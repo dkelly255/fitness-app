@@ -28,7 +28,7 @@ body {
 }
 
 .shop-now-button {
-    background: black;
+    background: rgba(0, 110, 255, 0.678);
     color: white;
     min-width: 260px;
 }
@@ -44,7 +44,7 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: rgba(0, 110, 255);
     color: white;
 }
 
@@ -58,6 +58,10 @@ body {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+.bg-blue {
+    background: rgba(0, 110, 255, 0.678) !important;
 }
 
 /* -------------------------------- Media Queries */
