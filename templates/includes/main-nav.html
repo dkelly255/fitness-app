@@ -5,9 +5,9 @@
                 Programmes
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">Cardio-Training</a>
-                <a href="" class="dropdown-item ">Strength Training</a>
-                <a href="" class="dropdown-item">All Programmes</a>
+                <a href="{% url 'products' %}?category=cardio_training" class="dropdown-item">Cardio-Training</a>
+                <a href="{% url 'products' %}?category=strength_training" class="dropdown-item ">Strength Training</a>
+                <a href="{% url 'products' %}?category=strength_training,cardio_training" class="dropdown-item">All Programmes</a>
             </div>
         </li>
 
@@ -16,9 +16,9 @@
                 Merchandise
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Apparrell</a>
-                <a href="" class="dropdown-item">Nutrition</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Merchandise</a>
+                <a href="{% url 'products' %}?category=apparrell" class="dropdown-item">Apparrell</a>
+                <a href="{% url 'products' %}?category=nutrition" class="dropdown-item">Nutrition</a>
+                <a href="{% url 'products' %}?category=apparrell,nutrition" class="dropdown-item">All Merchandise</a>
             </div>
         </li>
 
