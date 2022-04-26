@@ -58,3 +58,15 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def programme_detail(request, programme_id):
+    """ A view to show programme detail """
+
+    programme = get_object_or_404(Programme, pk=programme_id)
+
+    context = {
+        'programme': programme,
+    }
+
+    return render(request, 'products/programme_detail.html', context)
