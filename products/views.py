@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product, Category
+from .models import Product, Category, Programme
 
 # Create your views here.
 
@@ -34,6 +34,18 @@ def all_products(request):
     }
 
     return render(request, 'products/products.html', context)
+
+def all_programmes(request):
+    """ A view to return the programmes """
+
+    programmes = Programme.objects.all()
+
+    context = {
+        'programmes': programmes
+    }
+
+    return render(request, 'products/programmes.html', context)
+
 
 
 def product_detail(request, product_id):
