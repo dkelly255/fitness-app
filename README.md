@@ -1,5 +1,7 @@
 # Fitness App
 
+Full-Stack Ecommerce Application with authentication mechanism & paid access to the site's merchandise and workout programmes
+
 ![Title](Readme/home.png)
 
 # UX
