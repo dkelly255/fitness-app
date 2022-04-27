@@ -70,3 +70,38 @@ def programme_detail(request, programme_id):
     }
 
     return render(request, 'products/programme_detail.html', context)
+
+
+def search_results(request):
+    """ A view to return search results """
+
+    products = Product.objects.all()
+    programmes = Programme.objects.all()
+    query = None
+    categories = None
+
+    if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            products = products.filter(category__name__in=categories)
+            programmes = programmes.filter(category__name__in=categories)
+            category = Category.objects.filter(name__in=categories)
+
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "You didn't enter any search criteria")
+                return redirect(reverse('products')) # Note: Might need to update this to search_results instead of products
+            
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            products = products.filter(queries)
+            programmes = programmes.filter(queries)
+
+        context = {
+            'products': products,
+            'programmes': programmes,
+            'search_term': query,
+            'current_categories':categories,
+        }
+
+    return render(request, 'products/search_results.html', context)
