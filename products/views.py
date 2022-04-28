@@ -6,7 +6,7 @@ from .models import Product, Category, Programme
 # Create your views here.
 
 def all_products(request):
-    """ A view to show all products, including sorting and searching """
+    """ A view to show all products, and filter by category note:searching by term has been extracted out into search_results view """
 
     products = Product.objects.all()
     query = None
@@ -36,12 +36,31 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 def all_programmes(request):
-    """ A view to return the programmes """
+    """ A view to return the programmes and filter by category note:searching by term has been extracted out into search_results view"""
 
     programmes = Programme.objects.all()
+    query = None
+    categories = None
+
+    if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            programmes = programmes.filter(category__name__in=categories)
+            category = Category.objects.filter(name__in=categories)
+
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "You didn't enter any search criteria")
+                return redirect(reverse('programmes'))
+            
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            programmes = programmes.filter(queries)
 
     context = {
-        'programmes': programmes
+        'programmes': programmes,
+        'search_term': query,
+        'current_categories':categories,
     }
 
     return render(request, 'products/programmes.html', context)
