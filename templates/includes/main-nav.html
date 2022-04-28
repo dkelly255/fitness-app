@@ -7,6 +7,9 @@
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'programmes' %}?category=cardio_training" class="dropdown-item">Cardio-Training</a>
                 <a href="{% url 'programmes' %}?category=strength_training" class="dropdown-item ">Strength Training</a>
+                <a href="{% url 'programmes' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                <a href="{% url 'programmes' %}?sort=description&direction=desc" class="dropdown-item ">By Difficulty</a>
                 <a href="{% url 'programmes' %}?category=strength_training,cardio_training" class="dropdown-item">All Programmes</a>
             </div>
         </li>
@@ -18,6 +21,9 @@
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
                 <a href="{% url 'products' %}?category=apparrell" class="dropdown-item">Apparrell</a>
                 <a href="{% url 'products' %}?category=nutrition" class="dropdown-item">Nutrition</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}?category=apparrell,nutrition" class="dropdown-item">All Merchandise</a>
             </div>
         </li>
