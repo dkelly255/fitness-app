@@ -53,8 +53,6 @@ def all_products(request):
         'current_sorting': current_sorting,
     }
 
-    print(categories)
-
     return render(request, 'products/products.html', context)
 
 def all_programmes(request):
@@ -82,20 +80,20 @@ def all_programmes(request):
                     sortkey = f'-{sortkey}'
             programmes = programmes.order_by(sortkey)
 
-        # THIS CODE NOW REDUNDANT
-        # if 'category' in request.GET:
-        #     categories = request.GET['category'].split(',')
-        #     programmes = programmes.filter(category__name__in=categories)
-        #     category = Category.objects.filter(name__in=categories)
+        
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            programmes = programmes.filter(category__name__in=categories)
+            category = Category.objects.filter(name__in=categories)
 
-        # if 'q' in request.GET:
-        #     query = request.GET['q']
-        #     if not query:
-        #         messages.error(request, "You didn't enter any search criteria")
-        #         return redirect(reverse('programmes'))
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "You didn't enter any search criteria")
+                return redirect(reverse('programmes'))
             
-        #     queries = Q(name__icontains=query) | Q(description__icontains=query)
-        #     programmes = programmes.filter(queries)
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            programmes = programmes.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
 
@@ -105,6 +103,8 @@ def all_programmes(request):
         'current_categories':categories,
         'current_sorting': current_sorting,
     }
+
+    print(categories)
 
     return render(request, 'products/programmes.html', context)
 
