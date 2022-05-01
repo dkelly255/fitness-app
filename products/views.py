@@ -29,19 +29,20 @@ def all_products(request):
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
 
-        if 'category' in request.GET:
-            categories = request.GET['category'].split(',')
-            products = products.filter(category__name__in=categories)
-            category = Category.objects.filter(name__in=categories)
+        # THIS CODE NOW REDUNDANT
+        # if 'category' in request.GET:
+        #     categories = request.GET['category'].split(',')
+        #     products = products.filter(category__name__in=categories)
+        #     category = Category.objects.filter(name__in=categories)
 
-        if 'q' in request.GET:
-            query = request.GET['q']
-            if not query:
-                messages.error(request, "You didn't enter any search criteria")
-                return redirect(reverse('products'))
+        # if 'q' in request.GET:
+        #     query = request.GET['q']
+        #     if not query:
+        #         messages.error(request, "You didn't enter any search criteria")
+        #         return redirect(reverse('products'))
             
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
-            products = products.filter(queries)
+        #     queries = Q(name__icontains=query) | Q(description__icontains=query)
+        #     products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
 
@@ -60,26 +61,47 @@ def all_programmes(request):
     programmes = Programme.objects.all()
     query = None
     categories = None
+    sort = None
+    direction = None
 
+   
     if request.GET:
-        if 'category' in request.GET:
-            categories = request.GET['category'].split(',')
-            programmes = programmes.filter(category__name__in=categories)
-            category = Category.objects.filter(name__in=categories)
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                products = programmes.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            programmes = programmes.order_by(sortkey)
 
-        if 'q' in request.GET:
-            query = request.GET['q']
-            if not query:
-                messages.error(request, "You didn't enter any search criteria")
-                return redirect(reverse('programmes'))
+        # THIS CODE NOW REDUNDANT
+        # if 'category' in request.GET:
+        #     categories = request.GET['category'].split(',')
+        #     programmes = programmes.filter(category__name__in=categories)
+        #     category = Category.objects.filter(name__in=categories)
+
+        # if 'q' in request.GET:
+        #     query = request.GET['q']
+        #     if not query:
+        #         messages.error(request, "You didn't enter any search criteria")
+        #         return redirect(reverse('programmes'))
             
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
-            programmes = programmes.filter(queries)
+        #     queries = Q(name__icontains=query) | Q(description__icontains=query)
+        #     programmes = programmes.filter(queries)
+
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'programmes': programmes,
         'search_term': query,
         'current_categories':categories,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'products/programmes.html', context)
