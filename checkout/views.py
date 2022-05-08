@@ -39,6 +39,4 @@ def checkout(request):
         'client_secret': intent.client_secret,
     }
 
-    print(intent)
-
     return render(request, template, context)
