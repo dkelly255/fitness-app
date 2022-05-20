@@ -1,8 +1,16 @@
+
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'contact/css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
 <h1>Contact us</h1>
 
 <form action="" method="post">
     {% csrf_token %}
     {{ form }}
     <input type="submit" value="Submit">
- </form>
-
+</form>
+{% endblock %}
