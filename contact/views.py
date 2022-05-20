@@ -6,5 +6,4 @@ from django.http import HttpResponse
 def contact_view(request):
     """ A view to return the index page """
 
-    return HttpResponse("Contact app works")
-    
+    return render(request, 'contact/contact.html')
