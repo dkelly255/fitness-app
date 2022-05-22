@@ -16,4 +16,4 @@ class Comment(models.Model):
     author = models.CharField(max_length=80)
 
     def __str__(self):
-        return f"Comment {self.content} by {self.name}"
+        return f"by {self.author}: {self.content} "

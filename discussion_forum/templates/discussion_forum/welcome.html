@@ -1,6 +1,21 @@
 <h1> FitnessApp Forum </h1>
 {% for topic in topics %}
 
-<div> {{ topic.title }} {{ topic.date_created }} </div>
+<div> 
+    {{ topic.title }} {{ topic.date_created }} 
+    <hr>
+    {% for comment in comments %}
+        {% if comment.topic == topic %}
+            <div>
+            {{ comment.content }}
+            {{ comment.author }}
+            </div>
+        {% endif %}
+    {% endfor %}
+    <br>
+
+</div>
+
+
 
 {% endfor %}

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Topic
+from .models import Topic, Comment
 
 class TopicAdmin(admin.ModelAdmin):
     list_display = (
@@ -9,6 +9,16 @@ class TopicAdmin(admin.ModelAdmin):
 
     ordering = ('date_created',)
 
+class CommentAdmin(admin.ModelAdmin):
+    list_display = (
+        'comment_date',
+        'author',
+        'content',
+        'topic',   
+    )
+
+    ordering = ('comment_date',)
 
 # Register your models here.
 admin.site.register(Topic, TopicAdmin)
+admin.site.register(Comment, CommentAdmin)
