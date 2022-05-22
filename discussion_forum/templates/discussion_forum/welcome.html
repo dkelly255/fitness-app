@@ -8,7 +8,10 @@
         {% if comment.topic == topic %}
             <div>
             {{ comment.content }}
-            {{ comment.author }}
+            (
+            {{ comment.author }}:
+            {{ comment.comment_date }}
+            )
             </div>
         {% endif %}
     {% endfor %}
