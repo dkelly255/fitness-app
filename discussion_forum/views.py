@@ -30,8 +30,16 @@ def create_topic(request):
         form = CreateTopic(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/')
+            return redirect('discussion_forum')
 
     context = {'form': form}
 
     return render(request, 'discussion_forum/create_topic.html', context)
+
+
+def delete_topic(request, topic_id):
+
+    topic = get_object_or_404(Topic, id=topic_id)
+    topic.delete()
+    return redirect('discussion_forum')
+

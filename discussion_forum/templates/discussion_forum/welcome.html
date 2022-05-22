@@ -2,6 +2,9 @@
 {% for topic in topics %}
 <div> 
     {{ topic.title }} {{ topic.date_created }} 
+    <a href="/discussion_forum/delete_topic/{{ topic.id }}">
+        <button>Delete Topic</button>
+    </a>
     <hr>
     {% for comment in comments %}
         {% if comment.topic == topic %}
@@ -27,5 +30,5 @@
 
 <form method="POST" action="{% url 'create_topic' %}">
     {% csrf_token %}
-    <button class="btn btn-success" style="width:fit-content; padding: 4px; margin:10px;">Create A New Topic</button>
+    <button class="btn btn-success" style="width:fit-content; padding: 4px; margin:10px;">New Topic</button>
 </form>
