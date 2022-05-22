@@ -17,3 +17,12 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"by {self.author}: {self.content} "
+
+class Reply(models.Model):
+    comment = models.ForeignKey(Comment, on_delete=models.CASCADE, related_name="replies")
+    reply_date = models.DateTimeField(auto_now_add=True)
+    content = models.TextField()
+    author = models.CharField(max_length=80)
+
+    def __str__(self):
+        return f"by {self.author}: {self.content} "

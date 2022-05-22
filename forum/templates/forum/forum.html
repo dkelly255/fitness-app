@@ -34,17 +34,20 @@
                     </div>
                 </h5>
             
-            <hr>     
-            <h4>Comments</h4>
+              
+            
                     
             {% for discuss in discussions %}
                 {% for objs in discuss %}  
                     {% if objs.forum == forum %}
+                        <hr>
                         {{objs.discuss}}
-                        <br>
+                        
                     {% endif %}
-                {% endfor %}
+                    {% endfor %}
+                
             {% endfor %}
+            <hr>
                     
             <form method="POST" action="{% url 'addInDiscussion' %}">
                 {% csrf_token %}

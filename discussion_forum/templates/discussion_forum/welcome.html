@@ -1,24 +1,31 @@
 <h1> FitnessApp Forum </h1>
 {% for topic in topics %}
-
 <div> 
     {{ topic.title }} {{ topic.date_created }} 
     <hr>
     {% for comment in comments %}
         {% if comment.topic == topic %}
             <div>
-            {{ comment.content }}
-            (
-            {{ comment.author }}:
-            {{ comment.comment_date }}
-            )
+                {{ comment.content }}
+                (
+                {{ comment.author }}:
+                {{ comment.comment_date }}
+                )
             </div>
+                {% for reply in replies %}
+                    {% if reply.comment == comment %}
+                        {{ reply.content }}
+                    {% endif %}
+                {% endfor %}
+                <br>
         {% endif %}
     {% endfor %}
     <br>
 
 </div>
-
-
-
 {% endfor %}
+
+<form method="POST" action="{% url 'create_topic' %}">
+    {% csrf_token %}
+    <button class="btn btn-success" style="width:fit-content; padding: 4px; margin:10px;">Create A New Topic</button>
+</form>
