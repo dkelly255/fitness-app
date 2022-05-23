@@ -140,3 +140,22 @@ def delete_reply(request, reply_id):
     reply.delete()
     
     return redirect('discussion_forum')
+
+
+def edit_reply(request, reply_id):
+    
+    reply = get_object_or_404(Reply, id=reply_id)
+    
+    if request.method == 'POST':
+        form = ReplyForm(request.POST, instance=reply)
+        if form.is_valid():
+            form.save()
+            return redirect('discussion_forum')
+    
+    form = ReplyForm(instance=reply)
+    
+    context = {
+        'form': form
+    }
+    
+    return render(request, 'discussion_forum/edit_topic.html', context)
