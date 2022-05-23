@@ -14,3 +14,11 @@ class CommentForm(ModelForm):
         model = Comment
         fields = ( 'content',
                   'author', )
+
+class ReplyForm(ModelForm):
+    
+    class Meta:
+        model = Reply
+        fields = ( 'content',
+                  'author', )
+

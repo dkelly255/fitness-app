@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Topic, Comment, Reply
-from .forms import TopicForm, CommentForm
+from .forms import TopicForm, CommentForm, ReplyForm
 from django.shortcuts import get_object_or_404
 
 # Create your views here.
@@ -70,8 +70,7 @@ def add_comment(request, topic_id):
     topic = Topic.objects.get(pk=topic_id)
     
 
-    if request.method == 'POST':
-        
+    if request.method == 'POST':        
         
         form = CommentForm(request.POST)
         form.instance.topic = topic
@@ -111,4 +110,25 @@ def edit_comment(request, comment_id):
         'form': form
     }
     
-    return render(request, 'discussion_forum/edit_topic.html', context)  
+    return render(request, 'discussion_forum/edit_topic.html', context)
+
+
+def reply_to_comment(request, comment_id):
+
+    form = ReplyForm()
+    comment = Comment.objects.get(pk=comment_id)
+
+    if request.method == 'POST':
+
+        form = ReplyForm(request.POST)
+        form.instance.comment = comment
+        if form.is_valid():
+            form.save()
+            return redirect('discussion_forum')
+        
+    context = {
+        'form': form,
+        'comment': comment,
+    }
+
+    return render(request, 'discussion_forum/reply.html', context)

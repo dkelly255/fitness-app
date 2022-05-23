@@ -1,0 +1,6 @@
+<h1> Reply </h1>
+<form action="{% url 'reply_to_comment' comment.id %}" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" class="btn btn-success" value="submit">
+</form>
