@@ -2,7 +2,7 @@
 {% for topic in topics %}
 <div> 
     <hr>
-    {{ topic.title }} {{ topic.date_created }} 
+    {{ topic.title }} 
     <a href="/discussion_forum/delete_topic/{{ topic.id }}">
         <button>Delete Topic</button>
     </a>
@@ -12,6 +12,7 @@
     <a href="{% url 'add_comment' topic.id %}">
         <button>Add a Comment</button>
     </a>
+    {{ topic.date_created }} 
     <hr>
     <br>
     {% for comment in comments %}
