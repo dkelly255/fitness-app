@@ -93,3 +93,22 @@ def delete_comment(request, comment_id):
     comment.delete()
     
     return redirect('discussion_forum')
+
+
+def edit_comment(request, comment_id):
+    
+    comment = get_object_or_404(Comment, id=comment_id)
+    
+    if request.method == 'POST':
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            return redirect('discussion_forum')
+    
+    form = CommentForm(instance=comment)
+    
+    context = {
+        'form': form
+    }
+    
+    return render(request, 'discussion_forum/edit_topic.html', context)  
