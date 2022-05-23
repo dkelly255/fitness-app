@@ -1,5 +1,5 @@
-<h1>Create A New Topic</h1>
-<form action="{% url 'create_topic' %}" method="POST">
+<h1>Add a comment</h1>
+<form action="{% url 'add_comment' topic.id %}" method="POST">
     {% csrf_token %}
     {{form.as_p}}
     <input type="submit" class="btn btn-success" value="submit">

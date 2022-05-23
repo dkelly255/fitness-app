@@ -5,6 +5,12 @@
     <a href="/discussion_forum/delete_topic/{{ topic.id }}">
         <button>Delete Topic</button>
     </a>
+    <a href="/discussion_forum/edit_topic/{{ topic.id }}">
+        <button>Edit Topic</button>
+    </a>
+    <a href="{% url 'add_comment' topic.id %}">
+        <button>Add a Comment</button>
+    </a>
     <hr>
     {% for comment in comments %}
         {% if comment.topic == topic %}

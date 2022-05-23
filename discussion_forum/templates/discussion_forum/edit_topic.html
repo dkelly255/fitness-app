@@ -1,0 +1,10 @@
+<h1>Edit an existing Topic</h1>    
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div>
+            <p>
+                <button type="submit">Save Edits</button>
+            </p>
+        </div>
+    </form>

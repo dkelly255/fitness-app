@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Topic, Comment, Reply
-from .forms import CreateTopic
+from .forms import TopicForm, CommentForm
 from django.shortcuts import get_object_or_404
 
 # Create your views here.
@@ -24,10 +24,10 @@ def welcome_screen(request):
 
 def create_topic(request):
 
-    form = CreateTopic()
+    form = TopicForm()
 
     if request.method == 'POST':
-        form = CreateTopic(request.POST)
+        form = TopicForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('discussion_forum')
@@ -37,9 +37,51 @@ def create_topic(request):
     return render(request, 'discussion_forum/create_topic.html', context)
 
 
+def edit_topic(request, topic_id):
+    
+    topic = get_object_or_404(Topic, id=topic_id)
+    
+    if request.method == 'POST':
+        form = TopicForm(request.POST, instance=topic)
+        if form.is_valid():
+            form.save()
+            return redirect('discussion_forum')
+    
+    form = TopicForm(instance=topic)
+    
+    context = {
+        'form': form
+    }
+    
+    return render(request, 'discussion_forum/edit_topic.html', context)    
+
+
 def delete_topic(request, topic_id):
 
     topic = get_object_or_404(Topic, id=topic_id)
     topic.delete()
+    
     return redirect('discussion_forum')
 
+
+def add_comment(request, topic_id):
+
+    form = CommentForm()
+    topic = Topic.objects.get(pk=topic_id)
+    
+
+    if request.method == 'POST':
+        
+        
+        form = CommentForm(request.POST)
+        form.instance.topic = topic
+        if form.is_valid():
+            form.save()
+            return redirect('discussion_forum')
+
+    context = {
+        'form': form,
+        'topic': topic,
+        }
+
+    return render(request, 'discussion_forum/add_comment.html', context)
