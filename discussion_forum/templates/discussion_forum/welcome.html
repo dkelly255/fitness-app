@@ -32,9 +32,18 @@
                     <button>Reply</button>
                 </a>
             </div>
+                <br>
                 {% for reply in replies %}
                     {% if reply.comment == comment %}
-                        {{ reply.content }}
+                        >>>{{ reply.content }}
+                        [
+                        {{ reply.author }}:
+                        {{ reply.reply_date }}
+                        ]
+                        <a href="/discussion_forum/delete_reply/{{ reply.id }}">
+                            <button>Delete Reply</button>
+                        </a>
+                        <br>
                     {% endif %}
                 {% endfor %}
                 <br>

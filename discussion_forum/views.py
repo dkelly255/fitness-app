@@ -132,3 +132,11 @@ def reply_to_comment(request, comment_id):
     }
 
     return render(request, 'discussion_forum/reply.html', context)
+
+
+def delete_reply(request, reply_id):
+
+    reply = get_object_or_404(Reply, id=reply_id)
+    reply.delete()
+    
+    return redirect('discussion_forum')
