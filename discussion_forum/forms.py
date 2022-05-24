@@ -6,7 +6,9 @@ class TopicForm(ModelForm):
     
     class Meta:
         model = Topic
-        fields = "__all__"
+        fields = (
+            'title',)
+
 
 class CommentForm(ModelForm):
     

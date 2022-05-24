@@ -25,14 +25,21 @@ def welcome_screen(request):
 def create_topic(request):
 
     form = TopicForm()
+    user = request.user
+
 
     if request.method == 'POST':
         form = TopicForm(request.POST)
         if form.is_valid():
-            form.save()
+            topic = form.save(commit=False)
+            topic.author = user
+            topic.save()
             return redirect('discussion_forum')
 
-    context = {'form': form}
+    context = {
+        'form': form,
+        'user': user,
+        }
 
     return render(request, 'discussion_forum/create_topic.html', context)
 

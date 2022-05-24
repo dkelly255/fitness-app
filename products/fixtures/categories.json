@@ -1,6 +1,1 @@
-[
-    {"pk": 1, "model": "products.category", "fields": {"name": "cardio_training", "friendly_name": "Cardio-Training"}}, 
-    {"pk": 2, "model": "products.category", "fields": {"name": "strength_training", "friendly_name": "Strength-Training"}}, 
-    {"pk": 3, "model": "products.category", "fields": {"name": "apparrell", "friendly_name": "Apparrell"}}, 
-    {"pk": 4, "model": "products.category", "fields": {"name": "nutrition", "friendly_name": "Nutrition"}}
-]
+[{"model": "products.category", "pk": 1, "fields": {"name": "cardio_training", "friendly_name": "Cardio-Training"}}, {"model": "products.category", "pk": 2, "fields": {"name": "strength_training", "friendly_name": "Strength-Training"}}, {"model": "products.category", "pk": 3, "fields": {"name": "apparrell", "friendly_name": "Apparrell"}}, {"model": "products.category", "pk": 4, "fields": {"name": "nutrition", "friendly_name": "Nutrition"}}]
