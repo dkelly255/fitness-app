@@ -3,9 +3,9 @@
 {% if request.user.is_authenticated %}
 <hr>
 <div>
-    Currently Logged in as: {{ user.username }}
+    {{ user.first_name }} {{ user.last_name }} Currently Logged in as: Username:{{ user.username }} 
     <a href="{% url 'profile' %}">My Profile</a>
-    <a href="{% url 'profile' %}">Return To Site</a>
+    <a href="{% url 'home' %}">Return To Site</a>
     <a href="{% url 'account_logout' %}">Logout</a>   
     <hr>
     <br> 
