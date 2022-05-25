@@ -37,7 +37,7 @@
                 <div>
                     {{ comment.content }}
                     (
-                    {{ comment.author }}:
+                    by: {{ comment.author }}:
                     {{ comment.comment_date }}
                     )
                     <a href="/discussion_forum/delete_comment/{{ comment.id }}">
@@ -55,7 +55,7 @@
                         {% if reply.comment == comment %}
                             >>>{{ reply.content }}
                             [
-                            {{ reply.author }}:
+                            from: {{ reply.author }}:
                             {{ reply.reply_date }}
                             ]
                             <a href="/discussion_forum/delete_reply/{{ reply.id }}">
