@@ -1,16 +1,30 @@
-{{ enquiries }}
+
+
+<h1>"Contact Us" Enquiry Log</h1>
+<h2>(Note: For Administrator use only)</h2>
+
+<h3>Current Enquiry Log details: ({{enquiries.count}} Total Enquiries of which 1 Open & 0 Closed)</h3>
 
 <table border='1' style="border-collapse:collapse">
     <tr>
+        <th>Enquiry Number</th>
         <th>From</th>
+        <th>First Name</th>
+        <th>Last Name</th>
         <th>Subject</th>
         <th>Message</th>
+        <th>Status</th>
     </tr>
     {% for enquiry in enquiries %}
     <tr>
+        <td style="padding:15px">{{enquiry.id}}</td>
         <td style="padding:15px">{{enquiry.email}}</td>
+        <td style="padding:15px">(To Be Added to Model)</td>
+        <td style="padding:15px">(To Be Added to Model)</td>
         <td style="padding:15px">{{enquiry.subject}}</td>
         <td style="padding:15px">{{enquiry.message}}</td>
+        <td style="padding:15px">(Open / Closed)</td>
     </tr>
     {% endfor %}
 </table>
+
