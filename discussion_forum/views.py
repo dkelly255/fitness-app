@@ -8,15 +8,20 @@ from django.shortcuts import get_object_or_404
 def welcome_screen(request):
 
     topics = Topic.objects.all()
-    count = topics.count
+    topic_count = topics.count
     comments = Comment.objects.all()
     replies = Reply.objects.all()
+    comments_count = comments.count
+    replies_count = replies.count
+    
  
     context = {
         'topics': topics,
-        'count': count,
+        'topic_count': topic_count,
         'comments': comments,
         'replies': replies,
+        'comments_count': comments_count,
+        'replies_count': replies_count,
     }
 
     return render(request, 'discussion_forum/welcome.html', context)

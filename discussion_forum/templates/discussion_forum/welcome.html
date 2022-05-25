@@ -1,4 +1,4 @@
-<h1> FitnessApp Forum </h1>
+<h1> FitnessApp Forum </h1> 
 
 {% if request.user.is_authenticated %}
 <hr>
@@ -16,10 +16,12 @@
     <button class="btn btn-success" style="width:fit-content; padding: 4px; margin:10px; background:black; color:white">Create New Topic</button>
 </form>
 
+{{ topic_count }} Topics Currently Active
+
     {% for topic in topics %}
     <div>         
         <hr>
-        {{ topic.title }} Started By: {{ topic.author }} 
+        {{ topic.title }} with {{ comments_count }} Comments & {{ replies_count }} Replies Started By: {{ topic.author }} 
         <a href="/discussion_forum/delete_topic/{{ topic.id }}">
             <button style="background:red; color:white">Delete Topic</button>
         </a>
