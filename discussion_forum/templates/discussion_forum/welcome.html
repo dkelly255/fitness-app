@@ -22,12 +22,15 @@
     <div>         
         <hr>
         {{ topic.title }} with {{ comments_count }} Comments & {{ replies_count }} Replies Started By: {{ topic.author }} 
-        <a href="/discussion_forum/delete_topic/{{ topic.id }}">
-            <button style="background:red; color:white">Delete Topic</button>
-        </a>
-        <a href="/discussion_forum/edit_topic/{{ topic.id }}">
-            <button style="background:red; color:white">Edit Topic</button>
-        </a>
+        
+        {% if topic.author == user %}
+            <a href="/discussion_forum/delete_topic/{{ topic.id }}">
+                <button style="background:red; color:white">Delete Topic</button>
+            </a>
+            <a href="/discussion_forum/edit_topic/{{ topic.id }}">
+                <button style="background:red; color:white">Edit Topic</button>
+            </a>
+        {% endif %}
         <a href="{% url 'add_comment' topic.id %}">
             <button style="background:black; color:white">Add a Comment</button>
         </a>
@@ -42,12 +45,14 @@
                     by: {{ comment.author }}:
                     {{ comment.comment_date }}
                     )
-                    <a href="/discussion_forum/delete_comment/{{ comment.id }}">
-                        <button style="background:red; color:white">Delete Comment</button>
-                    </a>
-                    <a href="/discussion_forum/edit_comment/{{ comment.id }}">
-                        <button style="background:red; color:white">Edit Comment</button>
-                    </a>
+                    {% if comment.author == user %}
+                        <a href="/discussion_forum/delete_comment/{{ comment.id }}">
+                            <button style="background:red; color:white">Delete Comment</button>
+                        </a>
+                        <a href="/discussion_forum/edit_comment/{{ comment.id }}">
+                            <button style="background:red; color:white">Edit Comment</button>
+                        </a>
+                    {% endif %}
                     <a href="/discussion_forum/reply_to_comment/{{ comment.id }}">
                         <button style="background:black; color:white">Reply</button>
                     </a>
@@ -60,12 +65,14 @@
                             from: {{ reply.author }}:
                             {{ reply.reply_date }}
                             ]
-                            <a href="/discussion_forum/delete_reply/{{ reply.id }}">
-                                <button style="background:red; color:white">Delete Reply</button>
-                            </a>
-                            <a href="/discussion_forum/edit_reply/{{ reply.id }}">
-                                <button style="background:red; color:white">Edit Reply</button>
-                            </a>
+                            {% if reply.author == user %}
+                                <a href="/discussion_forum/delete_reply/{{ reply.id }}">
+                                    <button style="background:red; color:white">Delete Reply</button>
+                                </a>
+                                <a href="/discussion_forum/edit_reply/{{ reply.id }}">
+                                    <button style="background:red; color:white">Edit Reply</button>
+                                </a>
+                            {% endif %}
                             <br>
                         {% endif %}
                     {% endfor %}
