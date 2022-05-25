@@ -1,1 +1,16 @@
 {{ enquiries }}
+
+<table border='1' style="border-collapse:collapse">
+    <tr>
+        <th>From</th>
+        <th>Subject</th>
+        <th>Message</th>
+    </tr>
+    {% for enquiry in enquiries %}
+    <tr>
+        <td style="padding:15px">{{enquiry.email}}</td>
+        <td style="padding:15px">{{enquiry.subject}}</td>
+        <td style="padding:15px">{{enquiry.message}}</td>
+    </tr>
+    {% endfor %}
+</table>
