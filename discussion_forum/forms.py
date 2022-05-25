@@ -22,5 +22,5 @@ class ReplyForm(ModelForm):
     class Meta:
         model = Reply
         fields = ( 'content',
-                  'author', )
+                  )
 

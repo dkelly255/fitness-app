@@ -125,11 +125,12 @@ def reply_to_comment(request, comment_id):
 
     form = ReplyForm()
     comment = Comment.objects.get(pk=comment_id)
+    user = request.user
 
     if request.method == 'POST':
-
         form = ReplyForm(request.POST)
         form.instance.comment = comment
+        form.instance.author = user
         if form.is_valid():
             form.save()
             return redirect('discussion_forum')
