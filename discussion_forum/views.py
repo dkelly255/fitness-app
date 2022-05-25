@@ -75,12 +75,13 @@ def add_comment(request, topic_id):
 
     form = CommentForm()
     topic = Topic.objects.get(pk=topic_id)
+    user = request.user
     
 
-    if request.method == 'POST':        
-        
+    if request.method == 'POST':                
         form = CommentForm(request.POST)
         form.instance.topic = topic
+        form.instance.author = user
         if form.is_valid():
             form.save()
             return redirect('discussion_forum')

@@ -19,7 +19,7 @@
     {% for topic in topics %}
     <div>         
         <hr>
-        {{ topic.title }} {{ topic.author }} 
+        {{ topic.title }} Started By: {{ topic.author }} 
         <a href="/discussion_forum/delete_topic/{{ topic.id }}">
             <button style="background:red; color:white">Delete Topic</button>
         </a>
