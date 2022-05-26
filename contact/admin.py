@@ -4,6 +4,8 @@ from .models import Contact
 class ContactAdmin(admin.ModelAdmin):
     list_display = (
         'date_submitted',
+        'first_name',
+        'last_name',
         'email',
         'subject',
         'message',
