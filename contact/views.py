@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.models import User
 from django.http import HttpResponse
 from .forms import ContactForm
 from .models import Contact
@@ -8,8 +9,18 @@ from .models import Contact
 def contact_view(request):
     """ A view to return the contact form page to site visitors """
 
+    if not request.user.is_anonymous:
+        user = get_object_or_404(User, username=request.user) 
+        print(user)
+        form = ContactForm(request.POST or None, initial={'first_name':request.user.first_name, 'last_name':request.user.last_name, 'email':request.user.email })
+
+    else:
+        form = ContactForm(request.POST or None)
+    
+    # form = ContactForm(request.POST or None)
+
     if request.method == 'POST':
-        form = ContactForm(request.POST)
+        # form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
             return render(request, 'contact/success.html')
