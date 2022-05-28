@@ -23,7 +23,13 @@
         <td style="padding:15px">{{enquiry.last_name}}</td>
         <td style="padding:15px">{{enquiry.subject}}</td>
         <td style="padding:15px">{{enquiry.message}}</td>
-        <td style="padding:15px">(Open / Closed)</td>
+        <td style="padding:15px">
+            {% if not enquiry.status %}
+                Open 
+            {% else %}
+                Closed
+            {% endif %}
+        </td>
     </tr>
     {% endfor %}
 </table>
