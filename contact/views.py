@@ -41,3 +41,13 @@ def success(request):
     """ A view that renders the success page """
 
     return render(request, 'contact/success.html')
+
+
+def action_enquiry(request, item_id):
+    """ A view to open/close enquiries """
+    
+    enquiry = get_object_or_404(Contact, id=item_id)
+    enquiry.status = not enquiry.status
+    enquiry.save()
+
+    return redirect('enquiry_log.html')

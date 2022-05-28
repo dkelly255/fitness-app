@@ -26,8 +26,14 @@
         <td style="padding:15px">
             {% if not enquiry.status %}
                 Open 
+                <a href="{% url 'action_enquiry' enquiry.id %}">
+                    <button>Close Enquiry</button>
+                </a>
             {% else %}
                 Closed
+                <a href="{% url 'action_enquiry' enquiry.id %}">
+                    <button>Re-Open Enquiry</button>
+                </a>
             {% endif %}
         </td>
     </tr>
