@@ -47,16 +47,6 @@ def action_enquiry(request, enquiry_id):
     """ A view to open/close enquiries """
     
     enquiry = get_object_or_404(Contact, id=enquiry_id)
-    print(f'enquiry = {enquiry}')
-    print(enquiry.status)
-    print(enquiry.id)
-    print("HELLO")
-    print(request)
-    print(request.user)
-    # enquiry = get_object_or_404(Contact, id=item_id)
-    # enquiry.status = not enquiry.status
-    # enquiry.save()
-
     enquiry.status = not enquiry.status
     enquiry.save()
 
