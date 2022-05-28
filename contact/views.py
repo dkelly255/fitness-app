@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from .forms import ContactForm
@@ -13,10 +13,12 @@ def contact_view(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'contact/success.html')
+            return redirect(reverse('success'))
 
     form = ContactForm()
+
     context = {'form': form}
+    
     return render(request, 'contact/contact.html', context)
 
 # def contact_view(request):
@@ -50,3 +52,9 @@ def enquiry_log(request):
                 }
 
     return render(request, 'contact/enquiry_log.html', context)
+
+
+def success(request):
+    """ A view that renders the success page """
+
+    return render(request, 'contact/success.html')
