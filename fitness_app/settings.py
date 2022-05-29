@@ -53,7 +53,6 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'contact',
-    'forum',
     'discussion_forum',
 
     #Other
