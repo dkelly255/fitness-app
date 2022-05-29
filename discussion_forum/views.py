@@ -11,8 +11,9 @@ def welcome_screen(request):
     topic_count = topics.count
     comments = Comment.objects.all()
     replies = Reply.objects.all()
-    comments_count = comments.count
-    replies_count = replies.count
+    total_comments = comments.count
+    total_replies = replies.count
+
     
  
     context = {
@@ -20,8 +21,8 @@ def welcome_screen(request):
         'topic_count': topic_count,
         'comments': comments,
         'replies': replies,
-        'comments_count': comments_count,
-        'replies_count': replies_count,
+        'total_comments': total_comments,
+        'total_replies': total_replies,
     }
 
     return render(request, 'discussion_forum/welcome.html', context)
