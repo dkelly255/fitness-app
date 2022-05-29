@@ -1,10 +1,14 @@
+
+form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+}
+
 input[type=text], input[type=email], textarea {
-    width: 50%;
+    width: 90%;
     padding: 12px 20px;
     margin: 8px 0;
-    display: block;
+    display: flex;
    }
-
-.contact {
-    color:white!important;
-}
