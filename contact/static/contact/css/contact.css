@@ -4,3 +4,7 @@ input[type=text], input[type=email], textarea {
     margin: 8px 0;
     display: block;
    }
+
+.contact {
+    color:white!important;
+}
