@@ -26,23 +26,22 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Forum
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="{% url 'discussion_forum' %}" class="dropdown-item">Forum (Option 1)</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Support
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
                 <a href="{% url 'contact' %}" class="dropdown-item">Contact Us</a>
                 <a href="{% url 'enquiry_log' %}" class="dropdown-item">Enquiry Log</a>
             </div>          
+        </li>
 
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Forum
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
+                <a href="{% url 'discussion_forum' %}" class="dropdown-item">Forum (Option 1)</a>
+            </div>
         </li>
     </ul>
 </div>
