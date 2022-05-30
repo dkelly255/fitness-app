@@ -1,3 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
 <h1> FitnessApp Forum </h1> 
 
 {% if request.user.is_authenticated %}
@@ -92,3 +105,5 @@
 <h3> Need an account? Please <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a> & Sign Up </h3>
 
 {% endif %}
+
+{% endblock %}
