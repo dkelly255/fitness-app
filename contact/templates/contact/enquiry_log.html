@@ -1,42 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
 
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
 
-<h1>"Contact Us" Enquiry Log</h1>
-<h2>(Note: For Administrator use only)</h2>
+{% block content %}
+<div class="container w-90% my-5 pt-4 pb-5 bg-white">
+    <h1 class="my-3">"Contact Us" Enquiry Log</h1>
+    <h2 class="my-4">(Note: For Administrator use only)</h2>
 
-<h3>Current Enquiry Log details: ({{enquiries.count}} Total Enquiries of which 1 Open & 0 Closed)</h3>
+    <h3 class="my-4">Current Enquiry Log details: ({{enquiries.count}} Total Enquiries of which 1 Open & 0 Closed)</h3>
 
-<table border='1' style="border-collapse:collapse">
-    <tr>
-        <th>Enquiry Number</th>
-        <th>From</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Subject</th>
-        <th>Message</th>
-        <th>Status</th>
-    </tr>
-    {% for enquiry in enquiries %}
-    <tr>
-        <td style="padding:15px">{{enquiry.id}}</td>
-        <td style="padding:15px">{{enquiry.email}}</td>
-        <td style="padding:15px">{{enquiry.first_name}}</td>
-        <td style="padding:15px">{{enquiry.last_name}}</td>
-        <td style="padding:15px">{{enquiry.subject}}</td>
-        <td style="padding:15px">{{enquiry.message}}</td>
-        <td style="padding:15px">
-            {% if not enquiry.status %}
-                Open 
-                <a href="{% url 'action_enquiry' enquiry.id %}">
-                    <button>Close Enquiry</button>
-                </a>
-            {% else %}
-                Closed
-                <a href="{% url 'action_enquiry' enquiry.id %}">
-                    <button>Re-Open Enquiry</button>
-                </a>
-            {% endif %}
-        </td>
-    </tr>
-    {% endfor %}
-</table>
+    <table border='1' style="border-collapse:collapse">
+        <tr class="text-center">
+            <th>Enquiry Number</th>
+            <th>From</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Subject</th>
+            <th>Message</th>
+            <th>Status</th>
+        </tr>
+        {% for enquiry in enquiries %}
+        <tr class="text-center p-5">
+            <td>{{enquiry.id}}</td>
+            <td class="px-2">{{enquiry.email}}</td>
+            <td class="px-2">{{enquiry.first_name}}</td>
+            <td>{{enquiry.last_name}}</td>
+            <td>{{enquiry.subject}}</td>
+            <td>{{enquiry.message}}</td>
+            <td>
+                {% if not enquiry.status %}
+                    Open 
+                    <a href="{% url 'action_enquiry' enquiry.id %}">
+                        <button>Close</button>
+                    </a>
+                {% else %}
+                    Closed
+                    <a href="{% url 'action_enquiry' enquiry.id %}">
+                        <button>Re-Open</button>
+                    </a>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
 
