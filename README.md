@@ -7,12 +7,15 @@
 ![Mockup](Readme/mockup.png)
 
 # UX
+
 ## Strategy
 ### Epics
 ### User Stories
+
 ## Scope
 ### Kanban Board
 ### Tasks
+
 ## Structure
 ### Project Structure - Site Layout:
 
@@ -169,17 +172,21 @@
 ## Skeleton
 ## Surface
 # Features
+
 # Testing
 ## Manual Testing
 ## Automated Testing
+
 # Bugs
 ## Resolved Bugs
 ## Unresolved Bugs
+
 # Deployment
 ## Github Deployment
 ## Amazon AWS Deployment
 ## Heroku Deployment
 ## Local Deployment
+
 # Credits
 ## General
 ## Content
