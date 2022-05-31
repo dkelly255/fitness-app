@@ -1,8 +1,10 @@
 # Fitness App
 
- Heroku deployed (deployment link [here](https://fitness-app-p5.herokuapp.com/)) Full-Stack Ecommerce Application with authentication mechanism & paid access to the site's merchandise and workout programmes
+ Heroku deployed (deployment link [here](https://fitness-app-p5.herokuapp.com/)) Full-Stack E-commerce Application with authentication mechanism & paid access to the site's merchandise and workout programmes
 
 ![Title](Readme/home.png)
+
+![Mockup](Readme/mockup.png)
 
 # UX
 ## Strategy
