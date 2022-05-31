@@ -51,3 +51,8 @@ def action_enquiry(request, enquiry_id):
     enquiry.save()
 
     return redirect(reverse('enquiry_log'))
+
+
+def newsletter(request):
+
+    return render(request, 'contact/newsletter.html')

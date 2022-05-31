@@ -6,4 +6,5 @@ urlpatterns = [
     path('enquiry_log/', views.enquiry_log, name='enquiry_log'),
     path('success/', views.success, name='success'),
     path('action_enquiry/<enquiry_id>', views.action_enquiry, name='action_enquiry'),
+    path('newsletter/', views.newsletter, name='newsletter'),
 ]
