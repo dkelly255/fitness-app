@@ -14,6 +14,8 @@
     <h1 class="my-3">"Contact Us" Enquiry Log</h1>
     <h2 class="my-4">(Note: For Administrator use only)</h2>
 
+    {% if request.user.is_superuser %}
+
     <h3 class="my-4">Current Enquiry Log details: ({{enquiries.count}} Total Enquiries of which 1 Open & 0 Closed)</h3>
 
     <table border='1' style="border-collapse:collapse">
@@ -50,6 +52,13 @@
         </tr>
         {% endfor %}
     </table>
+
+    {% else %}
+
+        <div> Please note: You must be an Administrator to view Enquiqry Log</div>
+
+    {% endif %}
+
 </div>
 {% endblock %}
 

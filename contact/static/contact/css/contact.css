@@ -10,10 +10,11 @@ form {
 input[type=text], input[type=email], textarea {
     max-width: 90%;
     padding: 12px 20px;
-    margin: 8px 0;
+    /* margin: 8px 0; */
     display: flex;
    }
 
    input[type=submit] {
     max-width: 15%;
+    margin-top: 8px;
    }  
