@@ -295,8 +295,19 @@ input[name='q']::placeholder {
     }
 }
 
-.footer {
-    display:block;
+.footer {    
     background-color: #000;
     color: white;
+}
+
+.footer-middle {    
+    background-color: rgba(0, 110, 255);
+    color: white;
+    min-width:100%;
+}
+
+.footer-bottom {    
+    background-color: rgb(158, 166, 174);
+    color: rgb(2, 2, 2);
+    min-width:100%;
 }
