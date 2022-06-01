@@ -147,6 +147,12 @@
     {% block content %}
     {% endblock %}
 
+    <footer class="container-fluid footer">
+          {% include 'includes/footer.html' %}
+    </footer>
+
+    
+
     {% block postloadjs %}
       <script type="text/javascript">
         $('.toast').toast('show');
