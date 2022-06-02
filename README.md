@@ -6,6 +6,9 @@
 
 ![Mockup](Readme/mockup.png)
 
+Business Model
+Purpose of business, any marketing strategies - using facebook
+
 # UX
 
 ## Strategy

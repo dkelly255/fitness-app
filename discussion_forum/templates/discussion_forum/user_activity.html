@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'discussion_forum/css/forum.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+
+<div class="row pl-3">
+    <div class="col">
+
+        <h1 class="mt-1"> {{author}}'s User Activity Summary </h1> 
+
+        {% if request.user.is_authenticated %}
+            <hr>
+            <div>
+                Currently Logged in as: {{ user.username }} 
+                <a href="{% url 'discussion_forum' %}">Return To Forum</a>
+                <a href="{% url 'home' %}">Return To Site</a>
+                <a href="{% url 'account_logout' %}">Logout</a>   
+                <hr>
+                <br> 
+            </div>
+
+
+            {{ author}} has {{ topics | length }} Topics, with {{ comments | length }} Comments & {{ replies | length }} Replies
+
+                {% for topic in topics %}
+                <div>         
+                    <hr>
+                    {{ topic.title }} Started By: 
+                        <a href="">
+                            {{ topic.author }} 
+                        </a>
+                    {% if topic.author == user %}
+                        <a href="/discussion_forum/delete_topic/{{ topic.id }}">
+                            <button style="background:red; color:white">Delete Topic</button>
+                        </a>
+                        <a href="/discussion_forum/edit_topic/{{ topic.id }}">
+                            <button style="background:red; color:white">Edit Topic</button>
+                        </a>
+                    {% endif %}
+                    <a href="{% url 'add_comment' topic.id %}">
+                        <button style="background:black; color:white">Add a Comment</button>
+                    </a>
+                    {{ topic.date_created }} 
+                    <hr>
+                    <br>
+                    {% for comment in comments %}
+                        {% if comment.topic == topic %}
+                            <div>
+                                {{ comment.content }}
+                                (
+                                by: <a href="">{{ comment.author }}</a>:
+                                {{ comment.comment_date }}
+                                )
+                                {% if comment.author == user %}
+                                    <a href="/discussion_forum/delete_comment/{{ comment.id }}">
+                                        <button style="background:red; color:white">Delete Comment</button>
+                                    </a>
+                                    <a href="/discussion_forum/edit_comment/{{ comment.id }}">
+                                        <button style="background:red; color:white">Edit Comment</button>
+                                    </a>
+                                {% endif %}
+                                <a href="/discussion_forum/reply_to_comment/{{ comment.id }}">
+                                    <button style="background:black; color:white">Reply</button>
+                                </a>
+                            </div>
+                                <br>
+                                {% for reply in replies %}
+                                    {% if reply.comment == comment %}
+                                        >>>{{ reply.content }}
+                                        [
+                                        from: <a href="">{{ reply.author }}</a>:
+                                        {{ reply.reply_date }}
+                                        ]
+                                        {% if reply.author == user %}
+                                            <a href="/discussion_forum/delete_reply/{{ reply.id }}">
+                                                <button style="background:red; color:white">Delete Reply</button>
+                                            </a>
+                                            <a href="/discussion_forum/edit_reply/{{ reply.id }}">
+                                                <button style="background:red; color:white">Edit Reply</button>
+                                            </a>
+                                        {% endif %}
+                                        <br>
+                                    {% endif %}
+                                {% endfor %}
+                                <br>
+                        {% endif %}
+                    {% endfor %}
+                    <br>
+
+                </div>
+                {% endfor %}
+
+            
+
+        {% else %}
+
+            <h2> Please <a href="{% url 'account_login' %}" class="dropdown-item">Login</a> to access Discussion Forum </h2>
+            <h3> Need an account? Please <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a> & Sign Up </h3>
+
+        {% endif %}
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,9 +1,13 @@
-from django.forms import ModelForm
+from django import forms
 from .models import Newsletter
 
-class ContactForm(ModelForm):
+
+class NewsletterForm(forms.ModelForm):
+
+    privacy = forms.BooleanField(required=True)
+
     class Meta:
-        model = Contact
+        model = Newsletter
         fields = (
             'email',
             'privacy',

@@ -25,7 +25,7 @@
         <hr>
         <div>
             Currently Logged in as: {{ user.username }} 
-            <a href="{% url 'profile' %}">My Profile</a>
+            <a href="{% url 'user_activity' user.username %}">My Profile</a>
             <a href="{% url 'home' %}">Return To Site</a>
             <a href="{% url 'account_logout' %}">Logout</a>   
             <hr>
@@ -42,8 +42,10 @@
             {% for topic in topics %}
             <div>         
                 <hr>
-                {{ topic.title }} Started By: {{ topic.author }} 
-                
+                {{ topic.title }} Started By: 
+                    <a href="{% url 'user_activity' topic.author %}">
+                        {{ topic.author }} 
+                    </a>
                 {% if topic.author == user %}
                     <a href="/discussion_forum/delete_topic/{{ topic.id }}">
                         <button style="background:red; color:white">Delete Topic</button>
@@ -63,7 +65,7 @@
                         <div>
                             {{ comment.content }}
                             (
-                            by: {{ comment.author }}:
+                            by: <a href="{% url 'user_activity' comment.author %}">{{ comment.author }}</a>:
                             {{ comment.comment_date }}
                             )
                             {% if comment.author == user %}
@@ -83,7 +85,7 @@
                                 {% if reply.comment == comment %}
                                     >>>{{ reply.content }}
                                     [
-                                    from: {{ reply.author }}:
+                                    from: <a href="{% url 'user_activity' reply.author %}">{{ reply.author }}</a>:
                                     {{ reply.reply_date }}
                                     ]
                                     {% if reply.author == user %}

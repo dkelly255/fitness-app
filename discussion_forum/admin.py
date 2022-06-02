@@ -3,8 +3,7 @@ from .models import Topic, Comment, Reply
 
 class TopicAdmin(admin.ModelAdmin):
     list_display = (
-        'pk', 
-        'id', 
+        'author',
         'title',
         'date_created',
     )
@@ -13,8 +12,6 @@ class TopicAdmin(admin.ModelAdmin):
 
 class CommentAdmin(admin.ModelAdmin):
     list_display = (
-        'pk',
-        'id', 
         'comment_date',
         'author',
         'content',
@@ -25,8 +22,6 @@ class CommentAdmin(admin.ModelAdmin):
 
 class ReplyAdmin(admin.ModelAdmin):
     list_display = (
-        'pk',
-        'id', 
         'reply_date',
         'author',
         'content',

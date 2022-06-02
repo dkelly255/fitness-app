@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from .models import Topic, Comment, Reply
 from .forms import TopicForm, CommentForm, ReplyForm
@@ -12,9 +13,7 @@ def welcome_screen(request):
     comments = Comment.objects.all()
     replies = Reply.objects.all()
     total_comments = comments.count
-    total_replies = replies.count
-
-    
+    total_replies = replies.count    
  
     context = {
         'topics': topics,
@@ -174,3 +173,20 @@ def edit_reply(request, reply_id):
     }
     
     return render(request, 'discussion_forum/edit_topic.html', context)
+
+
+def user_activity(request, author):
+
+    profile = get_object_or_404(User, username=author)
+    topics = Topic.objects.filter(author=profile)
+    comments = Comment.objects.filter(author=profile)
+    replies = Reply.objects.filter(author=profile) 
+
+    context = {
+        'topics': topics,
+        'comments': comments,
+        'replies': replies,
+        'author': profile,
+    }
+
+    return render(request, 'discussion_forum/user_activity.html', context)

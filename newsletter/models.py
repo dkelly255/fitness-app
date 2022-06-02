@@ -9,3 +9,4 @@ class Newsletter(models.Model):
 
     email = models.EmailField(null=False, blank=False)
     privacy = models.BooleanField(null=False, blank=False)
+    
