@@ -20,17 +20,5 @@ class CategoryAdmin(admin.ModelAdmin):
         'name',
     )
 
-class ProgrammeAdmin(admin.ModelAdmin):
-    list_display = (
-        'name',
-        'category',
-        'price',
-        'description',
-        'image',
-    )
-
-    ordering = ('description',)
-
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(Programme, ProgrammeAdmin)
