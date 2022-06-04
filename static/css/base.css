@@ -296,12 +296,12 @@ input[name='q']::placeholder {
 }
 
 .footer {    
-    background-color: #000;
+    background-color: #222222;
     color: white;
 }
 
 .footer-middle {    
-    background-color: rgba(0, 110, 255);
+    background-color: #1A2F57;
     color: white;
     min-width:100%;
 }
