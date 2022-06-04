@@ -1,11 +1,13 @@
 
+    
+    
     <!-- Section: Social media -->
     <section
-      class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      class="d-flex justify-content-center justify-content-lg-around p-4 border-bottom"
     >
       <!-- Left -->
-      <div class="me-5 d-none d-lg-block">
-        <span>Get connected with us on social networks:</span>
+      <div class="mr-5 d-none d-lg-block">
+        <span>Get connected with us on Social Networks:</span>
       </div>
       <!-- Left -->
   
@@ -31,6 +33,28 @@
     </section>
     <!-- Section: Social media -->
   
+    <!-- Section: Newsletter -->
+    <section
+    class="d-flex justify-content-center justify-content-lg-around p-4 border-bottom"
+    >
+    <!-- Left -->
+    <div class="mr-5 d-none d-lg-block">
+      <span>Subscribe to our Newsletter for exclusive offers:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <form action="{% url 'home' %}" method="POST">
+        {% csrf_token %}
+        {{ form | crispy}}
+        <button type="submit">Subscribe</button>
+    </form>
+    </div>
+    <!-- Right -->
+    </section>
+    <!-- Section: Newsletter -->
+
     <!-- Section: Links  -->
     <section class="">
       <div class="container text-center text-md-start mt-5">
