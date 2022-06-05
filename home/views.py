@@ -12,6 +12,7 @@ def index(request):
     form = NewsletterForm(request.POST or None)
 
     if request.method == 'POST':
+        print(form.errors)
         if form.is_valid:
             form.save()
             messages.success(request, 'Thank you for subscribing')
