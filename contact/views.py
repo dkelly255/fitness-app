@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.http import HttpResponse
 from .forms import ContactForm
 from .models import Contact
+from django.contrib import messages
 
 # Create your views here.
 
@@ -18,8 +19,9 @@ def contact_view(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            form.save()            
-            return redirect(reverse('success'))            
+            form.save()
+            messages.success(request, 'Your Enquiry was submitted! Please allow one working day for processing and reply')            
+            return redirect(reverse('home'))            
     
     context = {'form': form}
 
@@ -35,12 +37,6 @@ def enquiry_log(request):
                 }
 
     return render(request, 'contact/enquiry_log.html', context)
-
-
-def success(request):
-    """ A view that renders the success page """
-
-    return render(request, 'contact/success.html')
 
 
 def action_enquiry(request, enquiry_id):
