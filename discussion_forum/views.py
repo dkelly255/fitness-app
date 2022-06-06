@@ -3,9 +3,11 @@ from django.shortcuts import render, redirect
 from .models import Topic, Comment, Reply
 from .forms import TopicForm, CommentForm, ReplyForm
 from django.shortcuts import get_object_or_404
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
+@login_required()
 def welcome_screen(request):
 
     topics = Topic.objects.all()

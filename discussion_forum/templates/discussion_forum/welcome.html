@@ -21,7 +21,7 @@
 
         <h1 class="mt-1"> FitnessApp Forum </h1> 
 
-        {% if request.user.is_authenticated %}
+        
         <hr>
         <div>
             Currently Logged in as: {{ user.username }} 
@@ -106,16 +106,6 @@
 
             </div>
             {% endfor %}
-
-            
-
-        {% else %}
-
-        <h2> Please <a href="{% url 'account_login' %}" class="dropdown-item">Login</a> to access Discussion Forum </h2>
-        <h3> Need an account? Please <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a> & Sign Up </h3>
-
-        {% endif %}
-
     </div>
 </div>
 
