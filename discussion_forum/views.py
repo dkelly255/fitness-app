@@ -33,11 +33,13 @@ def topic_detail(request, topic_id):
 
     current_topic = get_object_or_404(Topic, id=topic_id)
     comments = Comment.objects.filter(topic=current_topic)
+    replies = Reply.objects.all()
        
  
     context = {
         'topic': current_topic,        
-        'comments': comments,        
+        'comments': comments,   
+        'replies': replies,     
     }
 
     return render(request, 'discussion_forum/topic_detail.html', context)
