@@ -22,24 +22,24 @@
         <h1 class="mt-1"> FitnessApp Forum </h1> 
 
         
-        
-        <div class="container-fluid border border-secondary rounded px-2 py-1 m-1">
-            Currently Logged in as: <a href="{% url 'user_activity' user.username %}"> {{ user.username }} </a>
-            <a href="{% url 'user_activity' user.username %}" class="mx-3">My Profile</a>
-            <a href="{% url 'home' %}" class="mx-3">Return To Site</a>
-            <a href="{% url 'account_logout' %}" class="mx-3">Logout</a>    
+        <hr>
+        <div>
+            Currently Logged in as: {{ user.username }} 
+            <a href="{% url 'user_activity' user.username %}">My Profile</a>
+            <a href="{% url 'home' %}">Return To Site</a>
+            <a href="{% url 'account_logout' %}">Logout</a>   
+            <hr>
+            <br> 
         </div>
 
-        <div class="container-fluid border border-secondary rounded px-2 py-1 m-1">
-        This Forum currently has {{ topic_count }} active Topics with {{ total_comments }} Comments & {{ total_replies }} Replies
-        </div>
-        
         <form method="POST" action="{% url 'create_topic' %}">
             {% csrf_token %}
-            <button class="btn btn-dark m-1 p-1">Create New Topic</button>
+            <button class="btn btn-success" style="width:fit-content; padding: 4px; margin:10px; background:black; color:white">Create New Topic</button>
         </form>
 
-        {% for topic in topics %}
+        {{ topic_count }} Topics Currently Active with {{ total_comments }} Comments & {{ total_replies }} Replies
+
+            {% for topic in topics %}
             <div>         
                 <hr>
                 {{ topic.title }} Started By: 
