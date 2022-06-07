@@ -13,4 +13,5 @@ urlpatterns = [
     path('delete_reply/<reply_id>', views.delete_reply, name='delete_reply'),
     path('edit_reply/<reply_id>', views.edit_reply, name='edit_reply'),
     path('user_activity/<str:author>', views.user_activity, name='user_activity'),
+    path('topic_detail/<topic_id>', views.topic_detail, name='topic_detail'),
 ]
