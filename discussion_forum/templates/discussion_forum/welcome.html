@@ -64,7 +64,11 @@
                 {% for topic in topics %}
                     <tr>
                         <td class="forum-col-1">{{ forloop.counter }}</td>
-                        <td class="">{{ topic.title }}</td>
+                        <td class="">
+                            <a href="{% url 'topic_detail' topic.id %}">
+                                {{ topic.title }}
+                            </a>
+                        </td>
                         <td class="forum-col-2">{{ topic.author }}</td>
                         <td class="forum-col-2">{{ topic.date_created }}</td>
                         <td class="forum-col-3">
