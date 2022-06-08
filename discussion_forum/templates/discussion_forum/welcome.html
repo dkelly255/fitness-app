@@ -52,22 +52,22 @@
 
             <thead class="thead-light">
                 <tr>
-                    <th scope="col" class="">Topic #</th>
+                    <th scope="col" class="forum-col-1">Topic #</th>
                     <th scope="col" class="">Title</th>
-                    <th scope="col">Created By</th>
-                    <th scope="col">Date Created</th>
-                    <th scope="col" class="">Action/s</th>
+                    <th scope="col" class="forum-col-2">Created By</th>
+                    <th scope="col" class="forum-col-2">Date Created</th>
+                    <th scope="col" class="forum-col-3">Action/s</th>
                 </tr>
             </thead>
 
             <tbody>
                 {% for topic in topics %}
                     <tr>
-                        <td>{{ forloop.counter }}</td>
-                        <td>{{ topic.title }}</td>
-                        <td>{{ topic.author }}</td>
-                        <td>{{ topic.date_created }}</td>
-                        <td>
+                        <td class="forum-col-1">{{ forloop.counter }}</td>
+                        <td class="">{{ topic.title }}</td>
+                        <td class="forum-col-2">{{ topic.author }}</td>
+                        <td class="forum-col-2">{{ topic.date_created }}</td>
+                        <td class="forum-col-3">
                             {% if topic.author == user %}
                                 <a href="/discussion_forum/delete_topic/{{ topic.id }}">
                                     <button class="btn btn-danger m-1 p-1">Delete Topic</button>
