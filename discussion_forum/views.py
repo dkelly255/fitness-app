@@ -188,10 +188,11 @@ def edit_reply(request, reply_id):
     form = ReplyForm(instance=reply)
     
     context = {
-        'form': form
+        'form': form,
+        'reply':reply,
     }
     
-    return render(request, 'discussion_forum/edit_topic.html', context)
+    return render(request, 'discussion_forum/edit_reply.html', context)
 
 
 def user_activity(request, author):
