@@ -1,6 +1,52 @@
-<h1> Reply </h1>
-<form action="{% url 'reply_to_comment' comment.id %}" method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" class="btn btn-success" value="submit">
-</form>
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'discussion_forum/css/forum.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+
+<div class="container my-3">
+    
+        <div class="table-responsive">
+            <h1 class="h4 bg-primary mb-0 px-3 py-2 rounded-top text-light">
+                <strong>Fitness<i class="fas fa-medal mx-1"></i>App Forum </strong>: Reply to Comment
+            </h1>
+        </div>
+            
+        <table class="table table-striped table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col"> Please Type your Reply: </th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <td>
+                        <form action="{% url 'reply_to_comment' comment.id %}" method="POST">
+                            {% csrf_token %}
+                            <p>
+                                
+                                <textarea name="content" cols="40" rows="10" required id="id_content">
+                                </textarea>
+                            </p>
+                            <input type="submit" class="btn btn-success" value="submit">
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</div>
+{% endblock %}
