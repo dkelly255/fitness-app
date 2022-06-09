@@ -16,25 +16,20 @@
 {% block content %}
 <div class="overlay"></div>
 
-<div class="row pl-3">
-    <div class="col">
-        
+<div class="row ">
+    <div class="col">        
 
-        <div class="container border border-secondary rounded px-2 py-1 m-1 mb-3 bg-light">
+        <div class="container border border-secondary rounded px-2 py-1 m-1 bg-light">
             Currently Logged in as: <a href="{% url 'user_activity' user.username %}"> {{ user.username }} </a>
             <a href="{% url 'user_activity' user.username %}" class="mx-3">My Profile</a>
             <a href="{% url 'home' %}" class="mx-3">Return To Site</a>
             <a href="{% url 'account_logout' %}" class="mx-3">Logout</a>    
-        </div>
-        <p>*Please note: A topic can only be Edited or Deleted by its creator</p>
-        
-
-           
-
+        </div>     
+    
     </div>
 </div>
 
-<div class="container-fluid mt-1 mb-3">
+<div class="container-fluid mx-1">
 
     <div class="row">
         <div class="table-responsive">
@@ -88,12 +83,10 @@
                     </tr>
                 {% endfor %}
             </tbody>
-
         </table>
-
-
     </div>
-
 </div>
+
+<p class="mx-1">*Please note: A topic can only be Edited or Deleted by its creator</p>
 
 {% endblock %}
