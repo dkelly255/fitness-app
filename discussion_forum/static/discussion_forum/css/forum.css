@@ -1,11 +1,14 @@
 .forum-col-1{
-    max-width: 40px !important; 
+    max-width: 50px !important; 
 }
 .forum-col-2{
     max-width: 100px !important; 
 }
 .forum-col-3{
     max-width: 125px !important; 
+}
+.forum-col-4{
+    max-width: 500px !important; 
 }
 .last-post-col {
     min-width: 192px;

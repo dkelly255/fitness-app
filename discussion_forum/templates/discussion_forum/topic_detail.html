@@ -66,81 +66,94 @@
 
                 
 
-            
-                <table class="table table-striped table-bordered">
-                    <thead class="thead-light">
+
+        <table class="table table-striped table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col" class="forum-col-1">Comment #</th>
+                    <th scope="col" class="forum-col-4">Comment Detail</th>
+                    <th scope="col" class="forum-col-2">Date Posted</th>
+                    <th scope="col" class="forum-col-2">Author</th>
+                    <th scope="col" class="forum-col-3">Action/s</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for comment in comments %}
+                    {% if comment.topic == topic %}
                         <tr>
-                            <th scope="col" class="">Comment #</th>
-                            <th scope="col" class="">Comment Detail</th>
-                            <th scope="col">Date Posted</th>
-                            <th scope="col">Author</th>
-                            <th scope="col" class="">Action/s</th>
+                            <td class="forum-col-1">
+                                {{ forloop.counter }}
+                            </td>
+                            
+                            <td class="forum-col-4">
+                                {{ comment.content }}                                     
+                            </td>
+                            
+                            <td class="forum-col-2">
+                                {{ comment.comment_date }}                                
+                            </td>
+                            
+                            <td class="forum-col-2">
+                                {{ comment.author }}
+                            </td>
+                            
+                            <td class="forum-col-3">
+                                <a href="/discussion_forum/delete_comment/{{ comment.id }}">
+                                    <button class="btn btn-danger p-1">Delete Comment</button>
+                                </a>
+                                <a href="/discussion_forum/edit_comment/{{ comment.id }}">
+                                    <button class="btn btn-danger p-1">Edit Comment</button>
+                                </a>
+                                <a href="/discussion_forum/reply_to_comment/{{ comment.id }}">
+                                    <button class="btn btn-secondary p-1">Reply</button>
+                                </a>                                
+                            </td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        {% for comment in comments %}
-                            {% if comment.topic == topic %}
+                        {% for reply in replies %}
+                            {% if reply.comment == comment %}    
                                 <tr>
-                                    <td>{{ forloop.counter }}</td>
+                                    <td class="forum-col-1">
+                                        Reply
+                                    </td>        
                                     
-                                    <td>
-                                        {{ comment.content }}
+                                    <td class="forum-col-4">
                                         
-                                        {% for reply in replies %}
                                         
                                             {% if reply.comment == comment %}
-                                                <hr>
-                                                <em>Reply: {{ reply.content }}</em>
+                                                
+                                                <em>{{ reply.content }}</em>
 
                                             {% endif %}
                                         
-                                        {% endfor %}
-                                    </td>
-                                    
-                                    <td>
-                                        {{ comment.comment_date }}
                                         
-                                        {% for reply in replies %}
+                                    </td>
+                                    <td class="forum-col-2">
+                                        
                                         
                                             {% if reply.comment == comment %}
-                                                <hr>
+                                                
                                                 <em>{{ reply.reply_date }}</em>
 
                                             {% endif %}
                                         
-                                        {% endfor %}
+                                        
                                     </td>
-                                    
-                                    <td>
-                                        {{ comment.author }}
-
-                                        {% for reply in replies %}
+                                    <td class="forum-col-2">
+                                        
                                         
                                             {% if reply.comment == comment %}
-                                                <hr>
+                                                
                                                 <em>{{ reply.author }}</em>
 
                                             {% endif %}
                                         
-                                        {% endfor %}
-
+                                                                    
                                     </td>
-                                    
-                                    <td>
-                                        <a href="/discussion_forum/delete_comment/{{ comment.id }}">
-                                            <button class="btn btn-danger p-1">Delete Comment</button>
-                                        </a>
-                                        <a href="/discussion_forum/edit_comment/{{ comment.id }}">
-                                            <button class="btn btn-danger p-1">Edit Comment</button>
-                                        </a>
-                                        <a href="/discussion_forum/reply_to_comment/{{ comment.id }}">
-                                            <button class="btn btn-secondary p-1">Reply</button>
-                                        </a>
-
-                                        {% for reply in replies %}
+                                    <td class="forum-col-3">
+                                        
                                             {% if reply.comment == comment %}
                                                 {% if reply.author == user %}
-                                                    <hr class="m-2">
+                                                    
                                                     <em>
                                                         
                                                         <a href="/discussion_forum/delete_reply/{{ reply.id }}">
@@ -154,16 +167,19 @@
 
                                                 {% endif %}
                                             {% endif %}
-                                        {% endfor %}
+                                        
                                     </td>
-                                </tr>                               
-                            {% endif %}
+                                </tr>
+                            {% endif %}  
                         {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
+                        
+                        
+                    {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
 
         <p class="mx-1">*Please note: Both comments and Replies can only be Edited or Deleted by their creators</p>
 
 {% endblock %}
+
