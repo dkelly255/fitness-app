@@ -80,7 +80,8 @@ def edit_topic(request, topic_id):
     form = TopicForm(instance=topic)
     
     context = {
-        'form': form
+        'form': form,
+        'topic': topic,
     }
     
     return render(request, 'discussion_forum/edit_topic.html', context)    
