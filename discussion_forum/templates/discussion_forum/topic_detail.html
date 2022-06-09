@@ -18,12 +18,6 @@
 
 <div class="row pl-3">
     <div class="col">
-        <h1 class="mt-1"> FitnessApp Forum </h1> 
-
-            <form method="POST" action="{% url 'add_comment' topic.id %}">
-                {% csrf_token %}
-                <button class="btn btn-secondary m-1 p-1">Add a Comment</button>
-            </form>
 
         <div class="container border border-secondary rounded px-2 py-1 m-1 mb-3 bg-light">
             Currently Logged in as: <a href="{% url 'user_activity' user.username %}"> {{ user.username }} </a>
@@ -32,16 +26,12 @@
             <a href="{% url 'discussion_forum' %}" class="mx-3">Return To Topics List</a>
             <a href="{% url 'account_logout' %}" class="mx-3">Logout</a>    
         </div>
-        <p>*Please note: A Comment can only be Edited or Deleted by its creator</p>
-
-        
 
         <div class="container-fluid my-3">
-        
             <div class="row">
                 <div class="table-responsive">
                     <h2 class="h4 bg-primary mb-0 p-4 rounded-top text-light">
-                        <p>Discussion Topic: {{ topic.title }}</p>
+                        <strong>Discussion<i class="fas fa-medal mx-1"></i>Topic</strong>: {{ topic.title }}</p>
                         {% if topic.author == user %}
                             <a href="/discussion_forum/delete_topic/{{ topic.id }}">
                                 <button class="btn btn-danger m-1 p-1">Delete Topic</button>
@@ -84,50 +74,88 @@
                             {% if comment.topic == topic %}
                                 <tr>
                                     <td>{{ forloop.counter }}</td>
-                                    <td>{{ comment.content }}</td>
-                                    <td>{{ comment.comment_date }}</td>
-                                    <td>{{ comment.author }}</td>
+                                    
+                                    <td>
+                                        {{ comment.content }}
+                                        
+                                        {% for reply in replies %}
+                                        
+                                            {% if reply.comment == comment %}
+                                                <hr>
+                                                <em>Reply: {{ reply.content }}</em>
+
+                                            {% endif %}
+                                        
+                                        {% endfor %}
+                                    </td>
+                                    
+                                    <td>
+                                        {{ comment.comment_date }}
+                                        
+                                        {% for reply in replies %}
+                                        
+                                            {% if reply.comment == comment %}
+                                                <hr>
+                                                <em>{{ reply.reply_date }}</em>
+
+                                            {% endif %}
+                                        
+                                        {% endfor %}
+                                    </td>
+                                    
+                                    <td>
+                                        {{ comment.author }}
+
+                                        {% for reply in replies %}
+                                        
+                                            {% if reply.comment == comment %}
+                                                <hr>
+                                                <em>{{ reply.author }}</em>
+
+                                            {% endif %}
+                                        
+                                        {% endfor %}
+
+                                    </td>
+                                    
                                     <td>
                                         <a href="/discussion_forum/delete_comment/{{ comment.id }}">
-                                            <button class="btn btn-danger m-1 p-1">Delete Comment</button>
+                                            <button class="btn btn-danger p-1">Delete Comment</button>
                                         </a>
                                         <a href="/discussion_forum/edit_comment/{{ comment.id }}">
-                                            <button class="btn btn-danger m-1 p-1">Edit Comment</button>
+                                            <button class="btn btn-danger p-1">Edit Comment</button>
                                         </a>
                                         <a href="/discussion_forum/reply_to_comment/{{ comment.id }}">
-                                            <button class="btn btn-secondary m-1 p-1">Reply</button>
+                                            <button class="btn btn-secondary p-1">Reply</button>
                                         </a>
-                                    </td>
-                                </tr>
 
-                                {% for reply in replies %}
-                                <tr>
-                                    {% if reply.comment == comment %}
-                                        <td>Reply to Above</td>
-                                        <td>{{ reply.content }}</td>
-                                        <td>{{ reply.reply_date }}</td>
-                                        <td>{{ reply.author }}</td>
-                                        <td>
-                                            {% if reply.author == user %}
-                                                <a href="/discussion_forum/delete_reply/{{ reply.id }}">
-                                                    <button class="btn btn-danger m-1 p-1">Delete Reply</button>
-                                                </a>
-                                                <a href="/discussion_forum/edit_reply/{{ reply.id }}">
-                                                    <button class="btn btn-danger m-1 p-1">Edit Reply</button>
-                                                </a>
+                                        {% for reply in replies %}
+                                            {% if reply.comment == comment %}
+                                                {% if reply.author == user %}
+                                                    <hr class="m-2">
+                                                    <em>
+                                                        
+                                                        <a href="/discussion_forum/delete_reply/{{ reply.id }}">
+                                                            <button class="btn btn-danger p-1">Delete Reply</button>
+                                                        </a>
+                                                        <a href="/discussion_forum/edit_reply/{{ reply.id }}">
+                                                            <button class="btn btn-danger p-1">Edit Reply</button>
+                                                        </a>
+
+                                                    </em>
+
+                                                {% endif %}
                                             {% endif %}
-                                        </td>
-                                    {% endif %}
-                                </tr>
-                            {% endfor %}
-
+                                        {% endfor %}
+                                    </td>
+                                </tr>                               
                             {% endif %}
                         {% endfor %}
                     </tbody>
                 </table>
             </div>
-
         </div>
 
+        <p class="mx-1">*Please note: Both comments and Replies can only be Edited or Deleted by their creators</p>
 
 {% endblock %}
