@@ -15,7 +15,8 @@ def welcome_screen(request):
     comments = Comment.objects.all()
     replies = Reply.objects.all()
     total_comments = comments.count
-    total_replies = replies.count    
+    total_replies = replies.count
+    topics = topics.order_by('date_created')    
  
     context = {
         'topics': topics,
