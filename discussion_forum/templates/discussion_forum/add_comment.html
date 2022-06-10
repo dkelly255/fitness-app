@@ -34,7 +34,7 @@
             <tbody>
                 <tr>
                     <td>
-                        <form action="{% url 'fake_profile' topic.id %}" method="POST">
+                        <form action="{% url 'add_comment' topic.id %}" method="POST">
                             {% csrf_token %}
                             <p>
                                 
