@@ -5,6 +5,7 @@ from .forms import TopicForm, CommentForm, ReplyForm
 from django.shortcuts import get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
+from django.db.models import Count
 
 # Create your views here.
 
@@ -18,10 +19,11 @@ def welcome_screen(request):
     total_comments = comments.count
     total_replies = replies.count
     topics = topics.order_by('date_created')
-    paginator = Paginator(topics, 3)
+    paginator = Paginator(topics, 5)
     page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)    
- 
+    page_obj = paginator.get_page(page_number)
+   
+
     context = {
         'topics': topics,
         'topic_count': topic_count,
@@ -40,12 +42,17 @@ def topic_detail(request, topic_id):
     current_topic = get_object_or_404(Topic, id=topic_id)
     comments = Comment.objects.filter(topic=current_topic)
     replies = Reply.objects.all()
+    comments = comments.order_by('comment_date')
+    paginator = Paginator(comments, 5)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
        
  
     context = {
         'topic': current_topic,        
         'comments': comments,   
-        'replies': replies,     
+        'replies': replies,
+        'page_obj': page_obj,     
     }
 
     return render(request, 'discussion_forum/topic_detail.html', context)

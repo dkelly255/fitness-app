@@ -78,7 +78,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for comment in comments %}
+                    {% for comment in page_obj %}
                         {% if comment.topic == topic %}
                             <tr>
                                 <td class="forum-col-1">
@@ -180,6 +180,24 @@
             </table>
 
         </div>
+        </div>
+
+        <div class="pagination">
+            <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1"> First</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                {% endif %}
+        
+                <span class="current">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                </span>
+        
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">next</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                {% endif %}
+            </span>
         </div>
 
         <p class="mx-1">*Please note: Both comments and Replies can only be Edited or Deleted by their creators</p>

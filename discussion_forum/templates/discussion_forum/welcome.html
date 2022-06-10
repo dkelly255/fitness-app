@@ -63,7 +63,7 @@
             <tbody>
                 {% for topic in page_obj %}
                     <tr>
-                        <td class="forum-col-1">{{ topic.id }}</td>
+                        <td class="forum-col-1">{{ forloop.counter }}</td>
                         <td class="">
                             <a href="{% url 'topic_detail' topic.id %}">
                                 {{ topic.title }}
