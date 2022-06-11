@@ -162,6 +162,7 @@ def reply_to_comment(request, comment_id):
     form = ReplyForm()
     comment = Comment.objects.get(pk=comment_id)
     user = request.user
+    # print(f'the topic is: {comment.topic}')
 
     if request.method == 'POST':
         form = ReplyForm(request.POST)
