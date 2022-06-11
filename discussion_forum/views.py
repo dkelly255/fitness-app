@@ -120,7 +120,7 @@ def add_comment(request, topic_id):
         form.instance.author = user
         if form.is_valid():
             form.save()
-            return redirect('discussion_forum')
+            return redirect('topic_detail', topic_id)
 
     context = {
         'form': form,
