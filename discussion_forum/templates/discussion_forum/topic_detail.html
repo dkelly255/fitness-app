@@ -71,7 +71,7 @@
                 <thead class="thead-light">
                     <tr>
                         <th scope="col" class="forum-col-1">Comment #</th>
-                        <th scope="col" class="forum-col-4">Comment Detail</th>
+                        <th scope="col" class="forum-col-4">Comments & Replies</th>
                         <th scope="col" class="forum-col-2">Date Posted</th>
                         <th scope="col" class="forum-col-2">Author</th>
                         <th scope="col" class="forum-col-3">Action/s</th>
@@ -81,8 +81,9 @@
                     {% for comment in page_obj %}
                         {% if comment.topic == topic %}
                             <tr>
-                                <td class="forum-col-1">
+                                <td class="forum-col-1" rowspan="{{ comment.replies.count | add:'1' }}">
                                     {{ forloop.counter }}
+        
                                 </td>
                                 
                                 <td class="forum-col-4">
@@ -112,16 +113,14 @@
                             {% for reply in replies %}
                                 {% if reply.comment == comment %}    
                                     <tr>
-                                        <td class="forum-col-1">
-                                            Reply
-                                        </td>        
+                                               
                                         
-                                        <td class="forum-col-4">
+                                        <td class="forum-col-4 text-muted">
                                             
                                             
                                                 {% if reply.comment == comment %}
                                                     
-                                                    <em>{{ reply.content }}</em>
+                                                    <em>- {{ reply.content }}</em>
 
                                                 {% endif %}
                                             
