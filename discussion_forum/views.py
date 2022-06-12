@@ -190,7 +190,7 @@ def delete_reply(request, topic_id, reply_id):
     return redirect('topic_detail', topic_id)
 
 
-def edit_reply(request, reply_id):
+def edit_reply(request, topic_id, reply_id):
     
     reply = get_object_or_404(Reply, id=reply_id)
     
@@ -198,7 +198,7 @@ def edit_reply(request, reply_id):
         form = ReplyForm(request.POST, instance=reply)
         if form.is_valid():
             form.save()
-            return redirect('discussion_forum')
+            return redirect('topic_detail', topic_id)
     
     form = ReplyForm(instance=reply)
     

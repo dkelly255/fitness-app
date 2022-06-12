@@ -159,7 +159,7 @@
                                         <a href="{% url 'delete_reply' topic.id reply.id %}">
                                             <button class="btn btn-danger p-1">Delete Reply</button>
                                         </a>
-                                        <a href="/discussion_forum/edit_reply/{{ reply.id }}">
+                                        <a href="{% url 'edit_reply' topic.id reply.id %}">
                                             <button class="btn btn-danger p-1">Edit Reply</button>
                                         </a>
 
