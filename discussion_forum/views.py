@@ -42,7 +42,7 @@ def topic_detail(request, topic_id):
     current_topic = get_object_or_404(Topic, id=topic_id)
     comments = Comment.objects.filter(topic=current_topic)
     replies = Reply.objects.all()
-    comments = comments.order_by('comment_date')
+    comments = comments.order_by('-comment_date')
     paginator = Paginator(comments, 5)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
