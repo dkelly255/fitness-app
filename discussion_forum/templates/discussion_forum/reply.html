@@ -33,19 +33,19 @@
             </thead>
             
             <tbody>
-                <tr>
-                    <td>
-                        <form action="{% url 'reply_to_comment' comment.id %}" method="POST">
-                            {% csrf_token %}
-                            <p>
-                                
-                                <textarea name="content" cols="40" rows="10" required id="id_content">
-                                </textarea>
-                            </p>
-                            <input type="submit" class="btn btn-success" value="submit">
-                        </form>
-                    </td>
-                </tr>
+            <tr>
+            <td>
+            <form action="{% url 'reply_to_comment' topic.id comment.id %}" method="POST">
+                {% csrf_token %}
+                <p>
+                    
+                    <textarea name="content" cols="40" rows="10" required id="id_content">
+                    </textarea>
+                </p>
+                <input type="submit" class="btn btn-success" value="submit">
+            </form>
+            </td>
+            </tr>
             </tbody>
         </table>
 </div>

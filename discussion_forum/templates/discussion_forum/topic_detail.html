@@ -104,7 +104,7 @@
                                     <a href="{% url 'edit_comment' topic.id comment.id %}">
                                         <button class="btn btn-danger p-1">Edit Comment</button>
                                     </a>
-                                    <a href="{% url 'reply_to_comment' comment.id %}">
+                                    <a href="{% url 'reply_to_comment' topic.id comment.id %}">
                                         <button class="btn btn-secondary p-1">Reply</button>
                                     </a>                                
                                 </td>
