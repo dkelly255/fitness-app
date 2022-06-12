@@ -130,15 +130,15 @@ def add_comment(request, topic_id):
     return render(request, 'discussion_forum/add_comment.html', context)
 
 
-def delete_comment(request, comment_id):
+def delete_comment(request, topic_id, comment_id):
 
     comment = get_object_or_404(Comment, id=comment_id)
     comment.delete()
     
-    return redirect('discussion_forum')
+    return redirect('topic_detail', topic_id)
 
 
-def edit_comment(request, comment_id):
+def edit_comment(request, topic_id, comment_id):
     
     comment = get_object_or_404(Comment, id=comment_id)
     
@@ -146,7 +146,7 @@ def edit_comment(request, comment_id):
         form = CommentForm(request.POST, instance=comment)
         if form.is_valid():
             form.save()
-            return redirect('discussion_forum')
+            return redirect('topic_detail', topic_id)
     
     form = CommentForm(instance=comment)
     
@@ -154,7 +154,7 @@ def edit_comment(request, comment_id):
         'form': form
     }
     
-    return render(request, 'discussion_forum/edit_topic.html', context)
+    return render(request, 'discussion_forum/edit_comment.html', context)
 
 
 def reply_to_comment(request, comment_id):

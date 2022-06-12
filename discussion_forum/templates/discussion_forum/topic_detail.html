@@ -98,13 +98,13 @@
                                 </td>
                                 
                                 <td class="forum-col-3">
-                                    <a href="/discussion_forum/delete_comment/{{ comment.id }}">
+                                    <a href="{% url 'delete_comment' topic.id comment.id %}">
                                         <button class="btn btn-danger p-1">Delete Comment</button>
                                     </a>
-                                    <a href="/discussion_forum/edit_comment/{{ comment.id }}">
+                                    <a href="{% url 'edit_comment' topic.id comment.id %}">
                                         <button class="btn btn-danger p-1">Edit Comment</button>
                                     </a>
-                                    <a href="/discussion_forum/reply_to_comment/{{ comment.id }}">
+                                    <a href="{% url 'reply_to_comment' comment.id %}">
                                         <button class="btn btn-secondary p-1">Reply</button>
                                     </a>                                
                                 </td>
