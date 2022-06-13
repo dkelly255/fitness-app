@@ -218,7 +218,10 @@ def user_activity(request, author):
     replies = Reply.objects.filter(author=profile)
     topic_paginator = Paginator(topics, 5)
     topic_page_number = request.GET.get('page')
-    topic_page_obj = topic_paginator.get_page(topic_page_number) 
+    topic_page_obj = topic_paginator.get_page(topic_page_number)
+    comment_paginator = Paginator(topics, 5)
+    comment_page_number = request.GET.get('page')
+    comment_page_obj = comment_paginator.get_page(comment_page_number)  
 
     context = {
         'topics': topics,
@@ -226,6 +229,7 @@ def user_activity(request, author):
         'replies': replies,
         'author': profile,
         'topic_page_obj': topic_page_obj,
+        'comment_page_obj': comment_page_obj,
     }
 
     return render(request, 'discussion_forum/user_activity.html', context)
