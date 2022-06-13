@@ -134,28 +134,32 @@
                     </thead>
         
                     <tbody>
-                        {% for topic in topic_page_obj %}
+                        {% for comment in comment_page_obj %}
                             <tr>
                                 <td class="forum-col-1 text-center">{{ forloop.counter }}</td>
                                 <td class="pl-4">
-                                    <a href="{% url 'topic_detail' topic.id %}">
-                                        {{ topic.title }}
+                                    
+                                        {{ comment.content }}
+                                    
+                                        
+                                    
+                                </td>
+                                <td class="forum-col-2">
+                                    <a href="{% url 'topic_detail' comment.topic.id %}">
+                                        {{ comment.topic }}
                                     </a>
                                 </td>
-                                <td class="forum-col-2">{{ topic.author }}</td>
-                                <td class="forum-col-2">{{ topic.date_created | date:"j/n/y" }}, {{ topic.date_created | time:"H:i" }}</td>
+                                <td class="forum-col-2">{{ comment.comment_date | date:"j/n/y" }}, {{ comment.comment_date | time:"H:i" }}</td>
                                 <td class="forum-col-3">
-                                    {% if topic.author == user %}
-                                        <a href="/discussion_forum/delete_topic/{{ topic.id }}">
-                                            <button class="btn btn-danger m-1 p-1">Delete Topic</button>
+                                    
+                                        <a href="">
+                                            <button class="btn btn-danger m-1 p-1">Delete Comment</button>
                                         </a>
-                                        <a href="/discussion_forum/edit_topic/{{ topic.id }}">
-                                            <button class="btn btn-danger m-1 p-1">Edit Topic</button>
+                                        <a href="">
+                                            <button class="btn btn-danger m-1 p-1">Edit Comment</button>
                                         </a>
-                                    {% endif %}
-                                        <a href="{% url 'topic_detail' topic.id %}">
-                                            <button class="btn btn-secondary m-1 p-1">View Comments</button>
-                                        </a>
+                                    
+                                        
                                 </td>
                             </tr>
                         {% endfor %}
@@ -164,18 +168,18 @@
                 </table>
                 <div class="pagination mb-1">
                     <span class="step-links">
-                        {% if topic_page_obj.has_previous %}
+                        {% if comment_page_obj.has_previous %}
                             <a href="?page=1"> First</a>
-                            <a href="?page={{ topic_page_obj.previous_page_number }}">Previous</a>
+                            <a href="?page={{ comment_page_obj.previous_page_number }}">Previous</a>
                         {% endif %}
                 
                         <span class="current">
-                            Topics - Page {{ topic_page_obj.number }} of {{ topic_page_obj.paginator.num_pages }}.
+                            Topics - Page {{ comment_page_obj.number }} of {{ comment_page_obj.paginator.num_pages }}.
                         </span>
                 
-                        {% if topic_page_obj.has_next %}
-                            <a href="?page={{ topic_page_obj.next_page_number }}">next</a>
-                            <a href="?page={{ topic_page_obj.paginator.num_pages }}">last &raquo;</a>
+                        {% if comment_page_obj.has_next %}
+                            <a href="?page={{ comment_page_obj.next_page_number }}">next</a>
+                            <a href="?page={{ comment_page_obj.paginator.num_pages }}">last &raquo;</a>
                         {% endif %}
                     </span>
                 </div>
