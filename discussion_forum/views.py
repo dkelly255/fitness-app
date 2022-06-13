@@ -215,13 +215,17 @@ def user_activity(request, author):
     profile = get_object_or_404(User, username=author)
     topics = Topic.objects.filter(author=profile)
     comments = Comment.objects.filter(author=profile)
-    replies = Reply.objects.filter(author=profile) 
+    replies = Reply.objects.filter(author=profile)
+    topic_paginator = Paginator(topics, 5)
+    topic_page_number = request.GET.get('page')
+    topic_page_obj = topic_paginator.get_page(topic_page_number) 
 
     context = {
         'topics': topics,
         'comments': comments,
         'replies': replies,
         'author': profile,
+        'topic_page_obj': topic_page_obj,
     }
 
     return render(request, 'discussion_forum/user_activity.html', context)
