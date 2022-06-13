@@ -68,7 +68,7 @@
 
 
             <table class="table table-striped table-bordered">
-                <thead class="thead-light">
+                <thead class="thead-light text-center">
                     <tr>
                         <th scope="col" class="forum-col-1">Comment #</th>
                         <th scope="col" class="forum-col-4">Comments & Replies</th>
@@ -81,7 +81,7 @@
                     {% for comment in page_obj %}
                         {% if comment.topic == topic %}
                             <tr>
-                                <td class="forum-col-1" rowspan="{{ comment.replies.count | add:'1' }}">
+                                <td class="forum-col-1 text-center" rowspan="{{ comment.replies.count | add:'1' }}">
                                     {{ forloop.counter }}
         
                                 </td>
@@ -91,7 +91,7 @@
                                 </td>
                                 
                                 <td class="forum-col-2">
-                                    {{ comment.comment_date }}                                
+                                    {{ comment.comment_date | date:"j/n/y" }} {{ comment.comment_date |  time:"H:i" }}                                
                                 </td>
                                 
                                 <td class="forum-col-2">
@@ -115,12 +115,12 @@
                                     <tr>
                                                
                                         
-                                        <td class="forum-col-4 text-muted">
+                                        <td class="forum-col-4 text-muted pl-5">
                                             
                                             
                                                 {% if reply.comment == comment %}
                                                     
-                                                    <em>- {{ reply.content }}</em>
+                                                    <em> {{ reply.content }}</em>
 
                                                 {% endif %}
                                             
@@ -131,7 +131,7 @@
                                             
                                                 {% if reply.comment == comment %}
                                                     
-                                                    <em>{{ reply.reply_date }}</em>
+                                                    <em>{{ reply.reply_date | date:"j/n/y" }} {{ reply.reply_date | time:"H:i" }}</em>
 
                                                 {% endif %}
                                             
