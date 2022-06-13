@@ -41,7 +41,11 @@
             {% if request.user.is_authenticated %}
                 <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
                     <a href="{% url 'discussion_forum' %}" class="dropdown-item">Discussion Forum</a>
+                    <a href="{% url 'user_activity' user.username %}" class="dropdown-item">My Activity</a>
                 </div>
+                
+                    
+                
             {% else %}
                 <div class="dropdown-menu border-0" aria-labelledby="homeware-link">    
                     <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>

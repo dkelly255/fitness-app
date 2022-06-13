@@ -213,15 +213,23 @@ def edit_reply(request, topic_id, reply_id):
 def user_activity(request, author):
 
     profile = get_object_or_404(User, username=author)
+    
     topics = Topic.objects.filter(author=profile)
     comments = Comment.objects.filter(author=profile)
     replies = Reply.objects.filter(author=profile)
+    
     topic_paginator = Paginator(topics, 5)
     topic_page_number = request.GET.get('page')
     topic_page_obj = topic_paginator.get_page(topic_page_number)
+    
     comment_paginator = Paginator(comments, 5)
     comment_page_number = request.GET.get('page')
     comment_page_obj = comment_paginator.get_page(comment_page_number)  
+    
+    reply_paginator = Paginator(replies, 5)
+    reply_page_number = request.GET.get('page')
+    reply_page_obj = reply_paginator.get_page(reply_page_number)  
+    
     print(f"print statement:{comment_page_obj}")
 
     context = {
@@ -231,6 +239,7 @@ def user_activity(request, author):
         'author': profile,
         'topic_page_obj': topic_page_obj,
         'comment_page_obj': comment_page_obj,
+        'reply_page_obj': reply_page_obj,
     }
 
     return render(request, 'discussion_forum/user_activity.html', context)
