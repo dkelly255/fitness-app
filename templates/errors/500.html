@@ -12,7 +12,29 @@
 {% block content %}
 <div class="overlay"></div>
 
-    <div class="text-dark">
-    some fancy/witty error page for 500 here, choose your own design/styles to align with your project
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col bg-light shadow rounded mb-5 px-5 pb-3 pt-4">
+            
+                
+                <div class="table-responsive">
+                        <h2 class="h4 bg-primary mb-0 px-3 py-2 rounded-top text-light text-center">
+                            <strong>Oh Dear!<i class="fas fa-medal mx-1"></i>We Are Sorry</strong>:                         
+                        </h2>                    
+                    </div>
+    
+                
+
+                <div class="h5 text-center m-5">
+                    500 error: The server encountered an unexpected condition that prevented it from fulfilling the request
+                </div>
+
+                <div class="h5 text-center m-5">
+                    Please try again.
+                </div>
+
+            </div>
+        </div>
     </div>
+
 {% endblock %}
