@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from .forms import ContactForm
 from .models import Contact
 from django.contrib import messages
+from django.core.paginator import Paginator
 
 # Create your views here.
 
@@ -33,8 +34,13 @@ def enquiry_log(request):
     enquiries = Contact.objects.all()
     enquiries = enquiries.order_by('-date_submitted')
 
+    paginator = Paginator(enquiries, 10)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
     context = {
-                'enquiries': enquiries
+                'enquiries': enquiries,
+                'page_obj': page_obj,
                 }
 
     return render(request, 'contact/enquiry_log.html', context)
