@@ -31,6 +31,7 @@ def contact_view(request):
 def enquiry_log(request):
 
     enquiries = Contact.objects.all()
+    enquiries = enquiries.order_by('-date_submitted')
 
     context = {
                 'enquiries': enquiries
