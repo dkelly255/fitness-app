@@ -18,8 +18,8 @@ def welcome_screen(request):
     replies = Reply.objects.all()
     total_comments = comments.count
     total_replies = replies.count
-    topics = topics.order_by('date_created')
-    paginator = Paginator(topics, 5)
+    topics = topics.order_by('-date_created')
+    paginator = Paginator(topics, 10)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
    
@@ -43,7 +43,7 @@ def topic_detail(request, topic_id):
     comments = Comment.objects.filter(topic=current_topic)
     replies = Reply.objects.all()
     comments = comments.order_by('-comment_date')
-    paginator = Paginator(comments, 5)
+    paginator = Paginator(comments, 10)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
        
