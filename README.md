@@ -32,27 +32,21 @@ With these two broad epics as the overall strategic goal of the project, we are 
 ### *As a shopper I can:*
 - View a list of products so that I can select some to purchase
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 The product listing should display the products' price
+        - 2 The product listing should display the products' name
+        - 3 The product image should be clickable to bring the shopper to the individual product details
 
 - View individual product details so that I can Identify the price, description, and product rating, product image and available sizes
     - Acceptance Criteria:
-            - 1
-            - 2
-            - 3
-
-- Quickly Identify deals, clearance items and special offers so that I can Take advantage of special savings on products I'd like to purchase
-    - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+            - 1 The product details should contain an "add to bag" button allowing the shopper to add the product to their bag
+            - 2 The image should be large enough to give the shopper a good feel for the item being assessed
+            - 3 The product details screen should contain a more in-depth description of the item to give the shopper context and information on the product
 
 - Easily view the total of my purchases at any time so that I can Avoid spending too much
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 The shopping bag link should be viewable at all times on all site pages with the bag's current total cost also displayed
+        - 2 There should be a link to take the user to the secure checkout feature if the user has completed their shopping
+        - 3 The shopper should be able to easily modify the quantity of an item in their bag, or delete the item if required
 
 - Easily register for an account so that I can Have a personal account and be able to view my profile
     - Acceptance Criteria:
