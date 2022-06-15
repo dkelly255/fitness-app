@@ -50,39 +50,39 @@ With these two broad epics as the overall strategic goal of the project, we are 
 
 - Easily register for an account so that I can Have a personal account and be able to view my profile
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 The registration template should request an email, username and password
+        - 2 Upon clicking on the signup button, a user should receive a confirmation that their account setup is underway
+        - 3 The signup screen should also contain a direct link to the `Sign In` link, in case a user has arrived at the signup screen by mistake
 
 - Easily login or logout so that I can Access my personal account information
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 The login screen should contain a forgot password option
+        - 2 The login screen should also contain a "remember me" option and a direct link to the home page
+        - 3 The login screen should function as expected
 
 - Easily recover my password in case I forget it so that I can Recover access to my account
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 A "forgot password" option should be displayed on the login screen
+        - 2 Upon clicking on the "forgot password" link - a user should be prompted to enter their email address
+        - 3 The email should contain instructions on what user actions are required to reset their password
 
 - Receive an email confirmation after registering so that I can Verify that my account registration was successful
     - Acceptance Criteria:
-        - 1
-        - 2
+        - 1 The email should send automatically to the address specified in the user's signup details
+        - 2 
         - 3
 
 - Have a personalised user profile so that I can View my personal order history and order confirmations, and save my payment information
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 The profile should provide fields for a user's default delivery information
+        - 2 A history of the user's previous orders should also be shown wih dates and costs
+        - 3 There should be an option for a user to update their information 
 
 - Sort the list of available products so that I can Easily identify the best rated, best priced and categorically sorted products
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 Enable the user to sort by price (In both ascending & descending order)
+        - 2 Enable the user to sort by name (in both directions)
+        - 3 Enable the user to sort by category (both ascending and descending)
         
 - Sort a specific category of product so that I can Find the best-priced or best-rated product in a specific category, or sort the products in that category by name
     - Acceptance Criteria:
@@ -248,6 +248,13 @@ With these two broad epics as the overall strategic goal of the project, we are 
 
 
 ## Scope
+
+To deliver the scope of the project, an Agile approach to Software Development has been pursued for the project implementation. There are many useful resources available giving context and perspectives on the advantages of an Agile Software Development practice - including the Agilemanifesto.org and Agilealliance.org which are good starting points, and summarise Agile Software Development as "Individuals and interactions over processes and tools, Working software over comprehensive documentation, Customer collaboration over contract negotiation, and Responding to change over following a plan"
+
+There are many principles and features common to Agile approaches, including, Scrums, Sprints, and Kanban boards - I am currently managing the project scope via multiple kanban boards using Github's built-in Kanban board functionality, with a board for managing the delivery of user stories, and a board for managing the bugs & debugging exercises through the development lifecycle. And work through daily sprints in taking each of the tasks through their stages of completion:
+
+A view of the Kanban board with the user stories having been brought through "To Do", "In Progress", and "Done" columns as follows:
+
 ### Kanban Board
 ### Tasks
 
