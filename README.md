@@ -33,63 +33,149 @@ With these two broad epics as the overall strategic goal of the project, we are 
         - 3
 
 - View individual product details so that I can Identify the price, description, and product rating, product image and available sizes
+    - Acceptance Criteria:
+            - 1
+            - 2
+            - 3
 
 - Quickly Identify deals, clearance items and special offers so that I can Take advantage of special savings on products I'd like to purchase
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
 
 - Easily view the total of my purchases at any time so that I can Avoid spending too much
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
 
 - Easily register for an account so that I can Have a personal account and be able to view my profile
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
 
 - Easily login or logout so that I can Access my personal account information
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
 
 - Easily recover my password in case I forget it so that I can Recover access to my account
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
 
 - Receive an email confirmation after registering so that I can Verify that my account registration was successful
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
 
 - Have a personalised user profile so that I can View my personal order history and order confirmations, and save my payment information
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
 
 - Sort the list of available products so that I can Easily identify the best rated, best priced and categorically sorted products
-
-- Sort a specific category of product so that I can Find the best-priced or best-rated product in a specific category, or sort the products in that category by name
-
-- Sort multiple categories of products simulataneously so that I can Find the best-priced or best-rated product across broad categories such as "nutrition" or "apparrell"
-
-- Search for a product by name or description so that I can Find a specific product I'd like to purchase
-
-- Easily see what I've searched for and the number of results so that I can Quickly decide whether the product I want is available
-
-- Easily selects the size and quantity of a product when purchasing it so that I can Ensure I don't accidentally select the wrong product, quantity or size
-
-- View items in my bag to be purchased so that I can Identify the total cost of my purchase and all items I will receive
-
-- Adjust the quantity of individual items in my bag so that I can Easily make changes to my purchase before checkout
-
-- Easily enter my payment information so that I can Check out quickly and with no hassles
-
-- Feel my personal and payment information is safe and secure so that I can Confidently provide the needed information to make a purchase
-
-- View an order confirmation after checkout so that I can Verify that I haven't made any mistakes 
-
-- Receive an email confirmation after checking out so that I can Keep the confirmation of what I've purchased for my records
-
-- Add a product so that I can Add new items to my store
-
-- Edit/Update a product so that I can Change product Prices, descriptions, images, and other product criteria
-
-- Delete a product so that I can Remove items that are no longer for sale
-
-
-
-
-
-### *As a site administrator I can:*
-- Have full CRUD (Create, Read, Update, Delete) abilities so that I can manage the content of the blog website app
     - Acceptance Criteria:
-        - An administrator can Create users, comments, and likes from the administration area
-        - An administrator can Read users, comments, and likes from the administration area
-        - An administrator can Update users, comments, and likes from the administration area
-        - An administrator can Delete users, comments, and likes from the administration area
-        - Deletion of an Article should also delete the comments and likes associated with the Article
+        - 1
+        - 2
+        - 3
+        
+- Sort a specific category of product so that I can Find the best-priced or best-rated product in a specific category, or sort the products in that category by name
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+        
+- Sort multiple categories of products simulataneously so that I can Find the best-priced or best-rated product across broad categories such as "nutrition" or "apparrell"
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+        
+- Search for a product by name or description so that I can Find a specific product I'd like to purchase
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+        
+- Easily see what I've searched for and the number of results so that I can Quickly decide whether the product I want is available
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+        
+- Easily selects the size and quantity of a product when purchasing it so that I can Ensure I don't accidentally select the wrong product, quantity or size
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+        
+- View items in my bag to be purchased so that I can Identify the total cost of my purchase and all items I will receive
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+        
+- Adjust the quantity of individual items in my bag so that I can Easily make changes to my purchase before checkout
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+        
+- Easily enter my payment information so that I can Check out quickly and with no hassles
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+        
+- Feel my personal and payment information is safe and secure so that I can Confidently provide the needed information to make a purchase
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+        
+- View an order confirmation after checkout so that I can Verify that I haven't made any mistakes 
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+        
+- Receive an email confirmation after checking out so that I can Keep the confirmation of what I've purchased for my records
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+        
+
+        
+
+
+
+
+### *As a store owner I can:*
+- Add a product so that I can Add new items to my store
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+        
+- Edit/Update a product so that I can Change product Prices, descriptions, images, and other product criteria
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+        
+- Delete a product so that I can Remove items that are no longer for sale
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
 
 ### **Epic 2 - Fitness App Community - User Story Mapping:**
 
