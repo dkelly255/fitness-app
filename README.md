@@ -30,42 +30,37 @@ With these two broad epics as the overall strategic goal of the project, we are 
 ### **Epic 1 - Ecommerce Website App - User Story Mapping:**
 
 ### *As a shopper I can:*
+
 - View a list of products so that I can select some to purchase
     - Acceptance Criteria:
         - 1 The product listing should display the products' price
         - 2 The product listing should display the products' name
         - 3 The product image should be clickable to bring the shopper to the individual product details
-
 - View individual product details so that I can Identify the price, description, and product rating, product image and available sizes
     - Acceptance Criteria:
             - 1 The product details should contain an "add to bag" button allowing the shopper to add the product to their bag
             - 2 The image should be large enough to give the shopper a good feel for the item being assessed
             - 3 The product details screen should contain a more in-depth description of the item to give the shopper context and information on the product
-
 - Easily view the total of my purchases at any time so that I can Avoid spending too much
     - Acceptance Criteria:
         - 1 The shopping bag link should be viewable at all times on all site pages with the bag's current total cost also displayed
         - 2 There should be a link to take the user to the secure checkout feature if the user has completed their shopping
         - 3 The shopper should be able to easily modify the quantity of an item in their bag, or delete the item if required
-
 - Easily register for an account so that I can Have a personal account and be able to view my profile
     - Acceptance Criteria:
         - 1 The registration template should request an email, username and password
         - 2 Upon clicking on the signup button, a user should receive a confirmation that their account setup is underway
         - 3 The signup screen should also contain a direct link to the `Sign In` link, in case a user has arrived at the signup screen by mistake
-
 - Easily login or logout so that I can Access my personal account information
     - Acceptance Criteria:
         - 1 The login screen should contain a forgot password option
         - 2 The login screen should also contain a "remember me" option and a direct link to the home page
         - 3 The login screen should function as expected
-
 - Easily recover my password in case I forget it so that I can Recover access to my account
     - Acceptance Criteria:
         - 1 A "forgot password" option should be displayed on the login screen
         - 2 Upon clicking on the "forgot password" link - a user should be prompted to enter their email address
         - 3 The email should contain instructions on what user actions are required to reset their password
-
 - Receive an email confirmation after registering so that I can Verify that my account registration was successful
     - Acceptance Criteria:
         - 1 The email should send automatically to the address specified in the user's signup details
@@ -108,47 +103,47 @@ With these two broad epics as the overall strategic goal of the project, we are 
         - 2 Each product search result should be consistent with the original product listing style & layout
         - 3 The search results should enable the user to click into the detail of any of the products returned
         
-- Easily selects the size and quantity of a product when purchasing it so that I can Ensure I don't accidentally select the wrong product, quantity or size
+- Easily select the size and quantity of a product when purchasing it so that I can Ensure I don't accidentally select the wrong product, quantity or size
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 The product detail screen should enable selection of product size and quantity
+        - 2 The product size selector should be a drop-down menu listing all available sizes
+        - 3 The Product quantity selector should be an incrementor allowing the user to enter quantities as required
         
 - View items in my bag to be purchased so that I can Identify the total cost of my purchase and all items I will receive
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 The shopping bag screen should show a summary of the shopping bag contents
+        - 2 The user should be able to update quantities of items in their shopping bag
+        - 3 The user should also have the ability to remove items from their bag if they wish
         
 - Adjust the quantity of individual items in my bag so that I can Easily make changes to my purchase before checkout
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 The quantity selector in the shopping bag should allow the user to either manually type or use a selector to specify the quantity
+        - 2 The quantity selector should not accept bogus values (for example negative values)
+        - 3 Upon update of the quantity, the shopping bag total should automatically update appropriately
         
-- Easily enter my payment information so that I can Check out quickly and with no hassles
+- Easily enter my payment information so that I can Check out quickly and with no hassle
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 The payment card input details area should be intuitive and easy to use
+        - 2 Appropriate error message guidance should be provided to the user in the event of incorrect details being supplied
+        - 3 The "Complete Order" button should be easily viewable and work as intended
         
 - Feel my personal and payment information is safe and secure so that I can Confidently provide the needed information to make a purchase
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 All user information should be password protected to ensure safety and confidentiality
+        - 2 There should be an option for a user to "remember the details" so that their details pre-populate each time they make a purchase
+        - 3 Placeholder text should be present in each field in the details section to allow for a positive UX
         
 - View an order confirmation after checkout so that I can Verify that I haven't made any mistakes 
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 Display the order number and date
+        - 2 The details of the products purchased should also be shown on the order confirmation
+        - 3 Include the total price that was charged to the user's payment method, including the breakdown of delivery charges
         
 - Receive an email confirmation after checking out so that I can Keep the confirmation of what I've purchased for my records
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 The email should send automatically in conjunction with the completion of the user's payment
+        - 2 The email should include details of what the user has purchased and the date/time
+        - 3 The email should give the customer information on where they should go if they have queries on their order
         
 ### *As a store owner I can:*
 - Add a product so that I can Add new items to my store
