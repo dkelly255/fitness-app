@@ -1,17 +1,28 @@
 # Fitness App
 
- Heroku deployed (deployment link [here](https://fitness-app-p5.herokuapp.com/)) Full-Stack E-commerce Application with authentication mechanism & paid access to the site's merchandise and workout programmes
+ FitnessApp is a [Heroku deployed](https://fitness-app-p5.herokuapp.com/) Full-Stack E-commerce Application with authentication mechanisms & paid access to the site's merchandise. 
 
-![Title](Readme/home.png)
+![Title](Readme/amiresponsive.png)
 
 ![Mockup](Readme/mockup.png)
 
 Business Model
 Purpose of business, any marketing strategies - using facebook
 
-# UX
+# SECTION 1: UX
+
+I have designed the site using the five planes of UX approach, each of which is reviewed in detail in the following sections
 
 ## Strategy
+The strategy for the site is to offer a resource to users interested in Fitness where they can purchase Clothing and Nutrition, and can have the ability to participate in a community discussing their own topics, comments, and replies and to engage within a broader community of members and customers.
+
+The strategic aim of the site is to deliver the following Epics:
+
+Epic 1 - Create an Ecommerce Website App to allow users to purchase fitness apparrell and nutritional products
+Epic 2 - Create a community within the website to enhance the business brand and encourage members to purchase more products from the store
+
+With these two broad epics as the overall strategic goal of the project, we are then able to refine the epics into the following User Stories, each of which must have a clearly defined set of Acceptance Criteria:
+
 ### Epics
 ### User Stories
 
