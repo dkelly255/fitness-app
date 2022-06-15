@@ -86,27 +86,27 @@ With these two broad epics as the overall strategic goal of the project, we are 
         
 - Sort a specific category of product so that I can Find the best-priced or best-rated product in a specific category, or sort the products in that category by name
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 Enable the user to sort by price (In both ascending & descending order)
+        - 2 Enable the user to sort by name (in both directions)
+        - 3 Enable the user to sort by category (both ascending and descending)
         
 - Sort multiple categories of products simulataneously so that I can Find the best-priced or best-rated product across broad categories such as "nutrition" or "apparrell"
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 The products should be displayed in their correct sequence upon completion of the search
+        - 2 The search should be possible in either direction - ascending or descending
+        - 3 The multiple category search should function as expected
         
 - Search for a product by name or description so that I can Find a specific product I'd like to purchase
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 The search bar should be accessible at the top of all site pages
+        - 2 The search bar should contain placeholder text "Search Here" and a search icon to promote a positive User Experience
+        - 3 The search should return the correct listing of products
         
 - Easily see what I've searched for and the number of results so that I can Quickly decide whether the product I want is available
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 The search results should be displayed on a new screen 
+        - 2 Each product search result should be consistent with the original product listing style & layout
+        - 3 The search results should enable the user to click into the detail of any of the products returned
         
 - Easily selects the size and quantity of a product when purchasing it so that I can Ensure I don't accidentally select the wrong product, quantity or size
     - Acceptance Criteria:
