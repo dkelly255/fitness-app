@@ -4,7 +4,7 @@
 
 ![Title](Readme/amiresponsive.png)
 
-![Mockup](Readme/mockup.png)
+
 
 Business Model
 Purpose of business, any marketing strategies - using facebook
@@ -14,7 +14,11 @@ Purpose of business, any marketing strategies - using facebook
 I have designed the site using the five planes of UX approach, each of which is reviewed in detail in the following sections
 
 ## 1. Strategy
-The strategy for the site is to offer a resource to users interested in Fitness where they can purchase Clothing and Nutrition, and can have the ability to participate in a community discussing their own topics, comments, and replies and to engage within a broader community of members and customers.
+The ecommerce strategy for the site is to offer a business-to-customer (B2C) resource to users interested in Fitness where they can purchase Clothing and Nutrition, and can have the ability to participate in a community discussing their own topics, comments, and replies and to engage within a broader community of members and customers.
+
+As part of the E-Commerce strategy a facebook business page for the site has been designed and developed per below to aid with increasing the business' brand reach and to suuport with both developing new customers and retaining existing customers:
+
+![Mockup](Readme/mockup.png)
 
 The strategic aim of the site is to deliver the following **Epics**:
 
