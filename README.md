@@ -152,12 +152,6 @@ With these two broad epics as the overall strategic goal of the project, we are 
         - 2
         - 3
         
-
-        
-
-
-
-
 ### *As a store owner I can:*
 - Add a product so that I can Add new items to my store
     - Acceptance Criteria:
@@ -178,6 +172,81 @@ With these two broad epics as the overall strategic goal of the project, we are 
         - 3
 
 ### **Epic 2 - Fitness App Community - User Story Mapping:**
+
+### *As a forum member I can:*
+- Create a discussion topic so that I can Get advice and input from other members and customers on the topic
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+
+- Edit a discussion topic so that I can Remove typographical errors or change an out of date subject
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+
+
+- Delete a discussion topic so that I can Remove the topic from the website if required
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+
+- Create a comment so that I can Add a comment to a discussion topic created by myself or others
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+
+- Edit a comment so that I can Add or remove content from my original comment or correct errors
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+
+- Delete a comment so that I can Remove the comment from the website if required
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+
+- Create a reply so that I can Reply to a comment in a discussion topic created by myself or others
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+
+- Edit a reply so that I can Add or remove content from my original reply or correct errors
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+
+- Delete a reply so that I can Remove the reply from the website if required
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+
+- View current discussion topics so that I can Easily see the current inventory of discussion topics available on the forum
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+
+- View a list of comments and replies so that I can See how the discussion has progressed to date to determine what I should add to the topic
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+
+- View a record of my forum actvities  so that I can Easily see my activity in terms of topics I have created, as well as comments and replies I have left
+    - Acceptance Criteria:
+        - 1
+        - 2
+        - 3
+
 
 
 ## Scope
