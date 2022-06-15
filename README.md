@@ -64,8 +64,8 @@ With these two broad epics as the overall strategic goal of the project, we are 
 - Receive an email confirmation after registering so that I can Verify that my account registration was successful
     - Acceptance Criteria:
         - 1 The email should send automatically to the address specified in the user's signup details
-        - 2 
-        - 3
+        - 2 The email should include details of the user's username and the date & time
+        - 3 The email should give the customer information on where they should go if they have queries on their account
 
 - Have a personalised user profile so that I can View my personal order history and order confirmations, and save my payment information
     - Acceptance Criteria:
@@ -148,21 +148,21 @@ With these two broad epics as the overall strategic goal of the project, we are 
 ### *As a store owner I can:*
 - Add a product so that I can Add new items to my store
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 The interface should be on the front end (not the admin/back-end) and easy to use
+        - 2 All appropriate product fields should be included in the form
+        - 3 The screen should be appropriately protected to prevent unauthorised users from gaining access
         
 - Edit/Update a product so that I can Change product Prices, descriptions, images, and other product criteria
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 The edit optiopn should be clearly visible beside each product
+        - 2 The option should be viewable only to users with the correct level of authentication and authorisation
+        - 3 There should also be an option for the user to cancel their update if it is no longer required
         
 - Delete a product so that I can Remove items that are no longer for sale
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 The delete option should be clearly visible beside each product
+        - 2 The option should be viewable only to users with the correct level of authentication and authorisation
+        - 3 As part of defensive design principles - There should be a warning presented to a user upon selecting the deletion option to prevent inadvertent deletion
 
 ### **Epic 2 - Fitness App Community - User Story Mapping:**
 
