@@ -147,13 +147,13 @@ With these two broad epics as the overall strategic goal of the project, we are 
         - 2 The email should include details of what the user has purchased and the date/time
         - 3 The email should give the customer information on where they should go if they have queries on their order
 
-- Submit an enquiry to the store management about any issues or questions I may have relating to the site via the `Contact Us` page
+- Submit an enquiry to the store management so that I can get support for any issues or questions I may have relating to the site via the `Contact Us` page
     - Acceptance Criteria:
             - 1 The form should allow me to enter my name, email address, and provide the details of my enquiry
             - 2 The form should be available to anonymous shoppers/users, as well as users logged in
             - 3 If a user is logged in while accessing the form, their name & email should pre-populate (Positive UX)
 
-- Sign Up to the Fitness App Newsletter by entering my details in the Newsletter form in the site footer
+- Sign Up to the Fitness App Newsletter so that I can get information on deals and offers by entering my details in the Newsletter form in the site footer
     - Acceptance Criteria:
             - 1 The form should allow me to enter my email address to specify where the newsletter should be sent
             - 2 I should have to consent to the site Privacy statement before being accepted into the newsletter distribution
@@ -178,7 +178,7 @@ With these two broad epics as the overall strategic goal of the project, we are 
         - 2 The option should be viewable only to users with the correct level of authentication and authorisation
         - 3 As part of defensive design principles - There should be a warning presented to a user upon selecting the deletion option to prevent inadvertent deletion
 
-- View a list of enquiries submitted via the `Contact Us` form page
+- View a list of enquiries submitted so that I can address and manage them via the `Contact Us` form page
     - Acceptance Criteria:
         - 1 The enquiry log should be secured and protected against unauthorised access
         - 2 Each enquiry should be shown along with the key fields and data
@@ -200,7 +200,7 @@ With these two broad epics as the overall strategic goal of the project, we are 
         - 3 My permitted CRUD actions should be displayed 
         - 4 The list of comments & replies should be paginated to prevent excessive scrolling for the user
 
-- View a record of my forum actvities  so that I can Easily see my activity in terms of topics I have created, as well as comments and replies I have left
+- View a record of my forum actvities so that I can Easily see my activity in terms of topics I have created, as well as comments and replies I have left
     - Acceptance Criteria:
         - 1 The activity summary should show a list of all topics created by the user, together with key details and permitted CRUD actions
         - 2 A list of all comments left by the user, together with key details and permitted CRUD actions should also be shown
@@ -260,8 +260,6 @@ With these two broad epics as the overall strategic goal of the project, we are 
         - 1 I should only be permitted to delete replies which I have created
         - 2 There should be a warning presented upon clicking the delete button to ensure the deletion is warranted
         - 3 Upon deletion of the reply, the parent comment and topic should be un-impacted
-
-
 
 
 ## Scope
