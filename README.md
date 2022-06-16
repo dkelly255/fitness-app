@@ -144,6 +144,12 @@ With these two broad epics as the overall strategic goal of the project, we are 
         - 1 The email should send automatically in conjunction with the completion of the user's payment
         - 2 The email should include details of what the user has purchased and the date/time
         - 3 The email should give the customer information on where they should go if they have queries on their order
+
+- Submit an enquiry to the store management about any issues or questions I may have relating to the site via the `Contact Us` page
+    - Acceptance Criteria:
+            - 1 The form should allow me to enter my name, email address, and provide the details of my enquiry
+            - 2 The form should be available to anonymous shoppers/users, as well as users logged in
+            - 3 If a user is logged in while accessing the form, their name & email should pre-populate to contribute to a positive UX
         
 ### *As a store owner I can:*
 - Add a product so that I can Add new items to my store
@@ -163,6 +169,13 @@ With these two broad epics as the overall strategic goal of the project, we are 
         - 1 The delete option should be clearly visible beside each product
         - 2 The option should be viewable only to users with the correct level of authentication and authorisation
         - 3 As part of defensive design principles - There should be a warning presented to a user upon selecting the deletion option to prevent inadvertent deletion
+
+- View a list of enquiries submitted via the `Contact Us` form page
+    - Acceptance Criteria:
+        - 1 The enquiry log should be secured and protected against unauthorised access
+        - 2 Each enquiry should be shown along with the key fields and data
+        - 3 There should be an option to mark an enquiry as "closed" upon successfully actioning it
+
 
 ### **Epic 2 - Fitness App Community - User Story Mapping:**
 
