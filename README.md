@@ -29,18 +29,20 @@ With these two broad epics as the overall strategic goal of the project, we are 
 
 ### **Epic 1 - Ecommerce Website App - User Story Mapping:**
 
-### *As a shopper I can:*
 
-- View a list of products so that I can select some to purchase
+### *As a shopper I can:*
+- View a list of products so that I can select some to purchase:
     - Acceptance Criteria:
         - 1 The product listing should display the products' price
         - 2 The product listing should display the products' name
         - 3 The product image should be clickable to bring the shopper to the individual product details
+
 - View individual product details so that I can Identify the price, description, and product rating, product image and available sizes
     - Acceptance Criteria:
             - 1 The product details should contain an "add to bag" button allowing the shopper to add the product to their bag
             - 2 The image should be large enough to give the shopper a good feel for the item being assessed
             - 3 The product details screen should contain a more in-depth description of the item to give the shopper context and information on the product
+
 - Easily view the total of my purchases at any time so that I can Avoid spending too much
     - Acceptance Criteria:
         - 1 The shopping bag link should be viewable at all times on all site pages with the bag's current total cost also displayed
@@ -149,7 +151,13 @@ With these two broad epics as the overall strategic goal of the project, we are 
     - Acceptance Criteria:
             - 1 The form should allow me to enter my name, email address, and provide the details of my enquiry
             - 2 The form should be available to anonymous shoppers/users, as well as users logged in
-            - 3 If a user is logged in while accessing the form, their name & email should pre-populate to contribute to a positive UX
+            - 3 If a user is logged in while accessing the form, their name & email should pre-populate (Positive UX)
+
+- Sign Up to the Fitness App Newsletter by entering my details in the Newsletter form in the site footer
+    - Acceptance Criteria:
+            - 1 The form should allow me to enter my email address to specify where the newsletter should be sent
+            - 2 I should have to consent to the site Privacy statement before being accepted into the newsletter distribution
+            - 3 The signup form should be available on all site pages via the footer
         
 ### *As a store owner I can:*
 - Add a product so that I can Add new items to my store
@@ -176,22 +184,40 @@ With these two broad epics as the overall strategic goal of the project, we are 
         - 2 Each enquiry should be shown along with the key fields and data
         - 3 There should be an option to mark an enquiry as "closed" upon successfully actioning it
 
-
 ### **Epic 2 - Fitness App Community - User Story Mapping:**
 
 ### *As a forum member I can:*
+- View a list of current discussion topics so that I can Easily see the extent of discussion topics available on the forum
+    - Acceptance Criteria:
+        - 1 The list should show each topic title, author and creation date
+        - 2 The list should be paginated to prevent excessive quantities of topics and scrolling
+        - 3 Each topic should contain a number of actions the user is permitted to undertake depending on their authorisation & authentication level
+
+- View a list of comments and replies so that I can See how the discussion has progressed to date to determine what I should add to the topic
+    - Acceptance Criteria:
+        - 1 I should be able to access the list of comments and replies by clicking on the topic title
+        - 2 The comment/reply detail (topic detail) screen should show me each comment and reply along with author and date
+        - 3 My permitted CRUD actions should be displayed 
+        - 4 The list of comments & replies should be paginated to prevent excessive scrolling for the user
+
+- View a record of my forum actvities  so that I can Easily see my activity in terms of topics I have created, as well as comments and replies I have left
+    - Acceptance Criteria:
+        - 1 The activity summary should show a list of all topics created by the user, together with key details and permitted CRUD actions
+        - 2 A list of all comments left by the user, together with key details and permitted CRUD actions should also be shown
+        - 3 The activity summary should show a list of all replies left by the user, together with key details and permitted CRUD actions
+        - 4 All lists should be appropriately paginated
+
 - Create a discussion topic so that I can Get advice and input from other members and customers on the topic
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 The button to create a topic should be clearly shown to the user at the top of the forum welcome page
+        - 2 This should bring the user to a new form prompting the user to enter their topic title
+        - 3 As part of defensive design principles, the field should not permit blank values before submission
 
 - Edit a discussion topic so that I can Remove typographical errors or change an out of date subject
     - Acceptance Criteria:
         - 1
         - 2
         - 3
-
 
 - Delete a discussion topic so that I can Remove the topic from the website if required
     - Acceptance Criteria:
@@ -235,23 +261,6 @@ With these two broad epics as the overall strategic goal of the project, we are 
         - 2
         - 3
 
-- View current discussion topics so that I can Easily see the current inventory of discussion topics available on the forum
-    - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
-
-- View a list of comments and replies so that I can See how the discussion has progressed to date to determine what I should add to the topic
-    - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
-
-- View a record of my forum actvities  so that I can Easily see my activity in terms of topics I have created, as well as comments and replies I have left
-    - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
 
 
 
