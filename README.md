@@ -270,7 +270,23 @@ There are many principles and features common to Agile approaches, including, Sc
 
 A view of the Kanban board with the user stories having been brought through "To Do", "In Progress", and "Done" columns as follows:
 
-### Kanban Board
+### (i) Kanban Board 1 - User Stories [Link](https://github.com/dkelly255/fitness-app/projects/1)
+
+![Title](Readme/kanban1.png)
+
+From an Agile development perspective, the User Stories are also classified using the MoSCoW prioritisation technique, with each user story being attributed a category in terms of being either `Must-Have`, `Should-Have`, `Could-Have` and `Won't-Have`:
+
+![Title](Readme/labels.png)
+
+### (ii) Kanban Board 2 - User Stories [Link](https://github.com/dkelly255/fitness-app/projects/2)
+
+![Title](Readme/kanban2.png)
+
+Additionally, each individual User Story on the board can be drilled into for a detailed description of both the User Story and the clearly defined acceptance criteria associated with the atomic scope being implemented via that User Story - an example is shown below:
+
+![Title](Readme/user-story.png)
+
+
 ### Tasks
 
 ## Structure
