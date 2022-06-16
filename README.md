@@ -4,11 +4,6 @@
 
 ![Title](Readme/amiresponsive.png)
 
-
-
-Business Model
-Purpose of business, any marketing strategies - using facebook
-
 # SECTION 1: UX
 
 I have designed the site using the five planes of UX approach, each of which is reviewed in detail in the following sections
@@ -447,8 +442,47 @@ Additionally, each individual User Story on the board can be drilled into for a 
 # Features
 
 # Testing
-## Manual Testing
-## Automated Testing
+
+## 1. Manual Testing - Site Visitor Workflows:
+
+The key tests below are part of the manual testing procedures I have followed to prove out the functionality of the primary User-based workflows available within the application:
+
+No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
+ ------------- |------------- | ------------- | ------------ | ------------- | ------------- 
+  1 | Register an account | When clicking the `Sign Up` option, a user should be presented with the sign up form. Upon population of the required fields within the form, the user should  have a newly created account. | User account created as expected | Pass | [Screenshot](readme/testing/test1-signup.png)
+  2 | Log in | Upon clicking the `Login` option from the navigation bar, the `Log In` form should display to the user, prompting a username & password. Upon entering these details, a user should be logged into the site| Log in option & form functions as expected | Pass | [Screenshot](readme/testing/test2-signin.png)
+  3 | "About Us" Page |  Clicking into the `About` menu option should allow a user to view the company story page and to read about the company's purpose and quality | About Page functionality operates as expected | Pass | [Screenshot](readme/testing/test3-openarticle.png)
+  4 | Product Listings | Clicking into the `merchandise` menu option should allow a user to view different summaries of the companies product offerings | Product Listing functionality operates as expected | Pass | [Screenshot](readme/testing/test4-postcomment.png)
+  5 | Product Detail | Clicking the image associated with a product should bring the user to a more detailed information summary of the product - the product detail screen | Product detail functionality operates as expected | Pass | [Screenshot](readme/testing/test5-like.png)
+  6 | Add to Bag | Clicking the `add to bag` button under an product should the item to the shopping bag | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
+  7 | Keep Shopping Button | When clicking on the `Keep Shopping` button on the product details screen, a user should be redirected to the Product listing screen | Functionality operates as expected  | Pass | [Screenshot](readme/testing/test7-signout.png)
+  8 | Product Quantity Selector | The product details screen's Quantity selector option should allow users to increment, decrement, and specify the quantity of the product they wish to add to their shopping bag | Functionality operates as expected | Pass | [Screenshot 1](readme/testing/test8-navbar-1.png) 
+  9 | "Sort By" menu | When a user clicks on the "Sort by" dropdown menu, whilst on the product listing page, the full menu of sorting options should display to the user | Functionality operates as expected | Pass | [Screenshot](readme/testing/test9-polls.png)
+  10 | Individual "Sort By" options | Each of the individual `Sort By` options should work as expected - ascending & descending order across price, rating, name and category | Functionality operates as expected |Pass | [Screenshot](readme/testing/test10-choices.png)
+ 
+
+## 2. Manual Testing - Administrative Workflows:
+
+The tests below are part of the manual testing procedures I have followed to prove out the functionality of the primary Administrator-based workflows available within the application:
+
+No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
+ ------------- |------------- | ------------- | ------------ | ------------- | -------------
+  1 |Create an article | Upon clicking on the `Add Article +` button, an administrator should be able to populate the following form with all of the details required to create and publish a new article. The key fields should include - Title, Slug (which should autopopulate based on the title), Author, Image, Excerpt, the actual article content, and a status - draft or published | The Article creation feature works as expected | Pass | [Screenshot](readme/testing/test1-article-create.png)
+  2 |Delete an article | When an administrator selects a post, and clicks on the dropdown menu to choose the `Delete selected articles` option, a warning screen should present to the user highlighting that the article will be deleted. If the administrator proceeds to click on the `Yes I'm sure` button, the article and all associated comments & likes should be removed from the site | Delete article functionality operates as expected | Pass| [Screenshot](readme/testing/test2-article-delete.png)
+  3 |Approve a comment | If an administrator selects an (unapproved) comment from the comments inventory, and chooses `Approve comments` from the dropdown menu, the comment should then appear for viewing under the article it was submitted against on the live website, with a date & timestamp | Approve comments functionality works per expectations | Pass | [Screenshot](readme/testing/test3-comment-approve.png)
+  4 |Delete a comment | If an administrator selects a comment (either approved or unapproved) from the comments inventory, and chooses `Delete Selected Comments` from the dropdown menu, a warning screen should display asking for a confirmation that this action is required. If the `Yes, I'm sure` button is clicked, then the comment should then be removed from the article it was submitted against | Delete comments functionality works as expected | Pass | [Screenshot](readme/testing/test4-comment-delete.png)
+  5 |Add an email address | If an administrator tries to add an email to a username who signed up without an email, they should be allowed to add the email, and should be able to mark the email as either, or both `verified` and `primary` | Functionality works as expected | Pass | [Screenshot](readme/testing/test5-email-add.png)
+  6 |Verify an email address | When an administrator follows the required steps to verify an email address by navigating within the administration pane to Accounts, followed by Email Addresses, and selects an email address - then selects `Mark selected email addresses as verified` from the dropdown menu, the email address should change from unverified status (with a red x icon) to verified (with a green tick icon) |Email address verification feature works as expected | Pass | [Screenshot](readme/testing/test6-email-verify.png)
+  7 |Add a user | An administrator should be able to add a user manually to the database by navigating to the `Users` section of the Administration area, and clicking `add`. The following fields should be populated, building out the user's attributes (Username, Password, and password confirmation) and clicking `save`. A prompt should then be displayed to the administrator confirming that the user has been successfully added | Functionality performs as expected | Pass | [Screenshot](readme/testing/test7-user-add.png)
+  8 |Delete a user | When navigating to the `Users` section of the administration dashboard, a user with the correct access should be able to select a username from the available list, and select `Delete selected users` from the dropdown menu. Clicking `Go` should then trigger a warning message to the user, asking if they are sure they wish to proceed with the deletion, and clicking `Yes, I'm sure` should result in the deletion of the selected Username | Delete user functionality works as expected | Pass | [Screenshot](readme/testing/test8-user-delete.png)
+  9 |Change a password | Note - this refers to the password change within the administrative area. By clicking on the `Change password` option from the top right menu in the Administration area, an administrator should be presented with the password change screen, where they can specify a new password after confirming their old password. Confirming the change should result in a confirmation screen that the change was successful | Password change functionality works as expected | Pass | [Screenshot](readme/testing/test9-password-change.png)
+  10 |Create a Question Poll | Upon clicking on the `Add Question +` button, an administrator should be able to populate the following form with all of the details required to create and publish a new article | The Question creation feature works as expected | Pass | [Screenshot](readme/testing/test10-poll-create.png)
+  11 |Create Answer Choices for a Question Poll | Upon clicking on the `Add Choice +` button, an administrator should be able to populate the following form with all of the details required to create and add a new answer choice for poll questions | The answer creation feature works as expected | Pass | [Screenshot](readme/testing/test11-choice-create.png)
+  12 |Edit a Poll Question  | Upon clicking on the `Question` link, and subsequently clicking into the Question required for editing, an administrator should be able to populate the following form with any of the details required to edit an existing Poll Question | The Question edit feature works as expected | Pass | [Screenshot](readme/testing/test12-poll-edit.png)
+  13 |Edit a Poll Answer Choice  | Upon clicking on the `Choice` link, and subsequently clicking into the Choice required for editing, an administrator should be able to populate the following form with any of the details required to edit an existing Poll Question Answer Choice | The Answer Choice edit feature works as expected | Pass | [Screenshot](readme/testing/test13-choice-edit.png)
+  14 |Delete a Poll Question | When an administrator selects a Question, and clicks on the dropdown menu to choose the `Delete selected Questions` option, a warning screen should present to the user highlighting that the Question will be deleted. If the administrator proceeds to click on the `Yes I'm sure` button, the Question and it's associated answer choices should be removed from the site | Delete Question functionality operates as expected | Pass | [Screenshot](readme/testing/test14-poll-delete.png)
+  15 |Delete a Poll Answer Choice | When an administrator selects a Choice, and clicks on the dropdown menu to choose the `Delete selected Choices` option, a warning screen should present to the user highlighting that the Answer Choice will be deleted. If the administrator proceeds to click on the `Yes I'm sure` button, the Answer Choice should be removed from the site | Delete Answer functionality operates as expected | Pass | [Screenshot](readme/testing/test15-answer-delete.png)
+  16 | Default Article Picture Functions | When an article is created, without specifying an image (i.e. leaving the `image` field blank) the default article picture should be used as the image for the article in both the article index view, and the article detail view | Default article picture functionality operates as per expectations | Pass | [Screenshot](readme/testing/test16-default-pic.png)
 
 # Bugs
 ## Resolved Bugs
