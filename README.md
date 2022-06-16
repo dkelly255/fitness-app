@@ -251,15 +251,15 @@ With these two broad epics as the overall strategic goal of the project, we are 
 
 - Edit a reply so that I can Add or remove content from my original reply or correct errors
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 I should only be permitted to edit replies which I have created
+        - 2 The edit reply form should give me a field to change the reply content
+        - 3 The field should pre-populate the previous comment to promote a positive UX 
 
 - Delete a reply so that I can Remove the reply from the website if required
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 I should only be permitted to delete replies which I have created
+        - 2 There should be a warning presented upon clicking the delete button to ensure the deletion is warranted
+        - 3 Upon deletion of the reply, the parent comment and topic should be un-impacted
 
 
 
