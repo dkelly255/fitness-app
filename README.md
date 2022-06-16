@@ -215,39 +215,39 @@ With these two broad epics as the overall strategic goal of the project, we are 
 
 - Edit a discussion topic so that I can Remove typographical errors or change an out of date subject
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 I should only be permitted to edit topics which I have created
+        - 2 The edit topic form should give me a field to change the topic title
+        - 3 The field should pre-populate the previous title to promote a positive UX 
 
 - Delete a discussion topic so that I can Remove the topic from the website if required
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 I should only be permitted to delete topics which I have created
+        - 2 There should be a warning presented upon clicking the delete button to ensure the deletion is warranted
+        - 3 Upon deletion of the topic, all associated comments and replies should also be deleted
 
 - Create a comment so that I can Add a comment to a discussion topic created by myself or others
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 The button to create a comment should be clearly shown to the user at the top of the Topic Detail page
+        - 2 This should bring the user to a new form prompting the user to add their comment content
+        - 3 As part of defensive design principles, the field should not permit blank values before submission
 
 - Edit a comment so that I can Add or remove content from my original comment or correct errors
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 I should only be permitted to edit comments which I have created
+        - 2 The edit comment form should give me a field to change the comment content
+        - 3 The field should pre-populate the previous comment to promote a positive UX 
 
 - Delete a comment so that I can Remove the comment from the website if required
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 I should only be permitted to delete comments which I have created
+        - 2 There should be a warning presented upon clicking the delete button to ensure the deletion is warranted
+        - 3 Upon deletion of the comment, all associated replies should also be deleted
 
 - Create a reply so that I can Reply to a comment in a discussion topic created by myself or others
     - Acceptance Criteria:
-        - 1
-        - 2
-        - 3
+        - 1 The button to create a reply should be clearly shown to the user in the actions field of the comment detail
+        - 2 This should bring the user to a new form prompting the user to add their reply content
+        - 3 As part of defensive design principles, the field should not permit blank values before submission
 
 - Edit a reply so that I can Add or remove content from my original reply or correct errors
     - Acceptance Criteria:
