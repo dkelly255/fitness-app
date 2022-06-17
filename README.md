@@ -285,177 +285,186 @@ Additionally, each individual User Story on the board can be drilled into for a 
 ### Tasks
 
 ## Structure
-### Project Structure - Site Layout:
 
-![Title](Readme/structure.png)
+The website is structured using the Django Framework functionality, with a home page, an articles page, a login option, and a signup page. The home page greets the visitor with a welcome message and links to the main content of the site, the articles page houses the Django Articles, together with the comments that have been posted by other users/viewers.
 
-### **Project Structure - Models**
+The core website data  will be stored in Heroku's PostgreSQL add-on, and website static files and media/images will be stored on the Cloudinary Platform. I have made the decision to store website images on Cloudinary rather than Heroku due to the fact that Heroku is an ephemeral file system, and the Dyno system it utilizes can cause problems in situations where the project has been idle or if it has not been accessed for a certain length of time. Cloudinary is a persistent file store, and will therefore minimise the likelihood of such issues occurring and interrupting or deteriorating the User Experience, ensuring site visitors have less chance of seeing broken image links when browsing the site. In terms of the Cloudinary design choice, it is also less complicated to setup than other persistent file stores (such as Amazon S3 or Microsoft Azure) so will fit well for the scope of this project.
 
-<table>
-    <thead>
-        <tr>
-            <th>App/s</th>
-            <th>Model/s</th>
-            <th>Custom Model?</th>
-            <th>Notes</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Home</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td rowspan=3>Products</td>
-            <td>Category</td>
-            <td>N</td>
-            <td>1. Apparrell 2. Nutrition 3. Cardio-Programme 4. Strength-Programme</td>
-        </tr>
-        <tr>
-            <td>Product</td>
-            <td>N</td>
-            <td> ~10 Apparrell products & ~10 Nutrition products</td>
-        </tr>
-        <tr>
-            <td>Programme</td>
-            <td>Y</td>
-            <td>6 programmes (Beginner, Intermediate & Advanced for Cardio-Programmes & Strength-Programmes)</td>
-        </tr>
-        <tr>
-            <td rowspan=2>Checkout</td>
-            <td>Order</td>
-            <td>N</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>OrderLineItem</td>
-            <td>N</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>Bag</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td rowspan=2>Profile</td>
-            <td>UserProfile</td>
-            <td>N</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>create_or_update_user_profile</td>
-            <td>N</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td rowspan=3>Forum</td>
-            <td>Section</td>
-            <td>Y</td>
-            <td>e.g. General, Announcements, etc - only an admin can create/delete</td>
-        </tr>
-        <tr>
-            <td>Topic (Sits within a Section </td>
-            <td>Y</td>
-            <td>e.g. in general: Welcome to Forum, Forum Rules & guidelines... Users can also create A topic - e.g. "What Programme should I use?")</td>
-        </tr>
-        <tr>
-            <td>Post </td>
-            <td>Y</td>
-            <td>(Users can post within a topic - and can also create, read, edit & delete their own posts)</td>
-        </tr>
-        <tr>
-            <td>Contact</td>
-            <td>Enquiry</td>
-            <td>Y</td>
-            <td>Contact Us section - users can populate & submit a form with their queries if not answered by existing FAQs</td>
-        </tr>
-    </tbody>
-</table>
+## Code Structure
 
-### **Project Structure - Forms**
+### - *Model, View, Template*
 
-<table>
-    <thead>
-        <tr>
-            <th>App/s</th>
-            <th>Form/s</th>
-            <th>Custom Form?</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Home</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td rowspan=2>Products</td>
-            <td>ProductForm</td>
-            <td>N</td>
-        </tr>
-        <tr>
-            <td>ProgrammeForm</td>
-            <td>Y</td>
-        </tr>
-        <tr>
-            <td>Checkout</td>
-            <td>OrderForm</td>
-            <td>N</td>
-        </tr>
-        <tr>
-            <td>Bag</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>Profile</td>
-            <td>UserProfileForm</td>
-            <td>N</td>
-        </tr>
-        <tr>
-            <td rowspan=3>Forum</td>
-            <td>SubForumForm</td>
-            <td>Y</td>
-        </tr>
-        <tr>
-            <td>TopicForm</td>
-            <td>Y</td>
-        </tr>
-        <tr>
-            <td>PostForm</td>
-            <td>Y</td>
-        </tr>
-        <tr>
-            <td>Contact</td>
-            <td>EnquiryForm</td>
-            <td>Y</td>
-        </tr>
-    </tbody>
-</table>
+Generically the project is structured using the "Model, View, Template" software design pattern. 
 
-## Skeleton
-## Surface
+- The Model supports with database management, being a data access layer which primarily handles data. 
+- The Views are used to execute the business logic and interact with the model to carry data and render a template
+- The Templates are the presentation layers, which handle the User Interface aspects of the application.
+
+The diagram below (sourced from [javatpoint.com](https://www.javatpoint.com/django-mvt)) illustrates the MVT structure & control flow used for this project:
+
+![MVT](readme/mvt.png)
+
+### - *Requirements.txt* 
+
+The project structure includes a requirements.txt in keeping with Python Standards & best practices - as per this overview from [idkrtm.com](https://www.idkrtm.com/what-is-the-python-requirements-txt/), the requirements.txt file is used for specifying which Python packages are required to run the overall project.
+
+The current packages and dependencies list for the project are shown below:
+
+![Requirements](readme/requirements.png)
+
+### - *Procfile*
+
+A Procfile is also an integral element of the project structure - as per the overview in [medium.com](https://medium.com/@bennettgarner/deploying-django-to-heroku-procfile-static-root-other-pitfalls-e7ab8b2ba33b) - the Procfile is a file in the project's root directory that tells Heroku how the application should start and run - in this case, via a Gunicorn server.
+
+
+## Database Structure & Schema
+
+### 1. Website App
+
+The website app's content will utilise a simple database structure, consisting of two main models - one for the Articles about Django topics, and one for the comments that users can add to those articles
+
+The Entity Relationship Diagram for the Articles Table is shown below, with the field names, types, and key status. 
+
+Note the Foreign Key will be the "Author" field, and that the "Likes" field will also need to have a many to many relationship:
+
+![Articles table ERD](readme/erd_articles.png)
+
+The Entity Relationship Diagram for the Comments Table is shown below, with the field names, types, key status, and additional information. 
+
+Note the Foreign Key will be the "Post" field, and that this will need to cascade on delete, so that when a post is removed, the comments on that post are also removed, that is, the deletion is cascaded through the models.
+
+![Comments table ERD](readme/erd_comments.png)
+
+### 2. Poll App
+
+The poll app's content will also be implemented via a relatively simple database structure, consisting of two main models - one for the Poll Questions, and one for the choices that users can vote for under each of these questions
+
+The Entity Relationship Diagram for the `Questions` Table is shown below, with the field names, types, and key status:
+
+![Questions table ERD](readme/erd_questions.png)
+
+The Entity Relationship Diagram for the `Choices` Table is shown below, with the field names, types, key status, and additional information. 
+
+Note the Foreign Key will be the "Question" field, and that this will need to cascade on delete, so that when a Question is removed, the choices for that question are also removed, that is, the deletion is cascaded through the models.
+
+![Choices table ERD](readme/erd_choices.png)
+
+### - Project Directory Renaming
+
+Please note - I originally started this project as a Fantasy Football Content website but during development it has subsequently evolved into a blog about Django - primarily due to the quantity of content and material I was researching in relation to learning the framework, I found that writing articles about Django helped contribute to, and accelerate, the learning process. 
+
+Whilst it was not critical to the application's functionality, from a completeness perspective, and from a learning-experience perspective, I wanted to understand how the process of renaming a Django project would work if it were to be undertaken, and what the potential pitfalls would be. 
+
+Through consultation with our fortnightly Group Stand-Up facilitator, and from watching the linked [How To Change The Name Of A Django Project](https://www.youtube.com/watch?v=ko83PEvotNI&t=1s) instructional video from [Master Code Online](https://www.youtube.com/channel/UCbhm6TbMBTWn_GxrIbPFapA), I was able to successfully rename the project, across all elements of the directory structure, and the Heroku deployment. A snapshot of some of the key aspects of mapping exercise I undertook to successfullyrename the project directory structure is illustrated below:
+
+![renaming](readme/renaming.png)
+
+
+### - Production Database - PostgreSQL:
+
+The database system used for the models in production is an application known as [PostgreSQL](https://www.postgresql.org/). 
+
+As illustrated in this overview at [postgresqltutorial.com](https://www.postgresqltutorial.com/what-is-postgresql/) - PostgreSQL is an advanced, enterprise-class, open-source relational database system, which supports both relational querying, and is compatible with most popular programming languages (including Python) and is therefore ideal for the requirements of this project.
+
+### - Development Database - SQLite3:
+
+The database system used for the models in testing and development is an application known as [SQLite3](https://www.sqlite.org/index.html). 
+
+As illustrated in this overview at [Python.org](https://docs.python.org/3/library/sqlite3.html) - SQLite3 a C library that provides a lightweight disk-based database that doesn’t require a separate server process and allows accessing the database using a nonstandard variant of the SQL query language, and is typically used in Django Applications for testing & development.
+
+Note - for more information, please see the `Testing` and `Bugs` readme sections for more detail on the two databases - SQLite3 and PostgreSQL and changing between the two.
+
+### - Crispy Forms
+
+The project structure also utilises an application known as [CrispyForms](https://django-crispy-forms.readthedocs.io/en/latest/) to enable controlling the rendering behaviour of the key forms within the application.
+
+As per this overview article at [merixstudio.com](https://www.merixstudio.com/blog/django-crispy-forms-what-are-they-about/) Django-crispy-forms is an application that helps to manage Django forms and allows adjusting forms' properties (such as method, send button or CSS classes) on the backend without having to re-write them in the template.
+
+### - Summernote
+
+Summernote is used as an editor for the article functionality within the site. The Summernote [website](https://summernote.org/) contains comprehensive & useful documentation on the editor - for the purposes of this project's structure - it is used as a "WYSIWYG" (What You See Is What You Get) editor, due to it's simple & easy-to-use nature.
+
+## 4. Skeleton
+
+The wireframes below illustrate the skeleton of the site, including the home page, login page, signup page, together with the various nav bars and footers that underpin the site structure:
+
+- Wireframe 1 - Home Page
+
+![Home page](readme/wireframe-home.png)
+
+- Wireframe 2 - Article detail & comments 
+
+![Article page](readme/wireframe-article.png)
+
+- Wireframe 3 - Signup Page
+
+![Article page](readme/wireframe-signup.png)
+
+- Wireframe 4 - Login page
+
+![Article page](readme/wireframe-login.png)
+
+- Wireframe 5 - Administration page
+
+![Article page](readme/wireframe-admin.png)
+
+
+## 5. Surface
+
+I have used the Bootstrap framework to build the Surface of the website, with the following design choices helping to deliver the optimum user experience:
+
+- Typography
+
+For the Fonts on the site I am primarily using [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto) for site content - As per the overview on Google Fonts [linked](https://fonts.google.com/specimen/Roboto?query=roboto), Roboto has a dual nature, with a mechanical skeleton and the forms are largely geometric. At the same time, the font features friendly and open curves. While some grotesques distort their letterforms to force a rigid rhythm, Roboto doesn’t compromise, allowing letters to be settled into their natural width. This makes for a more natural reading rhythm more commonly found in humanist and serif types.
+
+![Roboto](readme/roboto.png)
+
+The [Lato](https://fonts.google.com/specimen/Lato?query=lato) font is also used - and is a sans serif typeface family started in the summer of 2010 by Warsaw-based designer Łukasz Dziedzic (“Lato” means “Summer” in Polish):
+
+![Lato](readme/lato.png)
+
+- Imagery
+
+I am using Django related imagery throughout the Surface layer of the site, to help with promoting a positive User Experience for the target audience. The imagery is primarily consisted of different Django-related pictures & diagrams. The site's background image is also selected due to it's relevance to coding, and having a similar color palette that matches with the site's surface. The background image was sourced from [pexels.com](https://www.pexels.com/) and is fully acknowledged in the credits section of this readme document. Some examples of the site imagery are shown below:
+
+![Imagery](readme/imagery.png)
+
+- Color Palette
+
+As part of the surface layer of the website's user experience, I wanted to use a green color palette as part of the site's theme - Bootstrap has a large array of color-schemes & themes to choose from, illustrated in the screenshot below:
+
+![Imagery](readme/bootstrap_color.png)
+
+A deeper dive on the Green color scheme allows many different shades, hues, and opacities depending on the user's needs, for the majority of the site's surface I am using the default shade of green (code #198754 & its' derivations) - shown below:
+
+![Imagery](readme/bootstrap_color_green.png)
+
+- Iconography
+
+I have utilised the functionality available through the [Fontawesome](https://fontawesome.com/) suite to embed the site's icons, this helps emphasise important elements of the site, and to help with generating a positive emotional response with the site users. 
+
+![alt text](readme/iconography.png)
+
+Additionally I have added a favicon, which displays at the top of all the site's pages in the browser tabs via the head element of the HTML to help with the User Experience & create a professional feel when browsing:
+    
+![alt text](static/images/favicon.png)
 # Features
 
 # Testing
 
 ## 1. Manual Testing - Site Visitor Workflows:
 
-The key tests below are part of the manual testing procedures I have followed to prove out the functionality of the primary User-based workflows available within the application:
+The key tests below are part of the manual testing procedures I have followed to prove out the functionality of the primary workflows available to shoppers, ommunity members, and store owners within the application:
 
-Authorisation & authentication Testing:
+  **Authorisation & authentication Testing:**
 
-No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
- ------------- |------------- | ------------- | ------------ | ------------- | ------------- 
+  No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
+  ------------- |------------- | ------------- | ------------ | ------------- | ------------- 
   1 | Register an account | When clicking the `Sign Up` option, a user should be presented with the sign up form. Upon population of the required fields within the form, the user should  have a newly created account. | User account created as expected | Pass | [Screenshot](readme/testing/test1-signup.png)
   2 | Log in | Upon clicking the `Login` option from the navigation bar, the `Log In` form should display to the user, prompting a username & password. Upon entering these details, a user should be logged into the site| Log in option & form functions as expected | Pass | [Screenshot](readme/testing/test2-signin.png)
   3 | Log out | Upon clicking the `Logout` option from the navigation bar, a user should be promted to confirm they wish to logout, and upon confirmation, they should be logged out of the site | Functionality operates as expected|Pass | [Screenshot](readme/testing/test2-signin.png)
   
-  Basic Site functionality Testing:
+  **Basic Site functionality Testing:**
   
   No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
   ------------- |------------- | ------------- | ------------ | ------------- | ------------- 
@@ -466,7 +475,7 @@ No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
   5 | Price, Rating, Category Filters | Clicking into the options for `Price`, `Rating` and `Category` should allow a user to view different summaries of the companies product offerings by those filters | Product Listing functionality operates as expected | Pass | [Screenshot](readme/testing/test4-postcomment.png)
   6 | My Profile | Clicking into the `My Profile` option under the `My Account` link should allow a user to viewtheir current profile details, including default delivery information, and an order history, along with the option to update the information should they desire to do so | Functionality operates as expected | Pass | [Screenshot](readme/testing/test4-postcomment.png)
   
-  Product Detail Testing:
+  **Product Detail Testing:**
   
   No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
   ------------- |------------- | ------------- | ------------ | ------------- | ------------- 
@@ -477,8 +486,9 @@ No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
   5 | "Sort By" menu | When a user clicks on the "Sort by" dropdown menu, whilst on the product listing page, the full menu of sorting options should display to the user | Functionality operates as expected | Pass | [Screenshot](readme/testing/test9-polls.png)
   6 | Individual "Sort By" options | Each of the individual `Sort By` options should work as expected - ascending & descending order across price, rating, name and category | Functionality operates as expected |Pass | [Screenshot](readme/testing/test10-choices.png)
   7 | Site Search Bar | When searching for terms in the `Search` bar at the top of all site pages, the search should work as expected - returning any products matching the search term/s | Functionality operates as expected |Pass | [Screenshot](readme/testing/test10-choices.png)
+  8 | Product Management | A Store Owner should be able to see an option for `Product Management` under their `My account` link - this should give Store Owners the ability to add new products to the store, specifying their details, and an image | Functionality operates as expected |Pass | [Screenshot](readme/testing/test10-choices.png)
 
-  Shopping bag testing
+  **Shopping bag testing**
 
   No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
  ------------- |------------- | ------------- | ------------ | ------------- | ------------- 
@@ -490,7 +500,7 @@ No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
   6 | Empty Bag | If the user navigates to the shopping bag when they have not selected any items to purchase, they should be presented with a `your bag is empty` screen to promote a positive UX | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
   7 | Secure Checkout Button | Clicking the `add to bag` button under an product should the item to the shopping bag | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
 
-  Checkout testing
+  **Checkout testing**
 
   No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
  ------------- |------------- | ------------- | ------------ | ------------- | ------------- 
@@ -505,7 +515,7 @@ No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
   9 | Order Confirmation Screen | Upon successful completion of the Stripe API call and payment, the user should be presented with a summary of their order, including the order number, date, order details, and delivery details | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
   10 | Order Confirmation email | A user should also receieve an email with their order details upon completion of the order | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
 
-  Support Application Testing:
+  **Support Application Testing:**
 
   No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
   ------------- |------------- | ------------- | ------------ | ------------- | ------------- 
@@ -516,7 +526,7 @@ No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
   5 | Enquiry Log Dashboard | User's with the appropriate credentials should be able to view a list of all of the enquiries submitetd to date via the Contact Us page | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
   6 | Enquiry Log Actions | Superusers should be able to mark individual enquiries as either `open` or `closed` depending on their status to aid store owners with managing the site | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
 
-  Community Application Testing:
+  **Community Application Testing:**
 
   No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
   ------------- |------------- | ------------- | ------------ | ------------- | ------------- 
@@ -534,28 +544,6 @@ No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
   12 | Delete a Reply| Whilst viewing the Topic Detail page, a user should have the option to delete any replies they have previously added to the discussion by clicking on the `Delete Reply` button - this should allow the user to permanently delete the Reply | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
   13 | User Activity | A user should have the option to view a history of their contributions & forum activity by clicking on the `My Activity` link - this should show the user's previously created Topics, Comments, and Replies together with permitted CRUD actions on each element | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
 
-## 2. Manual Testing - Administrative Workflows:
-
-The tests below are part of the manual testing procedures I have followed to prove out the functionality of the primary Administrator-based workflows available within the application:
-
-No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
- ------------- |------------- | ------------- | ------------ | ------------- | -------------
-  1 |Create an article | Upon clicking on the `Add Article +` button, an administrator should be able to populate the following form with all of the details required to create and publish a new article. The key fields should include - Title, Slug (which should autopopulate based on the title), Author, Image, Excerpt, the actual article content, and a status - draft or published | The Article creation feature works as expected | Pass | [Screenshot](readme/testing/test1-article-create.png)
-  2 |Delete an article | When an administrator selects a post, and clicks on the dropdown menu to choose the `Delete selected articles` option, a warning screen should present to the user highlighting that the article will be deleted. If the administrator proceeds to click on the `Yes I'm sure` button, the article and all associated comments & likes should be removed from the site | Delete article functionality operates as expected | Pass| [Screenshot](readme/testing/test2-article-delete.png)
-  3 |Approve a comment | If an administrator selects an (unapproved) comment from the comments inventory, and chooses `Approve comments` from the dropdown menu, the comment should then appear for viewing under the article it was submitted against on the live website, with a date & timestamp | Approve comments functionality works per expectations | Pass | [Screenshot](readme/testing/test3-comment-approve.png)
-  4 |Delete a comment | If an administrator selects a comment (either approved or unapproved) from the comments inventory, and chooses `Delete Selected Comments` from the dropdown menu, a warning screen should display asking for a confirmation that this action is required. If the `Yes, I'm sure` button is clicked, then the comment should then be removed from the article it was submitted against | Delete comments functionality works as expected | Pass | [Screenshot](readme/testing/test4-comment-delete.png)
-  5 |Add an email address | If an administrator tries to add an email to a username who signed up without an email, they should be allowed to add the email, and should be able to mark the email as either, or both `verified` and `primary` | Functionality works as expected | Pass | [Screenshot](readme/testing/test5-email-add.png)
-  6 |Verify an email address | When an administrator follows the required steps to verify an email address by navigating within the administration pane to Accounts, followed by Email Addresses, and selects an email address - then selects `Mark selected email addresses as verified` from the dropdown menu, the email address should change from unverified status (with a red x icon) to verified (with a green tick icon) |Email address verification feature works as expected | Pass | [Screenshot](readme/testing/test6-email-verify.png)
-  7 |Add a user | An administrator should be able to add a user manually to the database by navigating to the `Users` section of the Administration area, and clicking `add`. The following fields should be populated, building out the user's attributes (Username, Password, and password confirmation) and clicking `save`. A prompt should then be displayed to the administrator confirming that the user has been successfully added | Functionality performs as expected | Pass | [Screenshot](readme/testing/test7-user-add.png)
-  8 |Delete a user | When navigating to the `Users` section of the administration dashboard, a user with the correct access should be able to select a username from the available list, and select `Delete selected users` from the dropdown menu. Clicking `Go` should then trigger a warning message to the user, asking if they are sure they wish to proceed with the deletion, and clicking `Yes, I'm sure` should result in the deletion of the selected Username | Delete user functionality works as expected | Pass | [Screenshot](readme/testing/test8-user-delete.png)
-  9 |Change a password | Note - this refers to the password change within the administrative area. By clicking on the `Change password` option from the top right menu in the Administration area, an administrator should be presented with the password change screen, where they can specify a new password after confirming their old password. Confirming the change should result in a confirmation screen that the change was successful | Password change functionality works as expected | Pass | [Screenshot](readme/testing/test9-password-change.png)
-  10 |Create a Question Poll | Upon clicking on the `Add Question +` button, an administrator should be able to populate the following form with all of the details required to create and publish a new article | The Question creation feature works as expected | Pass | [Screenshot](readme/testing/test10-poll-create.png)
-  11 |Create Answer Choices for a Question Poll | Upon clicking on the `Add Choice +` button, an administrator should be able to populate the following form with all of the details required to create and add a new answer choice for poll questions | The answer creation feature works as expected | Pass | [Screenshot](readme/testing/test11-choice-create.png)
-  12 |Edit a Poll Question  | Upon clicking on the `Question` link, and subsequently clicking into the Question required for editing, an administrator should be able to populate the following form with any of the details required to edit an existing Poll Question | The Question edit feature works as expected | Pass | [Screenshot](readme/testing/test12-poll-edit.png)
-  13 |Edit a Poll Answer Choice  | Upon clicking on the `Choice` link, and subsequently clicking into the Choice required for editing, an administrator should be able to populate the following form with any of the details required to edit an existing Poll Question Answer Choice | The Answer Choice edit feature works as expected | Pass | [Screenshot](readme/testing/test13-choice-edit.png)
-  14 |Delete a Poll Question | When an administrator selects a Question, and clicks on the dropdown menu to choose the `Delete selected Questions` option, a warning screen should present to the user highlighting that the Question will be deleted. If the administrator proceeds to click on the `Yes I'm sure` button, the Question and it's associated answer choices should be removed from the site | Delete Question functionality operates as expected | Pass | [Screenshot](readme/testing/test14-poll-delete.png)
-  15 |Delete a Poll Answer Choice | When an administrator selects a Choice, and clicks on the dropdown menu to choose the `Delete selected Choices` option, a warning screen should present to the user highlighting that the Answer Choice will be deleted. If the administrator proceeds to click on the `Yes I'm sure` button, the Answer Choice should be removed from the site | Delete Answer functionality operates as expected | Pass | [Screenshot](readme/testing/test15-answer-delete.png)
-  16 | Default Article Picture Functions | When an article is created, without specifying an image (i.e. leaving the `image` field blank) the default article picture should be used as the image for the article in both the article index view, and the article detail view | Default article picture functionality operates as per expectations | Pass | [Screenshot](readme/testing/test16-default-pic.png)
 
 # Bugs
 ## Resolved Bugs
