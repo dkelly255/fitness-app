@@ -447,18 +447,59 @@ Additionally, each individual User Story on the board can be drilled into for a 
 
 The key tests below are part of the manual testing procedures I have followed to prove out the functionality of the primary User-based workflows available within the application:
 
+Authorisation & authentication Testing:
+
 No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
  ------------- |------------- | ------------- | ------------ | ------------- | ------------- 
   1 | Register an account | When clicking the `Sign Up` option, a user should be presented with the sign up form. Upon population of the required fields within the form, the user should  have a newly created account. | User account created as expected | Pass | [Screenshot](readme/testing/test1-signup.png)
   2 | Log in | Upon clicking the `Login` option from the navigation bar, the `Log In` form should display to the user, prompting a username & password. Upon entering these details, a user should be logged into the site| Log in option & form functions as expected | Pass | [Screenshot](readme/testing/test2-signin.png)
-  3 | "About Us" Page |  Clicking into the `About` menu option should allow a user to view the company story page and to read about the company's purpose and quality | About Page functionality operates as expected | Pass | [Screenshot](readme/testing/test3-openarticle.png)
-  4 | Product Listings | Clicking into the `merchandise` menu option should allow a user to view different summaries of the companies product offerings | Product Listing functionality operates as expected | Pass | [Screenshot](readme/testing/test4-postcomment.png)
-  5 | Product Detail | Clicking the image associated with a product should bring the user to a more detailed information summary of the product - the product detail screen | Product detail functionality operates as expected | Pass | [Screenshot](readme/testing/test5-like.png)
-  6 | Add to Bag | Clicking the `add to bag` button under an product should the item to the shopping bag | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
-  7 | Keep Shopping Button | When clicking on the `Keep Shopping` button on the product details screen, a user should be redirected to the Product listing screen | Functionality operates as expected  | Pass | [Screenshot](readme/testing/test7-signout.png)
-  8 | Product Quantity Selector | The product details screen's Quantity selector option should allow users to increment, decrement, and specify the quantity of the product they wish to add to their shopping bag | Functionality operates as expected | Pass | [Screenshot 1](readme/testing/test8-navbar-1.png) 
-  9 | "Sort By" menu | When a user clicks on the "Sort by" dropdown menu, whilst on the product listing page, the full menu of sorting options should display to the user | Functionality operates as expected | Pass | [Screenshot](readme/testing/test9-polls.png)
-  10 | Individual "Sort By" options | Each of the individual `Sort By` options should work as expected - ascending & descending order across price, rating, name and category | Functionality operates as expected |Pass | [Screenshot](readme/testing/test10-choices.png)
+  3 | Log out | Upon clicking the `Logout` option from the navigation bar, a user should be promted to confirm they wish to logout, and upon confirmation, they should be logged out of the site | Functionality operates as expected|Pass | [Screenshot](readme/testing/test2-signin.png)
+  
+  Basic Site functionality Testing:
+  
+  No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
+  ------------- |------------- | ------------- | ------------ | ------------- | ------------- 
+  4 | "About Us" Page |  Clicking into the `About` menu option should allow a user to view the company story page and to read about the company's purpose and quality | About Page functionality operates as expected | Pass | [Screenshot](readme/testing/test3-openarticle.png)
+  5 | Product Listings | Clicking into the `merchandise` menu option should allow a user to view different summaries of the companies product offerings | Product Listing functionality operates as expected | Pass | [Screenshot](readme/testing/test4-postcomment.png)
+  
+  Product Detail Testing:
+  
+  No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
+  ------------- |------------- | ------------- | ------------ | ------------- | ------------- 
+  6 | Product Detail | Clicking the image associated with a product should bring the user to a more detailed information summary of the product - the product detail screen | Product detail functionality operates as expected | Pass | [Screenshot](readme/testing/test5-like.png)
+  7 | Size selector | Adjusting the `size selector` button under an product should allow different sizes of the item to be added to the shopping bag | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
+  8 | Keep Shopping Button | When clicking on the `Keep Shopping` button on the product details screen, a user should be redirected to the Product listing screen | Functionality operates as expected  | Pass | [Screenshot](readme/testing/test7-signout.png)
+  9 | Product Quantity Selector | The product details screen's Quantity selector option should allow users to increment, decrement, and specify the quantity of the product they wish to add to their shopping bag | Functionality operates as expected | Pass | [Screenshot 1](readme/testing/test8-navbar-1.png) 
+  10 | "Sort By" menu | When a user clicks on the "Sort by" dropdown menu, whilst on the product listing page, the full menu of sorting options should display to the user | Functionality operates as expected | Pass | [Screenshot](readme/testing/test9-polls.png)
+  11 | Individual "Sort By" options | Each of the individual `Sort By` options should work as expected - ascending & descending order across price, rating, name and category | Functionality operates as expected |Pass | [Screenshot](readme/testing/test10-choices.png)
+  12 | Site Search Bar | When searching for terms in the `Search` bar at the top of all site pages, the search should work as expected - returning any products matching the search term/s | Functionality operates as expected |Pass | [Screenshot](readme/testing/test10-choices.png)
+
+  Shopping bag testing
+
+  No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
+ ------------- |------------- | ------------- | ------------ | ------------- | ------------- 
+  1 | Add to Bag | Clicking the `add to bag` button under an product should the item to the shopping bag | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
+  2 | Quantity Selector | Clicking the `add to bag` button under an product should the item to the shopping bag | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
+  3 | Remove button | Clicking the `add to bag` button under an product should the item to the shopping bag | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
+  4 | Bag subtotal | Clicking the `add to bag` button under an product should the item to the shopping bag | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
+  5 | Delivery Cost calculator | Clicking the `add to bag` button under an product should the item to the shopping bag | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
+  6 | Quantity Selector | Clicking the `add to bag` button under an product should the item to the shopping bag | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
+  7 | Secure Checkout Button | Clicking the `add to bag` button under an product should the item to the shopping bag | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
+
+  Checkout testing
+
+  No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
+ ------------- |------------- | ------------- | ------------ | ------------- | ------------- 
+  1 | Name Details | The User should be presented with fields to enter their first and last names in the `details` section with placeholders specifying the required information | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
+  2 | Delivery Details | The User should be presented with fields to enter their address details in the `Delivery` section with placeholders specifying the required information | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
+  3 | Payment Details | The User should be presented with fields to enter their card information in the `payment details` section with placeholders specifying the required information | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
+  4 | Adjust Bag button | Clicking the `adjust bag` button should return the user back to the shopping bag screen where they can make any changes they require, or progress back to the checkout screen | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
+  5 | Order Summary | A summary of the user's order should be shown containing the products being purchased, the quantities, sizes and any delivery costs along with the order subtotal | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
+  6 | Card Charge Reminder | An emphasized final warning of the amount the user's card is about to be charged should be displayed at the bottom under the `complete order` button | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
+  7 | Complete Order Button | Clicking the `Complete Order` button should commence the Stripe transactions and have the user pay for their items | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
+  7 | Processing Screen | Clicking the `Complete Order` button should commence the Stripe transactions and have the user pay for their items | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
+  7 | Order Confirmation Screen | Clicking the `Complete Order` button should commence the Stripe transactions and have the user pay for their items | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
+  7 | Order Confirmation email | Clicking the `Complete Order` button should commence the Stripe transactions and have the user pay for their items | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
  
 
 ## 2. Manual Testing - Administrative Workflows:
