@@ -321,7 +321,7 @@ A Procfile is also an integral element of the project structure - as per the ove
 
 ### Database Entity Relationships
 
-Placeholder for ERDs
+![Requirements](readme/erd.png)
 
 ### - Production Database - PostgreSQL:
 
@@ -391,11 +391,6 @@ A deeper dive on the Green color scheme allows many different shades, hues, and 
 
 ![Imagery](readme/bootstrap_color_blue.png)
 
-- Iconography
-
-I have utilised the functionality available through the [Fontawesome](https://fontawesome.com/) suite to embed the site's icons, this helps emphasise important elements of the site, and to help with generating a positive emotional response with the site users. 
-
-![alt text](readme/iconography.png)
 
 Additionally I have added a favicon, which displays at the top of all the site's pages in the browser tabs via the head element of the HTML to help with the User Experience & create a professional feel when browsing:
     
