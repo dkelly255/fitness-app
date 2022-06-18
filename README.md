@@ -2,7 +2,7 @@
 
  FitnessApp is a [Heroku deployed](https://fitness-app-p5.herokuapp.com/) Full-Stack E-commerce Application with authentication mechanisms & paid access to the site's merchandise. 
 
-![Title](Readme/amiresponsive.png)
+![Title](readme/amiresponsive.png)
 
 # SECTION 1: UX
 
@@ -13,7 +13,7 @@ The ecommerce strategy for the site is to offer a business-to-customer (B2C) res
 
 As part of the E-Commerce strategy a facebook business page for the site has been designed and developed per below to aid with increasing the business' brand reach and to suuport with both developing new customers and retaining existing customers:
 
-![Mockup](Readme/mockup.png)
+![Mockup](readme/mockup.png)
 
 The strategic aim of the site is to deliver the following **Epics**:
 
@@ -267,28 +267,28 @@ A view of the Kanban board with the user stories having been brought through "To
 
 ### (i) Kanban Board 1 - User Stories [Link](https://github.com/dkelly255/fitness-app/projects/1)
 
-![Title](Readme/kanban1.png)
+![Title](readme/kanban1.png)
 
 From an Agile development perspective, the User Stories are also classified using the MoSCoW prioritisation technique, with each user story being attributed a category in terms of being either `Must-Have`, `Should-Have`, `Could-Have` and `Won't-Have`:
 
-![Title](Readme/labels.png)
+![Title](readme/labels.png)
 
 ### (ii) Kanban Board 2 - User Stories [Link](https://github.com/dkelly255/fitness-app/projects/2)
 
-![Title](Readme/kanban2.png)
+![Title](readme/kanban2.png)
 
 Additionally, each individual User Story on the board can be drilled into for a detailed description of both the User Story and the clearly defined acceptance criteria associated with the atomic scope being implemented via that User Story - an example is shown below:
 
-![Title](Readme/user-story.png)
+![Title](readme/user-story.png)
 
 
 ### Tasks
 
 ## Structure
 
-The website is structured using the Django Framework functionality, with a home page, an articles page, a login option, and a signup page. The home page greets the visitor with a welcome message and links to the main content of the site, the articles page houses the Django Articles, together with the comments that have been posted by other users/viewers.
+The website is structured using the Django Framework functionality, pages for an overview of the site (About Us), Merchandise, the Community section and the Support section. The home page greets the visitor with a welcome message and links to the main Merchandise content of the site via the `Browse Now` button, the Merchandise page houses products currently available to purchase from the site.
 
-The core website data  will be stored in Heroku's PostgreSQL add-on, and website static files and media/images will be stored on the Cloudinary Platform. I have made the decision to store website images on Cloudinary rather than Heroku due to the fact that Heroku is an ephemeral file system, and the Dyno system it utilizes can cause problems in situations where the project has been idle or if it has not been accessed for a certain length of time. Cloudinary is a persistent file store, and will therefore minimise the likelihood of such issues occurring and interrupting or deteriorating the User Experience, ensuring site visitors have less chance of seeing broken image links when browsing the site. In terms of the Cloudinary design choice, it is also less complicated to setup than other persistent file stores (such as Amazon S3 or Microsoft Azure) so will fit well for the scope of this project.
+The core website data will be stored in a PostgreSQL Database, and website static files and media/images will be stored on the Amazon AWS Platform, with the app being deployed via Heroku. 
 
 ## Code Structure
 
@@ -300,7 +300,7 @@ Generically the project is structured using the "Model, View, Template" software
 - The Views are used to execute the business logic and interact with the model to carry data and render a template
 - The Templates are the presentation layers, which handle the User Interface aspects of the application.
 
-The diagram below (sourced from [javatpoint.com](https://www.javatpoint.com/django-mvt)) illustrates the MVT structure & control flow used for this project:
+The diagram below (sourced from [Towards-Data-Science](https://towardsdatascience.com/working-structure-of-django-mtv-architecture-a741c8c64082)) illustrates the MVT structure & control flow used for this project:
 
 ![MVT](readme/mvt.png)
 
@@ -319,70 +319,23 @@ A Procfile is also an integral element of the project structure - as per the ove
 
 ## Database Structure & Schema
 
-### 1. Website App
+### Database Entity Relationships
 
-The website app's content will utilise a simple database structure, consisting of two main models - one for the Articles about Django topics, and one for the comments that users can add to those articles
-
-The Entity Relationship Diagram for the Articles Table is shown below, with the field names, types, and key status. 
-
-Note the Foreign Key will be the "Author" field, and that the "Likes" field will also need to have a many to many relationship:
-
-![Articles table ERD](readme/erd_articles.png)
-
-The Entity Relationship Diagram for the Comments Table is shown below, with the field names, types, key status, and additional information. 
-
-Note the Foreign Key will be the "Post" field, and that this will need to cascade on delete, so that when a post is removed, the comments on that post are also removed, that is, the deletion is cascaded through the models.
-
-![Comments table ERD](readme/erd_comments.png)
-
-### 2. Poll App
-
-The poll app's content will also be implemented via a relatively simple database structure, consisting of two main models - one for the Poll Questions, and one for the choices that users can vote for under each of these questions
-
-The Entity Relationship Diagram for the `Questions` Table is shown below, with the field names, types, and key status:
-
-![Questions table ERD](readme/erd_questions.png)
-
-The Entity Relationship Diagram for the `Choices` Table is shown below, with the field names, types, key status, and additional information. 
-
-Note the Foreign Key will be the "Question" field, and that this will need to cascade on delete, so that when a Question is removed, the choices for that question are also removed, that is, the deletion is cascaded through the models.
-
-![Choices table ERD](readme/erd_choices.png)
-
-### - Project Directory Renaming
-
-Please note - I originally started this project as a Fantasy Football Content website but during development it has subsequently evolved into a blog about Django - primarily due to the quantity of content and material I was researching in relation to learning the framework, I found that writing articles about Django helped contribute to, and accelerate, the learning process. 
-
-Whilst it was not critical to the application's functionality, from a completeness perspective, and from a learning-experience perspective, I wanted to understand how the process of renaming a Django project would work if it were to be undertaken, and what the potential pitfalls would be. 
-
-Through consultation with our fortnightly Group Stand-Up facilitator, and from watching the linked [How To Change The Name Of A Django Project](https://www.youtube.com/watch?v=ko83PEvotNI&t=1s) instructional video from [Master Code Online](https://www.youtube.com/channel/UCbhm6TbMBTWn_GxrIbPFapA), I was able to successfully rename the project, across all elements of the directory structure, and the Heroku deployment. A snapshot of some of the key aspects of mapping exercise I undertook to successfullyrename the project directory structure is illustrated below:
-
-![renaming](readme/renaming.png)
-
+Placeholder for ERDs
 
 ### - Production Database - PostgreSQL:
 
-The database system used for the models in production is an application known as [PostgreSQL](https://www.postgresql.org/). 
-
-As illustrated in this overview at [postgresqltutorial.com](https://www.postgresqltutorial.com/what-is-postgresql/) - PostgreSQL is an advanced, enterprise-class, open-source relational database system, which supports both relational querying, and is compatible with most popular programming languages (including Python) and is therefore ideal for the requirements of this project.
+[PostgreSQL](https://www.postgresql.org/) is the database system used for the models in production - As illustrated in this overview at [postgresqltutorial.com](https://www.postgresqltutorial.com/what-is-postgresql/) - PostgreSQL is an advanced, enterprise-class, open-source relational database system, which supports both relational querying, and is compatible with most popular programming languages (including Python) and is therefore ideal for the requirements of this project.
 
 ### - Development Database - SQLite3:
 
-The database system used for the models in testing and development is an application known as [SQLite3](https://www.sqlite.org/index.html). 
-
-As illustrated in this overview at [Python.org](https://docs.python.org/3/library/sqlite3.html) - SQLite3 a C library that provides a lightweight disk-based database that doesn’t require a separate server process and allows accessing the database using a nonstandard variant of the SQL query language, and is typically used in Django Applications for testing & development.
-
-Note - for more information, please see the `Testing` and `Bugs` readme sections for more detail on the two databases - SQLite3 and PostgreSQL and changing between the two.
+[SQLite3](https://www.sqlite.org/index.html) is the database system used for the models in testing and development - As illustrated in this overview at [Python.org](https://docs.python.org/3/library/sqlite3.html) - SQLite3 a C library that provides a lightweight disk-based database that doesn’t require a separate server process and allows accessing the database using a nonstandard variant of the SQL query language, and is typically used in Django Applications for testing & development.
 
 ### - Crispy Forms
 
 The project structure also utilises an application known as [CrispyForms](https://django-crispy-forms.readthedocs.io/en/latest/) to enable controlling the rendering behaviour of the key forms within the application.
 
 As per this overview article at [merixstudio.com](https://www.merixstudio.com/blog/django-crispy-forms-what-are-they-about/) Django-crispy-forms is an application that helps to manage Django forms and allows adjusting forms' properties (such as method, send button or CSS classes) on the backend without having to re-write them in the template.
-
-### - Summernote
-
-Summernote is used as an editor for the article functionality within the site. The Summernote [website](https://summernote.org/) contains comprehensive & useful documentation on the editor - for the purposes of this project's structure - it is used as a "WYSIWYG" (What You See Is What You Get) editor, due to it's simple & easy-to-use nature.
 
 ## 4. Skeleton
 
@@ -392,22 +345,25 @@ The wireframes below illustrate the skeleton of the site, including the home pag
 
 ![Home page](readme/wireframe-home.png)
 
-- Wireframe 2 - Article detail & comments 
+- Wireframe 2 - Merchandise
 
-![Article page](readme/wireframe-article.png)
+![Article page](readme/wireframe-merchandise.png)
 
-- Wireframe 3 - Signup Page
+- Wireframe 3 - Discussion Forum
 
-![Article page](readme/wireframe-signup.png)
+![Article page](readme/wirefram-forum.png)
 
-- Wireframe 4 - Login page
+- Wireframe 4 - Support
 
-![Article page](readme/wireframe-login.png)
+![Article page](readme/wireframe-support.png)
 
-- Wireframe 5 - Administration page
+- Wireframe 5 - Shopping Bag
 
-![Article page](readme/wireframe-admin.png)
+![Article page](readme/wireframe-shoppingbag.png)
 
+- Wireframe 6 - Checkout
+
+![Article page](readme/wireframe-checkout.png)
 
 ## 5. Surface
 
@@ -415,29 +371,25 @@ I have used the Bootstrap framework to build the Surface of the website, with th
 
 - Typography
 
-For the Fonts on the site I am primarily using [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto) for site content - As per the overview on Google Fonts [linked](https://fonts.google.com/specimen/Roboto?query=roboto), Roboto has a dual nature, with a mechanical skeleton and the forms are largely geometric. At the same time, the font features friendly and open curves. While some grotesques distort their letterforms to force a rigid rhythm, Roboto doesn’t compromise, allowing letters to be settled into their natural width. This makes for a more natural reading rhythm more commonly found in humanist and serif types.
-
-![Roboto](readme/roboto.png)
-
-The [Lato](https://fonts.google.com/specimen/Lato?query=lato) font is also used - and is a sans serif typeface family started in the summer of 2010 by Warsaw-based designer Łukasz Dziedzic (“Lato” means “Summer” in Polish):
+For the Fonts on the site I am primarily using [Lato](https://fonts.google.com/specimen/Lato?query=lato) for site content - As per the overview on Google Fonts [linked](https://fonts.google.com/specimen/Lato?query=lato), is a sans serif typeface family started in the summer of 2010 by Warsaw-based designer Łukasz Dziedzic (“Lato” means “Summer” in Polish):
 
 ![Lato](readme/lato.png)
 
 - Imagery
 
-I am using Django related imagery throughout the Surface layer of the site, to help with promoting a positive User Experience for the target audience. The imagery is primarily consisted of different Django-related pictures & diagrams. The site's background image is also selected due to it's relevance to coding, and having a similar color palette that matches with the site's surface. The background image was sourced from [pexels.com](https://www.pexels.com/) and is fully acknowledged in the credits section of this readme document. Some examples of the site imagery are shown below:
+I am using Fitness-related imagery throughout the Surface layer of the site, to help with promoting a positive User Experience for the target audience. The imagery is primarily consisted of different exercise-related pictures & illustrations. The site's background image is also selected due to it's relevance to fitness/exercise, and having a similar color palette that matches with the site's surface. The background image was sourced from [pexels.com](https://www.pexels.com/) and is fully acknowledged in the credits section of this readme document. Some examples of the site imagery are shown below:
 
 ![Imagery](readme/imagery.png)
 
 - Color Palette
 
-As part of the surface layer of the website's user experience, I wanted to use a green color palette as part of the site's theme - Bootstrap has a large array of color-schemes & themes to choose from, illustrated in the screenshot below:
+As part of the surface layer of the website's user experience, I wanted to use a Blue color palette as part of the site's theme - Bootstrap has a large array of color-schemes & themes to choose from, illustrated in the screenshot below:
 
-![Imagery](readme/bootstrap_color.png)
+![Imagery](readme/bootsrap_color.png)
 
 A deeper dive on the Green color scheme allows many different shades, hues, and opacities depending on the user's needs, for the majority of the site's surface I am using the default shade of green (code #198754 & its' derivations) - shown below:
 
-![Imagery](readme/bootstrap_color_green.png)
+![Imagery](readme/bootstrap_color_blue.png)
 
 - Iconography
 
@@ -448,6 +400,7 @@ I have utilised the functionality available through the [Fontawesome](https://fo
 Additionally I have added a favicon, which displays at the top of all the site's pages in the browser tabs via the head element of the HTML to help with the User Experience & create a professional feel when browsing:
     
 ![alt text](static/images/favicon.png)
+
 # Features
 
 # Testing
