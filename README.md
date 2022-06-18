@@ -319,7 +319,7 @@ A Procfile is also an integral element of the project structure - as per the ove
 
 ## Database Structure & Schema
 
-### Database Entity Relationships
+The Database schema is mapped below - the application will contain eleven Models across six Apps - The diagram illustrates each App, Model, and field, with the relationships between each entity also shown where certain models have Foreign Keys to other models.
 
 ![Requirements](readme/erd.png)
 
