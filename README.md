@@ -347,23 +347,23 @@ The wireframes below illustrate the skeleton of the site, including the home pag
 
 - Wireframe 2 - Merchandise
 
-![Article page](readme/wireframe-merchandise.png)
+![Products page](readme/wireframe-merchandise.png)
 
 - Wireframe 3 - Discussion Forum
 
-![Article page](readme/wirefram-forum.png)
+![Forum](readme/wireframe-forum.png)
 
 - Wireframe 4 - Support
 
-![Article page](readme/wireframe-support.png)
+![Support](readme/wireframe-support.png)
 
 - Wireframe 5 - Shopping Bag
 
-![Article page](readme/wireframe-shoppingbag.png)
+![Shopping Bag](readme/wireframe-shoppingbag.png)
 
 - Wireframe 6 - Checkout
 
-![Article page](readme/wireframe-checkout.png)
+![Checkout](readme/wireframe-checkout.png)
 
 ## 5. Surface
 
