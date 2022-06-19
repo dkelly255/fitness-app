@@ -9,6 +9,11 @@
 I have designed the site using the five planes of UX approach, each of which is reviewed in detail in the following sections
 
 ## 1. Strategy
+
+- Pass Criteria: LO6: 7.1 - Document the e-commerce business model underlying your application
+
+- Merit Criteria: 5.1 - Document the primary marketing strategy behind the application
+
 The ecommerce strategy for the site is to offer a business-to-customer (B2C) resource to users interested in Fitness where they can purchase Clothing and Nutrition, and can have the ability to participate in a community discussing their own topics, comments, and replies and to engage within a broader community of members and customers.
 
 As part of the E-Commerce strategy a facebook business page for the site has been designed and developed per below to aid with increasing the business' brand reach and to suuport with both developing new customers and retaining existing customers:
@@ -406,6 +411,40 @@ Additionally I have added a favicon, which displays at the top of all the site's
 ![alt text](static/images/favicon.png)
 
 # Features
+
+Section: | Features Documentation:  | 
+  ------------- | ------------- | 
+ 1 | [**Authentication & Authorisation**](https://github.com/dkelly255/pp4-django-blog/blob/main/FEATURES.md#features) | 
+ 4 | [**E-Commerce**](https://github.com/dkelly255/pp4-django-blog/blob/main/FEATURES.md#3-future-features)
+ 2 | [**CRUD**](https://github.com/dkelly255/pp4-django-blog/blob/main/FEATURES.md#features) | 
+ 3 | [**Other Key Features**](https://github.com/dkelly255/pp4-django-blog/blob/main/FEATURES.md#2-other-key-existing-features) | 
+ 
+
+## 1. Authorisation, Authentication & Permission Features:
+
+Throughout the site I have identified and applied various layers of authorisation, authentication and permission features in keeping with a full-stack web application solution. Some examples to highlight these features are illustrated below:
+
+### - Signup Form:
+
+To ensure that the proper role-based registration functionality is in place, I have used a Signup form as illustrated below - where in order to create an account, Users should navigate to the "Signup" link in the nav bar, redirecting them to the "Signup" page shown below. The form is built using Django Allauth, and consists of an invitation & instruction set to the user to direct them on how to create an account with the site, there are five fields the user can fill in to supply the required details for creation of a new account - Username, Email, Password, and a confirmation of the password. 
+
+![Signup](readme/features-signup.png)
+
+The current login status is also consistently reflected to the user, via prompts on the signup form reminding the user that they should "Sign In" rather than "Sign Up" if they already have an account, also ensuring that the user is not permitted to access restricted content or functionality prior to role-based login, and the provision of all information will ensure the correct permissions are then reflected to the user.
+
+### - Login Form
+
+To apply role-based login functionality, the Login form is built using Django Allauth, and gives two fields for completion to grant the user access to the appropriate *user-level* (i.e. non-administrator) site features such as saving their default delivery information for quick purchases, leaving comments or creating topics or replies. 
+
+From a UX perspective, the current login state is reflected to the user via additional notifications delivered to the user on the Login form that they must be logged in to create a topic or leave a comment, and that if they have not yet created an account that they must Sign Up first to ensure that the correct role-based functionality is understood and applied. This also again helps to ensure that users are not permitted to access restricted content and/or functionality prior to their role-based login.
+
+![Login](readme/features-login.png)
+
+### - Logout Form
+
+The Logout form screenshot is shown below, illustrating the simple & intuitive nature of this feature, whereby the user is prompted with a confirmation that they wish to log out of the site, and a button they can click to confirm they wish to do so. A defensive design principle has been used for this form, so that a user cannot log out mistakenly with a single click, the confirmation button will help provide a positive UX where the user is less likely to log out accidentally, and also reinforcing the principle that the current login state is reflected to the user.
+
+![Logout](readme/features-logout.png)
 
 # Testing
 
