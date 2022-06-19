@@ -546,15 +546,27 @@ Similarly, when a user clicks on the `Delete Topic` button, they will be directe
 
 ### - Topic Detail Screen
 
+The `Topic Detail` screen is presented to a user when they click into the detail of any of the active Discussion Topics. This screen will display to the user a paginated listing of all the comments and replies currently active under the discussion topic, together with the posting date, and the author. As with all forum views, there is also a column for CRUD activities permitted to the user based on their credentials.
+
 ![Features](readme/features-topic-detail.png)
 
 ### - Comment Creation
 
+This screen will allow the user to add comments to any of the active discussion topics. Clicking on the `Add Comment` button will bring the user to this form, and will allow them to enter in their comment for addition to the existing discussion topic
+
 ![Features](readme/features-comment-add.png)
 
-### - Comment Deletion & Editing
+### - Comment Editing
+
+Clicking on the `Edit Comment` button will bring the user to the comment editing form, where the user will be able to edit the content of any comments they have previously posted to a discussion topic. Please note - from a CRUD-control/Authorisation perspective, Comments can only be edited by their creator or by a Superuser/Administrator.
 
 ![Features](readme/features-comment-delete-edit.png)
+
+### - Comment Deletion
+
+Similarly, when a user clicks on the `Delete Comment` button, they will be directed to the Delete Comment Confirmation page - this will allow a user to confirm they wish to delete the comment they previously created, along with any and all replies previously posted to the Comment. Please note - similar to the Comment Editing feature, from an authentication and CRUD-control standpoint - Comments can only be deleted by their creator or an administrator.
+
+![Features](readme/features-comment-delete.png)
 
 ### - Reply Creation 
 
