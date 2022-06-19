@@ -387,9 +387,15 @@ As part of the surface layer of the website's user experience, I wanted to use a
 
 ![Imagery](readme/bootsrap_color.png)
 
-A deeper dive on the Green color scheme allows many different shades, hues, and opacities depending on the user's needs, for the majority of the site's surface I am using the default shade of green (code #198754 & its' derivations) - shown below:
+A deeper dive on the Blue color scheme allows many different shades, hues, and opacities depending on the user's needs, for the majority of the site's surface I am using the default shade of Blue (code #0d6efd & its' derivations) - shown below:
 
 ![Imagery](readme/bootstrap_color_blue.png)
+
+- Iconography
+
+I have utilised the functionality available through the [Fontawesome](https://fontawesome.com/) suite to embed the site's icons, this helps emphasise important elements of the site, and to help with generating a positive emotional response with the site users. 
+
+![alt text](readme/iconography.png)
 
 
 Additionally I have added a favicon, which displays at the top of all the site's pages in the browser tabs via the head element of the HTML to help with the User Experience & create a professional feel when browsing:
