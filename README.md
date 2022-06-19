@@ -432,6 +432,12 @@ To ensure that the proper role-based registration functionality is in place, I h
 
 The current login status is also consistently reflected to the user, via prompts on the signup form reminding the user that they should "Sign In" rather than "Sign Up" if they already have an account, also ensuring that the user is not permitted to access restricted content or functionality prior to role-based login, and the provision of all information will ensure the correct permissions are then reflected to the user.
 
+### - Signup Email Confirmation:
+
+A confirmation email will be sent to each user who requests an account with site - the email will request the user to confirm their account by clicking on a link included in the email. This contributes to keeping the site user-base secure and help safeguard the site from any potential malicious or opportunistic behaviour:
+
+![Signup](readme/features-signupmail.png)
+
 ### - Login Form
 
 To apply role-based login functionality, the Login form is built using Django Allauth, and gives two fields for completion to grant the user access to the appropriate *user-level* (i.e. non-administrator) site features such as saving their default delivery information for quick purchases, leaving comments or creating topics or replies. 
@@ -449,15 +455,45 @@ The Logout form screenshot is shown below, illustrating the simple & intuitive n
 ## 2. Ecommerce Features:
 
 ### - Display Products
+
+![Features](readme/features-displayproducts.png)
+
 ### - Product Detail
+
+![Features](readme/features-productdetail.png)
+
 ### - Add Product to Shopping Bag
+
+![Features](readme/features-shoppingbag.png)
+
 ### - Adjust Shopping Bag 
+
+![Features](readme/features-bagadjust.png)
+
 ### - Secure Checkout
+
+![Features](readme/features-checkout.png)
+
 ### - Order Confirmation Screen
+
+![Features](readme/features-confirmation.png)
+
 ### - Order Confirmation Email
+
+![Features](readme/features-orderemail.png)
+
 ### - Add a product
+
+![Features](readme/features-productadd.png)
+
 ### - Delete a product
+
+![Features](readme/features-productdelete.png)
+
 ### - User Profile
+
+![Features](readme/features-userprofile.png)
+
 
 ## 3. Community Features:
 
