@@ -454,43 +454,65 @@ The Logout form screenshot is shown below, illustrating the simple & intuitive n
 
 ## 2. Ecommerce Features:
 
+The primary focus of the site is on offering e-commerce functionality to users in the form of two types of products available for purchase - Nutrition and Apparell. The section below covers an overview of the main e-commerce features of the site: 
+
 ### - Display Products
+
+The "Product display" page is the central e-commerce hub of the site, and contains a listing of all of the currently listed products available for sale on the site, together with options for sorting by price, category, name and rating. The page will also display a count of the displayed products, and will have a search bar at the top of the page consistent with the rest of the site.
 
 ![Features](readme/features-displayproducts.png)
 
 ### - Product Detail
 
+The product detail page is reached by clicking on the image of any of the displayed products. This will bring the user to a more detailed overview of the selected product, including an in-depth description of the product, together with the product's price and rating. A size selector will also be present for any Apparrell products with sizes, and a quantity selector will allow the user to specify their desited quantity.
+
 ![Features](readme/features-productdetail.png)
 
 ### - Add Product to Shopping Bag
+
+Clicking on the `Add to Bag` button will trigger the addition of the selected product to the user's shopping bag, also triggering a toast/notification confirmation of the addition to the shopping bag.
 
 ![Features](readme/features-shoppingbag.png)
 
 ### - Adjust Shopping Bag 
 
+Whilst on the shopping bag page, the user will have the option to adjust their shopping bag contents in several ways. Firstly the bag's quantities can be adjusted using the selectors, as well as products being deletable from the bag by using the `remove` button.
+
 ![Features](readme/features-bagadjust.png)
 
 ### - Secure Checkout
+
+When the user is satisfied with their shopping bag and wishes to proceed to making their purchase, they can click on the `Secure Checkout` button at the bottom of the Shopping bag page. This will bring the user to the Secure Checkout page, where they will be able to enter their name and delivery details, and confirm their payment details in order to trigger delivery of their items.
 
 ![Features](readme/features-checkout.png)
 
 ### - Order Confirmation Screen
 
+Following on from the completed secure checkout, a user will be presented with an order confirmation screen showing a record of their order in detail, including their order number, the product details, the delivery address and amounts paid. There will also be a link to take the user back to continue shopping should they wish to do so.
+
 ![Features](readme/features-confirmation.png)
 
 ### - Order Confirmation Email
+
+In addition to the order details screen, the user will be sent an automatically generated email summary of their order, this will be delivered to the email address they signed up with. This will act as a permanent record for the user of their purchase, and will contain similar details to the order confirmation screen - the user's order details, delivery details, and payment details. The email will also contain contact details where the user can get in touch with any queries they may have.
 
 ![Features](readme/features-orderemail.png)
 
 ### - Add a product
 
+From a store management perspective, one of the key features of the application is the ability to Add products to the site's inventory for purchase. In order to do so, a store owner/superuser can navigate to the `Product Management` section of the main menu, and being populating the appropriate fields to add new products for customer's to purchase.
+
 ![Features](readme/features-productadd.png)
 
 ### - Delete a product
 
+Similarly to the product addition functionality, the `Product Deletion` functionality will allow a store manager the ability to delete products should the need to do so arise. This can be done by clicking on the highlighted delete icon beside any of the currently listed products on the product detail screen as illustrated below: 
+
 ![Features](readme/features-productdelete.png)
 
 ### - User Profile
+
+Another core e-commerce feature of the site is the `User Profile` area - this is where a site user can come to view their current profile information. This feature gives a user the option to save and change their default delivery information, together with an order history detailing all previous orders completed by the user.
 
 ![Features](readme/features-userprofile.png)
 
