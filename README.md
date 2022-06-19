@@ -570,17 +570,25 @@ Similarly, when a user clicks on the `Delete Comment` button, they will be direc
 
 ### - Reply Creation 
 
+This screen will allow the user to add replies to any of the comments under active discussion topics. Clicking on the `Reply` button will bring the user to this form, and will allow them to enter in their Reply for addition to the comment under any existing discussion topics
+
 ![Features](readme/features-reply-create.png)
 
 ### - Reply Editing
+
+Clicking on the `Edit Reply` button will bring the user to the Reply editing form, where the user will be able to edit the content of any replies they have previously posted to a comment under a discussion topic. Please note - from a CRUD-control/Authorisation perspective, Replies can only be edited by their creator or by a Superuser/Administrator.
 
 ![Features](readme/features-reply-edit.png)
 
 ### - Reply Deletion
 
+Similarly, when a user clicks on the `Delete Reply` button, they will be directed to the Delete Reply Confirmation page - this will allow a user to confirm they wish to delete the Reply they previously created. Please note - similar to the Reply Editing feature, from an authentication and CRUD-control standpoint - Replies can only be deleted by their creator or an administrator.
+
 ![Features](readme/features-reply-delete.png)
 
 ### - User Activity
+
+This feature within the community application will allow a user to view their activity on the forum to date - including any Topics they have created, comments they have added to active discussion topics, and replies they have left under active comments. All permitted CRUD actions will also be displayed alongside each Topic, Comment and Reply left by the user.
 
 ![Features](readme/features-user-activity.png)
 
