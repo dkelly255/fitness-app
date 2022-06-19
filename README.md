@@ -415,8 +415,8 @@ Additionally I have added a favicon, which displays at the top of all the site's
 Section: | Features Documentation:  | 
   ------------- | ------------- | 
  1 | [**Authentication & Authorisation**](https://github.com/dkelly255/pp4-django-blog/blob/main/FEATURES.md#features) | 
- 4 | [**E-Commerce**](https://github.com/dkelly255/pp4-django-blog/blob/main/FEATURES.md#3-future-features)
- 2 | [**CRUD**](https://github.com/dkelly255/pp4-django-blog/blob/main/FEATURES.md#features) | 
+ 4 | [**E-Commerce Features**](https://github.com/dkelly255/pp4-django-blog/blob/main/FEATURES.md#3-future-features)
+ 2 | [**Community Features**](https://github.com/dkelly255/pp4-django-blog/blob/main/FEATURES.md#features) | 
  3 | [**Other Key Features**](https://github.com/dkelly255/pp4-django-blog/blob/main/FEATURES.md#2-other-key-existing-features) | 
  
 
@@ -445,6 +445,40 @@ From a UX perspective, the current login state is reflected to the user via addi
 The Logout form screenshot is shown below, illustrating the simple & intuitive nature of this feature, whereby the user is prompted with a confirmation that they wish to log out of the site, and a button they can click to confirm they wish to do so. A defensive design principle has been used for this form, so that a user cannot log out mistakenly with a single click, the confirmation button will help provide a positive UX where the user is less likely to log out accidentally, and also reinforcing the principle that the current login state is reflected to the user.
 
 ![Logout](readme/features-logout.png)
+
+## 2. Ecommerce Features:
+
+### - Display Products
+### - Product Detail
+### - Add Product to Shopping Bag
+### - Adjust Shopping Bag 
+### - Secure Checkout
+### - Order Confirmation Screen
+### - Order Confirmation Email
+### - Add a product
+### - Delete a product
+### - User Profile
+
+## 3. Community Features:
+
+### - Topic Display Screen
+### - Topic Creation & Editing
+### - Topic Deletion
+### - Topic Detail Screen
+### - Comment Creation & edting
+### - Comment Deletion
+### - Reply Creation & editing
+### - Reply Deletion
+### - User Activity
+
+## 4. Other Key Features:
+
+### - Contact Us Screen
+### - Enquiry Management Log
+### - Newsletter signup
+### - Nav Bar
+### - Footer
+
 
 # Testing
 
