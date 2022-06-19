@@ -498,22 +498,70 @@ The Logout form screenshot is shown below, illustrating the simple & intuitive n
 ## 3. Community Features:
 
 ### - Topic Display Screen
-### - Topic Creation & Editing
+
+![Features](readme/features-topicdisplay.png)
+
+### - Topic Creation
+
+![Features](readme/features-topiccreate.png)
+
+### - Topic Editing
+
+![Features](readme/features-topic-edit.png)
+
 ### - Topic Deletion
+
+![Features](readme/features-topic-edit-delete.png)
+
 ### - Topic Detail Screen
-### - Comment Creation & edting
-### - Comment Deletion
-### - Reply Creation & editing
+
+![Features](readme/features-topic-detail.png)
+
+### - Comment Creation
+
+![Features](readme/features-comment-add.png)
+
+### - Comment Deletion & Editing
+
+![Features](readme/features-comment-delete-edit.png)
+
+### - Reply Creation 
+
+![Features](readme/features-reply-create.png)
+
+### - Reply Editing
+
+![Features](readme/features-reply-edit.png)
+
 ### - Reply Deletion
+
+![Features](readme/features-reply-delete.png)
+
 ### - User Activity
+
+![Features](readme/features-user-activity.png)
 
 ## 4. Other Key Features:
 
 ### - Contact Us Screen
+
+![Features](readme/features-contact.png)
+
 ### - Enquiry Management Log
+
+![Features](readme/features-enquiries.png)
+
 ### - Newsletter signup
+
+![Features](readme/features-newsletter.png)
+
 ### - Nav Bar
+
+![Features](readme/features-nav.png)
+
 ### - Footer
+
+![Features](readme/features-footer.png)
 
 
 # Testing
