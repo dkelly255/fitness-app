@@ -15,15 +15,28 @@ As part of the E-Commerce strategy a facebook business page for the site has bee
 
 ![Mockup](readme/mockup.png)
 
-The strategic aim of the site is to deliver the following **Epics**:
+## Scope
+
+The Scope of the site is broadly encompassed in the delivery of the following **Epics**:
 
 1. Epic 1 - Create an Ecommerce Website App to allow users to purchase fitness apparrell and nutritional products
 2. Epic 2 - Create a community within the website to enhance the business brand and encourage members to purchase more products from the store
 
-With these two broad epics as the overall strategic goal of the project, we are then able to refine the epics into the following **User Stories**, each of which must have a clearly defined set of **Acceptance Criteria**:
+With these two broad epics as the overall strategic goal of the project, we are then able to refine the epics into the following **User Stories**, each of which must have a clearly defined set of **Acceptance Criteria**
+
+To deliver the scope of the project, an Agile approach to Software Development has been pursued for the project implementation. There are many useful resources available giving context and perspectives on the advantages of an Agile Software Development practice - including the Agilemanifesto.org and Agilealliance.org which are good starting points, and summarise Agile Software Development as "Individuals and interactions over processes and tools, Working software over comprehensive documentation, Customer collaboration over contract negotiation, and Responding to change over following a plan"
+
+There are many principles and features common to Agile approaches, including, Scrums, Sprints, and Kanban boards - I am currently managing the project scope via multiple kanban boards using Github's built-in Kanban board functionality, with a board for managing the delivery of user stories, and a board for managing the bugs & debugging exercises through the development lifecycle. And work through daily sprints in taking each of the tasks through their stages of completion.
+
+A view of the Kanban board with the user stories having been brought through "To Do", "In Progress", and "Done" columns as follows:
+
+### (i) Kanban Board 1 (Epic 1 Scope): [Link](https://github.com/dkelly255/fitness-app/projects/1)
+
+![Title](readme/kanban1.png)
+
+Each of the User Stories in Epic #1 are detailed below, together with their individual specific acceptance criteria and descriptions, from the perspcetives of both a shopper, and a store owner:
 
 ### **Epic 1 - Ecommerce Website App - User Story Mapping:**
-
 
 ### *As a shopper I can:*
 - View a list of products so that I can select some to purchase:
@@ -179,6 +192,17 @@ With these two broad epics as the overall strategic goal of the project, we are 
         - 2 Each enquiry should be shown along with the key fields and data
         - 3 There should be an option to mark an enquiry as "closed" upon successfully actioning it
 
+Additionally - From a further Agile development perspective, the User Stories are also classified using the MoSCoW prioritisation technique, with each user story being attributed a category in terms of being either `Must-Have`, `Should-Have`, `Could-Have` and `Won't-Have`:
+
+![Title](readme/labels.png)
+
+
+### (ii) Kanban Board 2 - User Stories [Link](https://github.com/dkelly255/fitness-app/projects/2)
+
+![Title](readme/kanban2.png)
+
+Each of the User Stories in Epic #2 are detailed below, together with their individual specific acceptance criteria and descriptions, from the perspcetives of a community/forum member:
+
 ### **Epic 2 - Fitness App Community - User Story Mapping:**
 
 ### *As a forum member I can:*
@@ -255,27 +279,6 @@ With these two broad epics as the overall strategic goal of the project, we are 
         - 1 I should only be permitted to delete replies which I have created
         - 2 There should be a warning presented upon clicking the delete button to ensure the deletion is warranted
         - 3 Upon deletion of the reply, the parent comment and topic should be un-impacted
-
-
-## Scope
-
-To deliver the scope of the project, an Agile approach to Software Development has been pursued for the project implementation. There are many useful resources available giving context and perspectives on the advantages of an Agile Software Development practice - including the Agilemanifesto.org and Agilealliance.org which are good starting points, and summarise Agile Software Development as "Individuals and interactions over processes and tools, Working software over comprehensive documentation, Customer collaboration over contract negotiation, and Responding to change over following a plan"
-
-There are many principles and features common to Agile approaches, including, Scrums, Sprints, and Kanban boards - I am currently managing the project scope via multiple kanban boards using Github's built-in Kanban board functionality, with a board for managing the delivery of user stories, and a board for managing the bugs & debugging exercises through the development lifecycle. And work through daily sprints in taking each of the tasks through their stages of completion:
-
-A view of the Kanban board with the user stories having been brought through "To Do", "In Progress", and "Done" columns as follows:
-
-### (i) Kanban Board 1 - User Stories [Link](https://github.com/dkelly255/fitness-app/projects/1)
-
-![Title](readme/kanban1.png)
-
-From an Agile development perspective, the User Stories are also classified using the MoSCoW prioritisation technique, with each user story being attributed a category in terms of being either `Must-Have`, `Should-Have`, `Could-Have` and `Won't-Have`:
-
-![Title](readme/labels.png)
-
-### (ii) Kanban Board 2 - User Stories [Link](https://github.com/dkelly255/fitness-app/projects/2)
-
-![Title](readme/kanban2.png)
 
 Additionally, each individual User Story on the board can be drilled into for a detailed description of both the User Story and the clearly defined acceptance criteria associated with the atomic scope being implemented via that User Story - an example is shown below:
 
@@ -375,21 +378,21 @@ For the Fonts on the site I am primarily using [Lato](https://fonts.google.com/s
 
 ![Lato](readme/lato.png)
 
+- Color Palette
+
+As part of the surface layer of the website's user experience, I wanted to use a Blue color palette as part of the site's theme - Bootstrap has a large array of color-schemes & themes to choose from, illustrated in the screenshot below:
+
+![color](readme/bootsrap_color.png)
+
+A deeper dive on the Blue color scheme allows many different shades, hues, and opacities depending on the user's needs, for the majority of the site's surface I am using the default shade of Blue (code #0d6efd & its' derivations) - shown below:
+
+![blue](readme/bootstrap_color_blue.png)
+
 - Imagery
 
 I am using Fitness-related imagery throughout the Surface layer of the site, to help with promoting a positive User Experience for the target audience. The imagery is primarily consisted of different exercise-related pictures & illustrations. The site's background image is also selected due to it's relevance to fitness/exercise, and having a similar color palette that matches with the site's surface. The background image was sourced from [pexels.com](https://www.pexels.com/) and is fully acknowledged in the credits section of this readme document. Some examples of the site imagery are shown below:
 
 ![Imagery](readme/imagery.png)
-
-- Color Palette
-
-As part of the surface layer of the website's user experience, I wanted to use a Blue color palette as part of the site's theme - Bootstrap has a large array of color-schemes & themes to choose from, illustrated in the screenshot below:
-
-![Imagery](readme/bootsrap_color.png)
-
-A deeper dive on the Blue color scheme allows many different shades, hues, and opacities depending on the user's needs, for the majority of the site's surface I am using the default shade of Blue (code #0d6efd & its' derivations) - shown below:
-
-![Imagery](readme/bootstrap_color_blue.png)
 
 - Iconography
 
