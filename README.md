@@ -516,22 +516,31 @@ Another core e-commerce feature of the site is the `User Profile` area - this is
 
 ![Features](readme/features-userprofile.png)
 
-
 ## 3. Community Features:
 
-### - Topic Display Screen
+An additional core aspect of the site's functionality is the `Community` underpinned by the `Discussion Forum` Application. This part of the site facilitates the building of an active community around the Fitness App Brand, which can help to build a loyal customer base and act as an effective and valuable source of feedback on the site's functionality and product offerings, helping to differentiate the site amongst rivals in a saturated market.
+
+### - Topic Listing Screen
+
+The initial screen a user lands on when accessing the forum is the `Topic Listing` screen - this contains a paginated overview of all of the currently active discussion topics on the forum, showing the topic number, title, creation date, author and permitted CRUD actions based on the user's credentials. There is also a sub-navigation bar specific to the forum, allowing a user to traverse the forum application more easily and in a more user friendly manner.
 
 ![Features](readme/features-topicdisplay.png)
 
 ### - Topic Creation
 
+When a user clicks the `Start A New Topic` button on the Topic Listing screen, they will be taken to the topic creation page. This page contains a form via which the User can specify the title of the new topic they wish to create, and click `submit` - which will then proceed to add the topic to the listing of active topics for discussion.
+
 ![Features](readme/features-topiccreate.png)
 
 ### - Topic Editing
 
+If a user clicks on the `Edit Topic` button, they will be directed to the Edit Topic page - this will allow a user to edit the titles of any Discussion Topics they have previously created. Please note - from an authentication and CRUD-control standpoint - Topics can only be edited by their creator or an administrator.
+
 ![Features](readme/features-topic-edit.png)
 
 ### - Topic Deletion
+
+Similarly, when a user clicks on the `Delete Topic` button, they will be directed to the Delete Topic Confirmation page - this will allow a user to confirm they wish to delete the topic they previously created, along with any and all comments and replies previously posted to the Topic. Please note - similar to the Topic Editing feature, from an authentication and CRUD-control standpoint - Topics can only be deleted by their creator or an administrator.
 
 ![Features](readme/features-topic-edit-delete.png)
 
