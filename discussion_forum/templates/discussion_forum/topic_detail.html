@@ -153,20 +153,45 @@
                                         <td class="forum-col-3">
                                             
                                         {% if reply.comment == comment %}
-                                        {% if reply.author == user %}
+                                            {% if reply.author == user %}
+                                                
+                                            <em>                                               
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-reply-modal-{{ reply.id }}">
+                                                Delete Reply
+                                            </button>
                                             
-                                        <em>
-                                            
-                                        <a href="{% url 'delete_reply' topic.id reply.id %}">
-                                            <button class="btn btn-danger p-1">Delete Reply</button>
-                                        </a>
-                                        <a href="{% url 'edit_reply' topic.id reply.id %}">
-                                            <button class="btn btn-danger p-1">Edit Reply</button>
-                                        </a>
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="delete-reply-modal-{{ reply.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Are You Sure?</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            Warning - If you continue this reply will be permanently deleted
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                            <a href="{% url 'delete_reply' topic.id reply.id %}">
+                                                                <button class="btn btn-danger p-1">Delete Reply</button>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                                        </em>
 
-                                        {% endif %}
+                                            <a href="{% url 'edit_reply' topic.id reply.id %}">
+                                                <button class="btn btn-danger p-1">Edit Reply</button>
+                                            </a>
+
+                                            </em>
+
+                                            {% endif %}
                                         {% endif %}
                                             
                                         </td>
