@@ -11,10 +11,10 @@ from django.core.paginator import Paginator
 def contact_view(request):
     """ A view to return the contact form page to site visitors """
 
-    if not request.user.is_anonymous:
+    if not request.user.is_anonymous:        
         user = get_object_or_404(User, username=request.user) 
         form = ContactForm(initial={'first_name': request.user.first_name, 'last_name':request.user.last_name, 'email':request.user.email })    
-    else:
+    else:        
         form = ContactForm(request.POST or None)  
 
     if request.method == 'POST':
