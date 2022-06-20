@@ -38,10 +38,7 @@
 
                 <div class="table-responsive">
                     <h3 class="h7 m-0 p-1 bg-secondary text-light">
-                        {% if topic.author == user %}
-                        <a href="{% url 'delete_topic' topic.id %}">
-                            <button class="btn btn-danger m-1 p-1">Delete Topic</button>
-                        </a>
+                        {% if topic.author == user %}                        
 
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#delete-topic-modal-{{ topic.id }}">
