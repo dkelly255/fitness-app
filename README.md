@@ -542,7 +542,7 @@ If a user clicks on the `Edit Topic` button, they will be directed to the Edit T
 
 Similarly, when a user clicks on the `Delete Topic` button, they will be directed to the Delete Topic Confirmation page - this will allow a user to confirm they wish to delete the topic they previously created, along with any and all comments and replies previously posted to the Topic. Please note - similar to the Topic Editing feature, from an authentication and CRUD-control standpoint - Topics can only be deleted by their creator or an administrator.
 
-![Features](readme/features-topic-edit-delete.png)
+![Features](readme/features-topic-delete.png)
 
 ### - Topic Detail Screen
 

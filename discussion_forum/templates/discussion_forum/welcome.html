@@ -75,7 +75,7 @@
                             {% if topic.author == user %}                             
 
                                 <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#delete-topic-modal-{{ topic.id }}">
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-topic-modal-{{ topic.id }}">
                                     Delete Topic
                                 </button>
                                 
@@ -103,7 +103,7 @@
                                 </div>
 
                                 <a href="{% url 'edit_topic' topic.id %}">
-                                    <button class="btn btn-danger m-1 p-1">Edit Topic</button>
+                                    <button class="btn btn-warning m-1 p-1">Edit Topic</button>
                                 </a>
                             {% endif %}
                                 <a href="{% url 'topic_detail' topic.id %}">

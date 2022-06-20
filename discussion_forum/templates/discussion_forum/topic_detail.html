@@ -41,7 +41,7 @@
                         {% if topic.author == user %}                        
 
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#delete-topic-modal-{{ topic.id }}">
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-topic-modal-{{ topic.id }}">
                             Delete Topic
                         </button>
                         
@@ -68,8 +68,8 @@
                             </div>
                         </div>
 
-                        <a href="/discussion_forum/edit_topic/{{ topic.id }}">
-                            <button class="btn btn-danger m-1 p-1">Edit Topic</button>
+                        <a href="{% url 'edit_topic' topic.id %}">
+                            <button class="btn btn-warning m-1 p-1">Edit Topic</button>
                         </a>
                         {% endif %}
         
@@ -158,7 +158,7 @@
 
 
                                         <a href="{% url 'edit_comment' topic.id comment.id %}">
-                                            <button class="btn btn-danger p-1">Edit Comment</button>
+                                            <button class="btn btn-warning p-1">Edit Comment</button>
                                         </a>
                                     {% endif %}
                                     <a href="{% url 'reply_to_comment' topic.id comment.id %}">
@@ -240,7 +240,7 @@
 
 
                                             <a href="{% url 'edit_reply' topic.id reply.id %}">
-                                                <button class="btn btn-danger p-1">Edit Reply</button>
+                                                <button class="btn btn-warning p-1">Edit Reply</button>
                                             </a>
 
                                             </em>
