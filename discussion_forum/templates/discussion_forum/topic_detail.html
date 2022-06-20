@@ -39,9 +39,38 @@
                 <div class="table-responsive">
                     <h3 class="h7 m-0 p-1 bg-secondary text-light">
                         {% if topic.author == user %}
-                        <a href="/discussion_forum/delete_topic/{{ topic.id }}">
+                        <a href="{% url 'delete_topic' topic.id %}">
                             <button class="btn btn-danger m-1 p-1">Delete Topic</button>
                         </a>
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#delete-topic-modal-{{ topic.id }}">
+                            Delete Topic
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="delete-topic-modal-{{ topic.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-dark" id="exampleModalLabel">Are You Sure?</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body text-dark">
+                                        Warning - If you continue this Topic will be permanently deleted, including all comments and replies
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <a href="{% url 'delete_topic' topic.id %}">
+                                            <button class="btn btn-danger p-1">Delete Topic</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <a href="/discussion_forum/edit_topic/{{ topic.id }}">
                             <button class="btn btn-danger m-1 p-1">Edit Topic</button>
                         </a>
