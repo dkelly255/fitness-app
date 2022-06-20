@@ -596,21 +596,31 @@ This feature within the community application will allow a user to view their ac
 
 ### - Contact Us Screen
 
+The `Contact Us` feature is where users (both anonymous and logged in) can come to submit any queries they may have in relation to anything concerning the site or product offerings. If a User is anonymous, they will populate all of the available fields, including names and email. Whereas if the user is already registered and logged in, the form will pre-populate the user's first name, last name, and email from the existing database contents. The User can then specify the subject of their enquiry, and add a message before clicking Submit.
+
 ![Features](readme/features-contact.png)
 
 ### - Enquiry Management Log
+
+Upon submission of each enquiry, and entry will be made in the site's `Enquiry Log` feature. This feature is available only to users with administrative credentials, and will allow store owners the ability to effectively manage any queries received from users. The enquiry log will record the date of the enquiry's submission, together with the user's name, email, subject, and will enclose the user's message. There is also a "status" column where store owners can mark individual enquiries as either "open" or "closed" to better aid in the management and disposition of enquiries.
 
 ![Features](readme/features-enquiries.png)
 
 ### - Newsletter signup
 
+The Newsletter signup form is included in the site's footer, and enables site user's to enter their email address and consent to the site privacy policy before clicking `subscribe` to get added to the newsletter distribution list.
+
 ![Features](readme/features-newsletter.png)
 
 ### - Nav Bar
 
+The Nav bar is included on all site pages and is fully responsive - this feature enables users to navigate intuitively and quickly throughout the site structure.
+
 ![Features](readme/features-nav.png)
 
 ### - Footer
+
+The footer is also included on all site pages and is fully responsive - this feature contains several useful links and information which allows a user to see where they can navigate if they wish to obtain more information on any aspect of the site's functionality, as well as social links and the newsletter signup form as described above.
 
 ![Features](readme/features-footer.png)
 
