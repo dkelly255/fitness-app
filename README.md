@@ -693,12 +693,12 @@ The key tests below are part of the manual testing procedures I have followed to
 
   No. |Test Case | Expected Result | Actual Result | Pass/Fail | Link
   ------------- |------------- | ------------- | ------------ | ------------- | ------------- 
-  1 | Contact Us Form | The User should be presented with fields to enter their first and last names, email and the nature of their enquiry in the `Contact Us` form when clicking on the main nav menu option | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
-  2 | Pre-population | If the user is logged in, their `First Name`, `Last Name`, and `Email` should pre-populate in the form to promote a positive User Experience | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
-  3 | Confirmation Notification | The User should be presented with a `toast success` message upon completion and submission of the form, whilst also being redirected back to the application's home screen | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
-  4 | Enquiry Log Access | User's with `Superuser` privileges should have an option to view the Support Application's `Enquiry Log` on their `My Account` dropdown menu | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
-  5 | Enquiry Log Dashboard | User's with the appropriate credentials should be able to view a list of all of the enquiries submitetd to date via the Contact Us page | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
-  6 | Enquiry Log Actions | Superusers should be able to mark individual enquiries as either `open` or `closed` depending on their status to aid store owners with managing the site | Functionality operates as expected | Pass | [Screenshot](readme/testing/test6-unlike.png)
+  1 | Contact Us Form | The User should be presented with fields to enter their first and last names, email and the nature of their enquiry in the `Contact Us` form when clicking on the main nav menu option | Functionality operates as expected | Pass | [Screenshot](readme/testing/contact-us.png)
+  2 | Pre-population | If the user is logged in, their `First Name`, `Last Name`, and `Email` should pre-populate in the form to promote a positive User Experience | Functionality operates as expected | Pass | [Screenshot](readme/testing/pre-population.png)
+  3 | Confirmation Notification | The User should be presented with a `toast success` message upon completion and submission of the form, whilst also being redirected back to the application's home screen | Functionality operates as expected | Pass | [Screenshot](readme/testing/contact-confirmation.png)
+  4 | Enquiry Log Access | User's with `Superuser` privileges should have an option to view the Support Application's `Enquiry Log` on their `My Account` dropdown menu | Functionality operates as expected | Pass | [Screenshot](readme/testing/enquiry-log.png)
+  5 | Enquiry Log Dashboard | User's with the appropriate credentials should be able to view a list of all of the enquiries submitetd to date via the Contact Us page | Functionality operates as expected | Pass | [Screenshot](readme/testing/dashboard.png)
+  6 | Enquiry Log Actions | Superusers should be able to mark individual enquiries as either `open` or `closed` depending on their status to aid store owners with managing the site | Functionality operates as expected | Pass | [Screenshot](readme/testing/log-actions.png)
 
   **Community Application Testing:**
 
