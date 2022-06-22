@@ -727,7 +727,7 @@ There are no known unresolved bugs in this release of the application
 
 # Deployment
 
-The application is deployed via Heroku, and a link to the live deployment can be found by clicking [here](https://p4-django-blog.herokuapp.com/)
+The application is deployed via Heroku, and a link to the live deployment can be found by clicking [here](https://fitness-app-p5.herokuapp.com/)
 
 An extended list of detailed steps & instructions for deployment is covered in the section below:
 
@@ -748,7 +748,7 @@ The Steps for deployment to Heroku are as follows - Please note these steps are 
 
 ![New App creation](readme/deployment/heroku-newapp.png)
 
-- Choose a name for the application - I have chosen P4-Django-Blog but please note that the name must be unique.
+- Choose a name for the application - I have chosen Fitness-App-P5 but please note that the name must be unique.
 
 ![App name selection](readme/deployment/heroku-name.png)
 
@@ -772,15 +772,20 @@ Settings Tab:
 
 Deployment Tab: 
 
-- Select Github here, and then we  can confirm that we want to connect to Github & search for the equivalent Github repository name, followed by “Search”. 
+- Select `Heroku Git` here, and then we can install the Heroku CLI by following the instructions shown:
 
 ![Github Deployment](readme/deployment/heroku-deploy.png)
 
-- Next, click “connect” to link up the Heroku app to our Github repository code, and scroll down to see two options - for manual or automatic deployment
-- If you choose to enable automatic deployment then Heroku will rebuild the app every time you push a new change to your code in Github. 
-- Alternatively you can choose to  manually deploy using the "deploy branch" option
-- Finally, you will see the “App was successfully deployed” message  
-and a button for the deployed link. 
+- After making any changes or updates to the code pre-deployment - you can then deploy the changes using the code below:
+
+    ``` 
+    git add .
+    
+    git commit -m "commit message here"
+    
+    git push heroku main
+    ```
+
 
 ## Local Deployment
 
@@ -798,7 +803,18 @@ Note, please ensure that you install all of the required dependencies and packag
 pip3 install -r requirements.txt
 ```
 
-Also please ensure to have an environment file correctly setup (`env.py`) with the following variables - `DATABASE_URL` , `SECRET_KEY`, and `DEVELOPMENT`
+Also please ensure to have an environment file correctly setup (`env.py`) with the following variables - 
+
+```
+`DATABASE_URL` 
+`SECRET_KEY` 
+`DEVELOPMENT` 
+`STRIPE_PUBLIC_KEY`
+`STRIPE_SECRET_KEY`
+`STRIPE_WH_SECRET` 
+`EMAIL_HOST_PASS`
+`EMAIL_HOST_USER`
+```
 
 # Credits
 ## General
