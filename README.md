@@ -736,6 +736,9 @@ An extended list of detailed steps & instructions for deployment is covered in t
 Note - please ensure you have created a GitHub repository prior to proceeding to the "Heroku" deployment section below to ensure no rework or deployment issues
 
 ## Amazon AWS Deployment
+
+
+
 ## Heroku Deployment
 
 The Steps for deployment to Heroku are as follows - Please note these steps are correct and current as at the time of application release (June 2022) but may be subject to change in future:
