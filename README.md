@@ -737,7 +737,58 @@ Note - please ensure you have created a GitHub repository prior to proceeding to
 
 ## Amazon AWS Deployment
 
+Firstly - Navigate to [Amazon AWS](https://aws.amazon.com/) and create a new account, choosing your username, password, verification method and email address details. Then click on the `S3 Storage` option to open the Amazon AWS S3 Storage application:
 
+![AWS5](readme/deployment/aws-5.png)
+
+The Steps for deployment to Amazon AWS are as follows - Please note these steps are correct and current as at the time of application release (June 2022) but may be subject to change in future:
+
+### - Create bucket:
+
+When creating a bucket there are several configuration options. Most of
+these can be left default but the Object Ownership setting (below) needs to be set as shown with the
+ACLs enabled option checked.
+
+![AWS1](readme/deployment/aws-1.png)
+
+### - Bucket settings:
+
+The S3 Bucket options page is a scrollable page broken into sections:
+
+- On the properties tab, static website hosting can now be found by scrolling down to the bottom.
+- On the permissions tab, the three settings covered in the video have their own section.
+- AWS has changed the format of their CORS configuration - the updated code is shown below. Paste
+that into the Cross-origin resource sharing (CORS) section.
+
+![AWS2](readme/deployment/aws-2.png)
+
+The Bucket Policy is unchanged.
+
+For the Access control list (ACL) section, click edit and enable List for Everyone (public access) and
+accept the warning box. If the edit button is disabled you need to change the Object Ownership
+section above to ACLs enabled (refer to Create Bucket section above).
+
+![AWS3](readme/deployment/aws-3.png)
+
+### - Identify and Access Management (IAM)
+
+- Create group:
+
+The sidebar name is now User Groups and everything happens on a single page instead of clicking
+next as shown in the videos.
+
+- Create policy:
+
+On the create policy page there is now a button to go to the next page to add tags. Tags are optional,
+but you must click it to get to the review policy page.
+
+- Attach policy:
+
+To attach the policy, on the sidebar click User Groups. Select your group, go to the permissions tab,
+open the Add permissions dropdown, and click Attach policies. Select the policy and click Add
+permissions at the bottom.
+
+![AWS4](readme/deployment/aws-4.png)
 
 ## Heroku Deployment
 
@@ -821,6 +872,8 @@ Also please ensure to have an environment file correctly setup (`env.py`) with t
 
 # Credits
 ## General
+
+The Amazon AWS Deployment steps are taken from the Code Institute Boutique Ado Deployment instructions
 ## Content
 ## Code
 ## Media
