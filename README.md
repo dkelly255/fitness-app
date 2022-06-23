@@ -16,17 +16,19 @@ The Ecommerce strategy for the site is to offer a business-to-customer (B2C) res
 
 The B2C/Retail Ecommerce strategy will be advantageous to the company over a traditional store-based retail approach in this case as it should allow Fitness-App to reach more customers, reduce their overhead costs, and create detailed customer profiles. 
 
-As part of the E-commerce strategy, Site Users & Customers will also have the ability to participate in a community discussion forum, partaking in discussions around Fitness App's products, creating and adding their own topics, comments, and replies and to engage within a broader community of members and customers - this community aspect should provide another effective platform from which the company can find new customers and work on retinaing existing customers.
+As part of the E-commerce strategy, Site Users & Customers will also have the ability to participate in a community discussion forum, partaking in discussions around Fitness App's products, creating and adding their own topics, comments, and replies and to engage within a broader community of members and customers - this community aspect should provide another effective platform from which the company can find new customers and work on retaining existing customers.
 
 ### - Marketing Strategy:
 
-- SEO:
+- SEO
 
 - Content Marketing:
 
+Content marketing is the process of consistently creating useful, engaging content that will attract, engage and convert your target market into customers. The Community Disucssion Forum is a key part of the content marketing strategy underpinning Fitness App's marketing efforts - and in many discussion topics and comments there are references to which products work best for which goals, and other useful content marketing elements.
+
 - Email Marketing:
 
-- Organic Community Marketing:
+Email marketing is an area almost all e-commerce businesses can benefit from - including Fitness App. As part of the site's email marketing strategy, the `footer` contains a `newsletter signup` form, allowing users to enter their contact details in return for being informed about upcoming news and offers from the site. This gives Fitness App a direct line to their existing and potential customer's inboxes and can be extremely valuable.
 
 - Social Media Marketing:
 
