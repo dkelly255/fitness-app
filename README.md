@@ -12,15 +12,16 @@ I have designed the site using the five planes of UX approach, each of which is 
 
 - E-Commerce Strategy & Business Model:
 
-`Pass Criteria: LO6: 7.1 - Document the e-commerce business model underlying your application`
+The Ecommerce strategy for the site is to offer a business-to-customer (B2C) resource - also called Retail Ecommerce - to users interested in Fitness where they can purchase Clothing and Nutritional products that will suit their hobbies and lifestyle. 
 
-The ecommerce strategy for the site is to offer a business-to-customer (B2C) resource to users interested in Fitness where they can purchase Clothing and Nutrition, and can have the ability to participate in a community discussing their own topics, comments, and replies and to engage within a broader community of members and customers.
+The B2C/Retail Ecommerce strategy will be advantageous to the company over a traditional store-based retail approach in this case as it should allow Fitness-App to reach more customers, reduce their overhead costs, and create detailed customer profiles. 
+
+As part of the E-commerce strategy, Site Users & Customers will also the ability to participate in a community discussing their own topics, comments, and replies and to engage within a broader community of members and customers - this community aspect should provide another effective platform from which the company can find new customers and work on retinaing existing customers.
 
 - Marketing Strategy:
 
-`Merit Criteria: 5.1 - Document the primary marketing strategy behind the application`
+As part of the primary marketing strategy, a facebook business page for the site has been designed and developed per below to aid with increasing the business' brand reach and to support with both developing new customers and retaining existing customers. Facebook are currently deleting many business pages so the screenshot below is attached as a record in case of deletion.
 
-As part of the primary marketing strategy, a facebook business page for the site has been designed and developed per below to aid with increasing the business' brand reach and to suuport with both developing new customers and retaining existing customers. Facebook are currently deleting many business pages so the screenshot below is attached as a record in case of deletion:
 
 ![Mockup](readme/mockup.png)
 
