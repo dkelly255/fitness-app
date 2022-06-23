@@ -10,18 +10,27 @@ I have designed the site using the five planes of UX approach, each of which is 
 
 ## 1. Strategy
 
-- E-Commerce Strategy & Business Model:
+### - E-Commerce Strategy & Business Model:
 
 The Ecommerce strategy for the site is to offer a business-to-customer (B2C) resource - also called Retail Ecommerce - to users interested in Fitness where they can purchase Clothing and Nutritional products that will suit their hobbies and lifestyle. 
 
 The B2C/Retail Ecommerce strategy will be advantageous to the company over a traditional store-based retail approach in this case as it should allow Fitness-App to reach more customers, reduce their overhead costs, and create detailed customer profiles. 
 
-As part of the E-commerce strategy, Site Users & Customers will also the ability to participate in a community discussing their own topics, comments, and replies and to engage within a broader community of members and customers - this community aspect should provide another effective platform from which the company can find new customers and work on retinaing existing customers.
+As part of the E-commerce strategy, Site Users & Customers will also have the ability to participate in a community discussion forum, partaking in discussions around Fitness App's products, creating and adding their own topics, comments, and replies and to engage within a broader community of members and customers - this community aspect should provide another effective platform from which the company can find new customers and work on retinaing existing customers.
 
-- Marketing Strategy:
+### - Marketing Strategy:
+
+- SEO:
+
+- Content Marketing:
+
+- Email Marketing:
+
+- Organic Community Marketing:
+
+- Social Media Marketing:
 
 As part of the primary marketing strategy, a facebook business page for the site has been designed and developed per below to aid with increasing the business' brand reach and to support with both developing new customers and retaining existing customers. Facebook are currently deleting many business pages so the screenshot below is attached as a record in case of deletion.
-
 
 ![Mockup](readme/mockup.png)
 
