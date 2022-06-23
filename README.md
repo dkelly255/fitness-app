@@ -10,13 +10,17 @@ I have designed the site using the five planes of UX approach, each of which is 
 
 ## 1. Strategy
 
-- Pass Criteria: LO6: 7.1 - Document the e-commerce business model underlying your application
+- E-Commerce Strategy & Business Model:
 
-- Merit Criteria: 5.1 - Document the primary marketing strategy behind the application
+`Pass Criteria: LO6: 7.1 - Document the e-commerce business model underlying your application`
 
 The ecommerce strategy for the site is to offer a business-to-customer (B2C) resource to users interested in Fitness where they can purchase Clothing and Nutrition, and can have the ability to participate in a community discussing their own topics, comments, and replies and to engage within a broader community of members and customers.
 
-As part of the E-Commerce strategy a facebook business page for the site has been designed and developed per below to aid with increasing the business' brand reach and to suuport with both developing new customers and retaining existing customers:
+- Marketing Strategy:
+
+`Merit Criteria: 5.1 - Document the primary marketing strategy behind the application`
+
+As part of the primary marketing strategy, a facebook business page for the site has been designed and developed per below to aid with increasing the business' brand reach and to suuport with both developing new customers and retaining existing customers. Facebook are currently deleting many business pages so the screenshot below is attached as a record in case of deletion:
 
 ![Mockup](readme/mockup.png)
 
