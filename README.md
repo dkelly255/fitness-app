@@ -747,7 +747,7 @@ The key tests below are part of the manual testing procedures I have followed to
   13 | User Activity | A user should have the option to view a history of their contributions & forum activity by clicking on the `My Activity` link - this should show the user's previously created Topics, Comments, and Replies together with permitted CRUD actions on each element | Functionality operates as expected | Pass | [Screenshot](readme/testing/user-activity.png)
 
 ## 2. Browser Compatibility Testing:
-\xzc\zx
+
 ### Google Chrome 
 ### Microsoft Edge
 ### Mozilla Firefox
@@ -755,6 +755,8 @@ The key tests below are part of the manual testing procedures I have followed to
 ### Safari (Ipad)
 
 ## 3. Accessibility Testing:
+
+
 
 ## 4. Compliance Testing:
 
