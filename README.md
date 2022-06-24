@@ -440,10 +440,10 @@ Additionally I have added a favicon, which displays at the top of all the site's
 
 Section: | Features Documentation:  | 
   ------------- | ------------- | 
- 1 | [**Authentication & Authorisation**](https://github.com/dkelly255/pp4-django-blog/blob/main/FEATURES.md#features) | 
- 4 | [**E-Commerce Features**](https://github.com/dkelly255/pp4-django-blog/blob/main/FEATURES.md#3-future-features)
- 2 | [**Community Features**](https://github.com/dkelly255/pp4-django-blog/blob/main/FEATURES.md#features) | 
- 3 | [**Other Key Features**](https://github.com/dkelly255/pp4-django-blog/blob/main/FEATURES.md#2-other-key-existing-features) | 
+ 1 | [**Authentication & Authorisation**](https://github.com/dkelly255/fitness-app#1-authorisation-authentication--permission-features) | 
+ 4 | [**E-Commerce Features**](https://github.com/dkelly255/fitness-app#2-ecommerce-features)
+ 2 | [**Community Features**](https://github.com/dkelly255/fitness-app#3-community-features) | 
+ 3 | [**Other Key Features**](https://github.com/dkelly255/fitness-app#4-other-key-features) | 
  
 
 ## 1. Authorisation, Authentication & Permission Features:
