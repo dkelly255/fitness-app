@@ -746,6 +746,17 @@ The key tests below are part of the manual testing procedures I have followed to
   12 | Delete a Reply| Whilst viewing the Topic Detail page, a user should have the option to delete any replies they have previously added to the discussion by clicking on the `Delete Reply` button - this should allow the user to permanently delete the Reply | Functionality operates as expected | Pass | [Screenshot](readme/testing/reply-delete.png)
   13 | User Activity | A user should have the option to view a history of their contributions & forum activity by clicking on the `My Activity` link - this should show the user's previously created Topics, Comments, and Replies together with permitted CRUD actions on each element | Functionality operates as expected | Pass | [Screenshot](readme/testing/user-activity.png)
 
+## 2. Browser Compatibility Testing:
+\xzc\zx
+### Google Chrome 
+### Microsoft Edge
+### Mozilla Firefox
+### Android (Galaxy S10)
+### Safari (Ipad)
+
+## 3. Accessibility Testing:
+
+## 4. Compliance Testing:
 
 # Bugs
 ## Resolved Bugs
