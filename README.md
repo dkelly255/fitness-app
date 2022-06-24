@@ -20,7 +20,17 @@ As part of the E-commerce strategy, Site Users & Customers will also have the ab
 
 ### - Marketing Strategy:
 
-- SEO
+We will address the site's marketing strategy from several angles, including Search Engine Optimisation, Content Marketing, Email Marketing, And Social Media Marketing.
+
+- Search Engine Optimisation
+
+From an SEO strategy standpoint, the goal is to have the site rank as highly as possible on search engine results pages. To facilitate this, a keyword research exercise has been performed using both google and (Wordtracker.com)[https://www.wordtracker.com/] - firstly, making a listing of topics relevant and important to the fitness nutrition/apparrell industry B2C customers, and then building out the topics with keywords relevant and appropriate to those topics - with the keywords then splitting into both short tail (head terms) & long tail categories.
+
+We also want to avoid "Keyword stuffing" as part of the SEO strategy when using the keywords throughout the body elements of the application, and for the site to be SEO-smart. Additionally, the site contains social links in the footer which we want to ensure are excluded from Search Engines for ranking purposes so the `rel="noopener` attribute has been used to ensure this is the case.
+
+Lastly, we also want to ensure that descriptive metadata (i.e. that accurately reflects the site's purpose) is used from an SEO strategy perspective - as demonstrated in the snapshot below the appropriate & effective keyword usage has been applied to the site's metadata for maximum SEO optimisation:
+
+![SEO](readme/seo.png)
 
 - Content Marketing:
 
