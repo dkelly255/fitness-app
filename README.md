@@ -24,13 +24,15 @@ We will address the site's marketing strategy from several angles, including Sea
 
 - Search Engine Optimisation
 
-From an SEO strategy standpoint, the goal is to have the site rank as highly as possible on search engine results pages. To facilitate this, a keyword research exercise has been performed using both google and (Wordtracker.com)[https://www.wordtracker.com/] - firstly, making a listing of topics relevant and important to the fitness nutrition/apparrell industry B2C customers, and then building out the topics with keywords relevant and appropriate to those topics - with the keywords then splitting into both short tail (head terms) & long tail categories.
+From an SEO strategy standpoint, the goal is to have the site rank as highly as possible on search engine results pages. To facilitate this, a keyword research exercise has been performed using both google and [Wordtracker.com](https://www.wordtracker.com/) - firstly, making a listing of topics relevant and important to the fitness nutrition/apparrell industry B2C customers, and then building out the topics with keywords relevant and appropriate to those topics - with the keywords then splitting into both short tail (head terms) & long tail categories.
 
 We also want to avoid "Keyword stuffing" as part of the SEO strategy when using the keywords throughout the body elements of the application, and for the site to be SEO-smart. Additionally, the site contains social links in the footer which we want to ensure are excluded from Search Engines for ranking purposes so the `rel="noopener` attribute has been used to ensure this is the case.
 
-Lastly, we also want to ensure that descriptive metadata (i.e. that accurately reflects the site's purpose) is used from an SEO strategy perspective - as demonstrated in the snapshot below the appropriate & effective keyword usage has been applied to the site's metadata for maximum SEO optimisation:
+Additionally, we also want to ensure that descriptive metadata (i.e. that accurately reflects the site's purpose) is used from an SEO strategy perspective - as demonstrated in the snapshot below the appropriate & effective keyword usage has been applied to the site's metadata for maximum SEO optimisation:
 
 ![SEO](readme/seo.png)
+
+Two additional important files relevant to our marketing strategy are the [sitemap.xml](https://github.com/dkelly255/fitness-app/blob/main/sitemap.xml) and the [robots.txt](https://github.com/dkelly255/fitness-app/blob/main/robots.txt). The sitemap is a file that lists the website's important page url's, ensuring that search engines can crawl/navigate through them, and helping search engines understand the website structure. Whereas the robots.txt is a simple text file that tells search engines where they are not allowed to go on a website - listing any folders or files that will not be crawled or indexed by search engines. Having these files is an integral element of our SEO marketing strategy and should help improve our search engine rankings as a result.
 
 - Content Marketing:
 
