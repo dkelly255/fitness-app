@@ -748,6 +748,8 @@ The key tests below are part of the manual testing procedures I have followed to
 
 ## 2. Browser Compatibility Testing:
 
+The site's compatibility with different browsers and device sizes has been extensively tested to help ensure the best positive experience for site users & visitors, with some of the primary browser & device-size compatibility screenshots being displayed below:
+
 ### Google Chrome 
 
 ![Screenshot](readme/testing/chrome.png)
@@ -769,6 +771,8 @@ The key tests below are part of the manual testing procedures I have followed to
 ![Screenshot](readme/testing/ipad.png)
 
 ## 3. Lighthouse Testing (Accessbility, SEO, Performance):
+
+The DevTools suite, and Lighthouse were used to audit the site's accessibility and found the only initial accessibility deficiencies in the site were generally driven by Search Engine Optimisation and in some cases, accessibility. The finalized accessibility scoring for each page in the site are shown below with the results of the focus on meeting accessbility guidelines ensuring all scores green and in the 90%-100% range.
 
 Website Page | Performance | Accessibility | Best practices | SEO | Screenshot
   ------------- |------------- | ------------- | ------------ | ------------- | ------------- 
