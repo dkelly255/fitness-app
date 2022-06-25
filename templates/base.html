@@ -58,7 +58,7 @@
             <div class="input-group w-100">
               <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search Here">
                 <div class="input-group-append">
-                    <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                    <button class="form-control btn btn-black border border-black rounded-0" type="submit" aria-label="search">
                         <span class="icon">
                           <i class="fas fa-search"></i>
                         </span>
@@ -71,13 +71,13 @@
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <ul class="list-inline list-unstyled text-center text-lg-right my-0">
               <li class="list-inline-item dropdown">
-                  <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="text-black nav-link" href="#" id="user-options1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <div class="text-center">
                           <div><i class="fas fa-user fa-lg"></i></div>
                           <p class="my-0">My Account</p>
                       </div>
                   </a>
-                  <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                  <div class="dropdown-menu border-0" aria-labelledby="user-options1">
                       {% if request.user.is_authenticated %}
                           {% if request.user.is_superuser %}
                               <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
@@ -152,7 +152,7 @@
     {% block content %}
     {% endblock %}
 
-    <footer class="text-center text-lg-start bg-light text-dark">
+    <footer class="text-center text-lg-start bg-light text-muted">
           {% include 'includes/footer.html' %}
     </footer>
 
