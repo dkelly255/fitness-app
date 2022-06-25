@@ -749,10 +749,24 @@ The key tests below are part of the manual testing procedures I have followed to
 ## 2. Browser Compatibility Testing:
 
 ### Google Chrome 
+
+![Screenshot](readme/testing/chrome.png)
+
 ### Microsoft Edge
+
+![Screenshot](readme/testing/edge.png)
+
 ### Mozilla Firefox
+
+![Screenshot](readme/testing/mozilla.png)
+
 ### Android (Galaxy S10)
+
+![Screenshot](readme/testing/android.png)
+
 ### Safari (Ipad)
+
+![Screenshot](readme/testing/ipad.png)
 
 ## 3. Lighthouse Testing (Accessbility, SEO, Performance):
 
