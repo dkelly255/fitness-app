@@ -754,9 +754,12 @@ The key tests below are part of the manual testing procedures I have followed to
 ### Android (Galaxy S10)
 ### Safari (Ipad)
 
-## 3. Accessibility Testing:
+## 3. Lighthouse Testing (Accessbility, SEO, Performance):
 
-
+Website Page | Performance | Accessibility | Best practices | SEO | Screenshot
+  ------------- |------------- | ------------- | ------------ | ------------- | ------------- 
+  Home Page | 99 | 93 | 92 | 100 | [Screenshot](readme/testing/lighthouse_home.png)
+  About Page | 100 | 93 | 92 | 100 | [Screenshot](readme/testing/lighthouse_about.png)
 
 ## 4. Compliance Testing:
 
