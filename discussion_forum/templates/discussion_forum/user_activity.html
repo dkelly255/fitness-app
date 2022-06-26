@@ -36,19 +36,19 @@
 
                 <div class="table-responsive">
                     <h3 class="h6 bg-secondary mb-0 p-2 text-light">               
-                        <p class="mb-0">
+                        
                             User: {{ author}} has created {{ topics | length }} Topics, posted {{ comments | length }} Comments & {{ replies | length }} Replies         
-                        </p>
+                        
                     </h3>
                 </div>
 
                 <div class="table-responsive">
-                    <h3 class="h6 bg-info text-light m-0">
-                            <p class="p-2 m-0">Topics Started By: 
-                                <a href="" class="text-light">
-                                    {{ user.username }} 
+                    <h3 class="h6 bg-info text-light p-2 m-0">
+                            
+                                <a href="" class="text-light m-0">
+                                    Topics Started By: {{ user.username }} 
                                 </a>                                 
-                            </p>
+                            
                     </h3>
                 </div>
 
@@ -77,15 +77,15 @@
                                 <td class="forum-col-2">{{ topic.date_created | date:"j/n/y" }}, {{ topic.date_created | time:"H:i" }}</td>
                                 <td class="forum-col-3">
                                     {% if topic.author == user %}
-                                        <a href="/discussion_forum/delete_topic/{{ topic.id }}">
-                                            <button class="btn btn-danger m-1 p-1">Delete Topic</button>
+                                        <a href="/discussion_forum/delete_topic/{{ topic.id }}" class="btn btn-danger m-1 p-1">
+                                            Delete Topic
                                         </a>
-                                        <a href="/discussion_forum/edit_topic/{{ topic.id }}">
-                                            <button class="btn btn-danger m-1 p-1">Edit Topic</button>
+                                        <a href="/discussion_forum/edit_topic/{{ topic.id }}" class="btn btn-danger m-1 p-1">
+                                            Edit Topic
                                         </a>
                                     {% endif %}
-                                        <a href="{% url 'topic_detail' topic.id %}">
-                                            <button class="btn btn-secondary m-1 p-1">View Comments</button>
+                                        <a href="{% url 'topic_detail' topic.id %}" class="btn btn-secondary m-1 p-1">
+                                            View Comments
                                         </a>
                                 </td>
                             </tr>
@@ -112,12 +112,12 @@
                 </div>
             
                 <div class="table-responsive">
-                    <h3 class="h6 bg-info text-light mt-1 mb-0">
-                            <p class="p-2 m-0">Comments Posted By: 
+                    <h3 class="h6 bg-info text-light mt-1 mb-0 p-2">
+                            
                                 <a href="" class="text-light">
-                                    {{ user.username }} 
+                                    Comments Posted By: {{ user.username }} 
                                 </a>                                 
-                            </p>
+                            
                     </h3>
                 </div>
 
@@ -152,11 +152,11 @@
                                 <td class="forum-col-2">{{ comment.comment_date | date:"j/n/y" }}, {{ comment.comment_date | time:"H:i" }}</td>
                                 <td class="forum-col-3">
                                     
-                                        <a href="">
-                                            <button class="btn btn-danger m-1 p-1">Delete Comment</button>
+                                        <a href="" class="btn btn-danger m-1 p-1">
+                                            Delete Comment
                                         </a>
-                                        <a href="">
-                                            <button class="btn btn-danger m-1 p-1">Edit Comment</button>
+                                        <a href="" class="btn btn-danger m-1 p-1">
+                                            Edit Comment
                                         </a>
                                     
                                         
@@ -185,12 +185,12 @@
                 </div>
             
                 <div class="table-responsive">
-                    <h3 class="h6 bg-info text-light mt-1 mb-0">
-                            <p class="p-2 m-0">Replies Left By: 
+                    <h3 class="h6 bg-info text-light mt-1 mb-0 p-2">
+                            
                                 <a href="" class="text-light">
-                                    {{ user.username }} 
+                                    Replies Left By: {{ user.username }} 
                                 </a>                                 
-                            </p>
+                            
                     </h3>
                 </div>
 
@@ -220,11 +220,11 @@
                                 </td>
                                 <td class="forum-col-2">{{ reply.reply_date | date:"j/n/y" }}, {{ reply.reply_date | time:"H:i" }}</td>
                                 <td class="forum-col-3">                                    
-                                        <a href="">
-                                            <button class="btn btn-danger m-1 p-1">Delete Comment</button>
+                                        <a href="" class="btn btn-danger m-1 p-1">
+                                            Delete Reply
                                         </a>
-                                        <a href="">
-                                            <button class="btn btn-danger m-1 p-1">Edit Comment</button>
+                                        <a href="" class="btn btn-danger m-1 p-1">
+                                            Edit Reply
                                         </a>                                   
                                 </td>
                             </tr>

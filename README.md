@@ -825,6 +825,10 @@ Please note the Forum screens cannot be validated by URL as they require authent
 
 - Forum User Activity:
 
+Please note similar to above, the Forum Activity screens cannot be validated by URL as they require authentication, these screens have been validated by direct input. Please see the [screenshot](readme/testing/w3c_forum_activity_extended.png) attached for the extended code validation.
+
+![Forum](readme/testing/w3c_forum_activity.png)
+
 ### CSS validation
 
 The site's CSS code has been successfully validated using the Jigsaw CSS validation service, with no errors found, and only two warnings which do not affect the site content and can be safely ignored per the screenshot below:
