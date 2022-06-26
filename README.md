@@ -807,9 +807,11 @@ All HTML pages have been passed through the official W3C validator without any i
 
 - About Us:
 
-![Login](readme/testing/w3c_about.png)
+![About Us](readme/testing/w3c_about.png)
 
 - Merchandise:
+
+![Merchandise](readme/testing/w3c_merchandise.png)
 
 - Contact Us:
 
