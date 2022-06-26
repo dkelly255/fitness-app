@@ -859,6 +859,45 @@ The site's Javascript code has been successfully validated using the JSHint vali
 
 This section will summarise the Python validation activities carried out across the various python files consisting the structure of the application, using the PEP8 Online Check utility:
 
+### (iv) Python Validation
+
+This section will summarise the Python validation activities carried out across the various python files consisting the structure of the application, using the [PEP8 Online Check](http://pep8online.com/) utility:
+
+#### **(a) Main Project Directory:** [PP4-DJANGO-BLOG/p4-django-project](p4-django-project):
+
+No. |Python File | PEP8 Status | Screenshot 
+------------- |------------- | ------------- | ------------ 
+1 | [asgi.py](p4-django-project/asgi.py) | No issues | [link](readme/pep8/pep8-project-asgi.png)
+2 | [settings.py](p4-django-project/settings.py) | Two Issues - E501 Line Length see Note^ below tables | [link](readme/pep8/pep8-project-settings.png)
+3 | [urls.py](p4-django-project/urls.py) | No issues | [link](readme/pep8/pep8-project-urls.png)
+4 | [wsgi.py](p4-django-project/wsgi.py) | No issues | [link](readme/pep8/pep8-project-wsgi.png)
+
+#### **(b) Poll App Directory:** [PP4-DJANGO-BLOG/poll](poll):
+
+No. |Python File | PEP8 Status | Screenshot 
+------------- |------------- | ------------- | ------------ 
+1 | [admin.py](poll/admin.py) | No issues | [link](readme/pep8/pep8-poll-admin.png)
+2 | [apps.py](poll/apps.py) | No issues | [link](readme/pep8/pep8-poll-apps.png)
+3 | [models.py](poll/models.py) | No issues | [link](readme/pep8/pep8-poll-models.png)
+4 | [tests.py](poll/tests.py) | No issues | [link](readme/pep8/pep8-poll-tests.png)
+5 | [urls.py](poll/urls.py) | No issues | [link](readme/pep8/pep8-poll-urls.png)
+6 | [views.py](poll/views.py) | No issues | [link](readme/pep8/pep8-poll-views.png)
+
+#### **(c) Website App Directory:** [PP4-DJANGO-BLOG/website](website):
+
+No. |Python File | PEP8 Status | Screenshot 
+------------- |------------- | ------------- | ------------ 
+1 | [admin.py](website/admin.py) | No issues | [link](readme/pep8/pep8-website-admin.png)
+2 | [apps.py](website/apps.py) | No issues | [link](readme/pep8/pep8-website-apps.png)
+3 | [forms.py](website/forms.py) | No issues | [link](readme/pep8/pep8-website-forms.png)
+4 | [models.py](website/models.py) | No issues | [link](readme/pep8/pep8-website-models.png)
+5 | [tests.py](website/tests.py) | No issues | [link](readme/pep8/pep8-website-tests.png)
+6 | [urls.py](website/urls.py) | No issues | [link](readme/pep8/pep8-website-urls.png)
+7 | [views.py](website/views.py) | No issues | [link](readme/pep8/pep8-website-views.png)
+
+^Note - Lines 167 and 132 in settings.py are generating an `E501 code` for line length (exceeding 79 characters by one character & three characters respectively) - this is known and understood as Django has developed the code in this fashion, and per [this](https://peps.python.org/pep-0008/) section of the [PEP8](https://www.python.org/) guidelines I have made a judgement call that applying the guideline in these two specific instance `would potentially make the code less readable, even for someone who is used to reading code that follows this PEP.`
+
+
 # Bugs
 ## Resolved Bugs
 ## Unresolved Bugs
