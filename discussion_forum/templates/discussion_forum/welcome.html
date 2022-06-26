@@ -95,7 +95,7 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                                 <a href="{% url 'delete_topic' topic.id %}">
-                                                    <button class="btn btn-danger p-1">Delete Topic</button>
+                                                    <div class="btn btn-danger p-1">Delete Topic</div>
                                                 </a>
                                             </div>
                                         </div>
@@ -103,11 +103,11 @@
                                 </div>
 
                                 <a href="{% url 'edit_topic' topic.id %}">
-                                    <button class="btn btn-warning m-1 p-1">Edit Topic</button>
+                                    <div class="btn btn-warning m-1 p-1">Edit Topic</div>
                                 </a>
                             {% endif %}
                                 <a href="{% url 'topic_detail' topic.id %}">
-                                    <button class="btn btn-secondary m-1 p-1">View Comments</button>
+                                    <div class="btn btn-secondary m-1 p-1">View Comments</div>
                                 </a>
                         </td>
                     </tr>
