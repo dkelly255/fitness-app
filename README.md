@@ -793,6 +793,26 @@ Website Page | Performance | Accessibility | Best practices | SEO | Screenshot
 
 All HTML pages have been passed through the official W3C validator without any issues, (with the exception of the article detail page - see context below) with accompanying screenshots of the output below:
 
+- Home Page:
+
+![Home Page](readme/testing/w3c_home.png)
+
+- Register:
+
+- Log In:
+
+- Log Out:
+
+- About Us:
+
+- Merchandise:
+
+- Contact Us:
+
+- Forum Overview:
+
+- Forum User Activity:
+
 ### CSS validation
 
 The site's CSS code has been successfully validated using the Jigsaw CSS validation service, with no errors found, and only two warnings which do not affect the site content and can be safely ignored per the screenshot below:
