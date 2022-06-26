@@ -815,6 +815,8 @@ All HTML pages have been passed through the official W3C validator without any i
 
 - Contact Us:
 
+![Contact](readme/testing/w3c_contact.png)
+
 - Forum Overview:
 
 - Forum User Activity:
