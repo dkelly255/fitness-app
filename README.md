@@ -790,10 +790,20 @@ Website Page | Performance | Accessibility | Best practices | SEO | Screenshot
 ## 4. Compliance Testing:
 
 ### HTML validation
+
+All HTML pages have been passed through the official W3C validator without any issues, (with the exception of the article detail page - see context below) with accompanying screenshots of the output below:
+
 ### CSS validation
+
+The site's CSS code has been successfully validated using the Jigsaw CSS validation service, with no errors found, and only two warnings which do not affect the site content and can be safely ignored per the screenshot below:
+
 ### Javascript Validation
+
+The site's Javascript code has been successfully validated using the JSHint validation service, with no errors found, and one warning regarding an undefined variable which does not affect the site content and is required in order to enable the messaging functionality to operate:
+
 ### Python Validation
 
+This section will summarise the Python validation activities carried out across the various python files consisting the structure of the application, using the PEP8 Online Check utility:
 
 # Bugs
 ## Resolved Bugs
