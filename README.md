@@ -819,6 +819,10 @@ All HTML pages have been passed through the official W3C validator without any i
 
 - Forum Overview:
 
+Please note the Forum screens cannot be validated by URL as they require authentication, these screens have been validated by direct input. Please see the [screenshot](readme/testing/w3c_forum_extended.png) attached for the extended code validation.
+
+![Forum](readme/testing/w3c_forum.png)
+
 - Forum User Activity:
 
 ### CSS validation

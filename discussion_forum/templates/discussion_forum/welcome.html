@@ -40,11 +40,11 @@
 
         <div class="table-responsive">
             <h2 class="h4 bg-secondary mb-0 px-3 pt-2 pb-1 text-light">               
-                <p class="mb-0">
-                    <a href="{% url 'create_topic' %}">
-                        <button class="btn btn-dark m-1 p-1">Start a new Topic</button>
+                
+                    <a href="{% url 'create_topic' %}" class="btn btn-dark m-1 p-1">
+                        Start a new Topic
                     </a>               
-                </p>
+                
             </h2>
         </div>
 
@@ -80,7 +80,7 @@
                                 </button>
                                 
                                 <!-- Modal -->
-                                <div class="modal fade" id="delete-topic-modal-{{ topic.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="delete-topic-modal-{{ topic.id }}" tabindex="-1" role="dialog" aria-labelledby="delete-topic-modal-{{ topic.id }}" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
