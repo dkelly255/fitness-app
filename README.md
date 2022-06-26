@@ -831,7 +831,23 @@ Please note similar to above, the Forum Activity screens cannot be validated by 
 
 ### CSS validation
 
-The site's CSS code has been successfully validated using the Jigsaw CSS validation service, with no errors found, and only two warnings which do not affect the site content and can be safely ignored per the screenshot below:
+The site's CSS code has been successfully validated using the Jigsaw CSS validation service, with no errors found, and only two types of warnings found which do not affect the site content and can be safely ignored per the screenshot below:
+
+- base.css
+
+![base.css](readme/testing/jigsaw_base.png)
+
+- checkout.css
+
+![checkout.css](readme/testing/jigsaw_checkout.png)
+
+- profile.css
+
+![profile.css](readme/testing/jigsaw_profile.png)
+
+- forum.css
+
+![forum.css](readme/testing/jigsaw_forum.png)
 
 ### Javascript Validation
 
