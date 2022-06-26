@@ -26,9 +26,9 @@
                     </h2>                    
                 </div>
 
-            <form action="" method="post" class="contact">
+            <form method="post" class="contact">
                 {% csrf_token %}
-                    {{ form }}
+                    {{ form | crispy }}
                 <input type="submit" value="Submit" class="btn btn-primary mt-4">
             </form>
         </div>
