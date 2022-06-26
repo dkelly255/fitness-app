@@ -799,11 +799,15 @@ All HTML pages have been passed through the official W3C validator without any i
 
 - Register:
 
+![Register](readme/testing/w3c_register.png)
+
 - Log In:
 
-- Log Out:
+![Login](readme/testing/w3c_login.png)
 
 - About Us:
+
+![Login](readme/testing/w3c_about.png)
 
 - Merchandise:
 
