@@ -863,7 +863,16 @@ This section will summarise the Python validation activities carried out across 
 
 This section will summarise the Python validation activities carried out across the various python files consisting the structure of the application, using the [PEP8 Online Check](http://pep8online.com/) utility:
 
-#### **(a) Main Project Directory:** [PP4-DJANGO-BLOG/p4-django-project](p4-django-project):
+#### **(a) Bag Application:**
+
+No. |Python File | PEP8 Status | Screenshot 
+------------- |------------- | ------------- | ------------ 
+1 | [apps.py](bag/apps.py) | No issues | [link](readme/pep8/bag-apps.png)
+2 | [contexts.py](bag/contexts.py) | Two Issues - E501 Line Length see Note^ below tables | [link](readme/pep8/bag-contexts.png)
+3 | [urls.py](bag/urls.py) | No issues | [link](readme/pep8/bag-urls.png)
+4 | [views.py](bag/views.py) | No issues | [link](readme/pep8/bag-views.png)
+
+#### **(a) Main Project Directory:**
 
 No. |Python File | PEP8 Status | Screenshot 
 ------------- |------------- | ------------- | ------------ 
@@ -872,7 +881,7 @@ No. |Python File | PEP8 Status | Screenshot
 3 | [urls.py](p4-django-project/urls.py) | No issues | [link](readme/pep8/pep8-project-urls.png)
 4 | [wsgi.py](p4-django-project/wsgi.py) | No issues | [link](readme/pep8/pep8-project-wsgi.png)
 
-#### **(b) Poll App Directory:** [PP4-DJANGO-BLOG/poll](poll):
+#### **(b) Poll App Directory:**
 
 No. |Python File | PEP8 Status | Screenshot 
 ------------- |------------- | ------------- | ------------ 
@@ -883,7 +892,7 @@ No. |Python File | PEP8 Status | Screenshot
 5 | [urls.py](poll/urls.py) | No issues | [link](readme/pep8/pep8-poll-urls.png)
 6 | [views.py](poll/views.py) | No issues | [link](readme/pep8/pep8-poll-views.png)
 
-#### **(c) Website App Directory:** [PP4-DJANGO-BLOG/website](website):
+#### **(c) Website App Directory:** 
 
 No. |Python File | PEP8 Status | Screenshot 
 ------------- |------------- | ------------- | ------------ 
