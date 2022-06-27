@@ -868,9 +868,23 @@ This section will summarise the Python validation activities carried out across 
 No. |Python File | PEP8 Status | Screenshot 
 ------------- |------------- | ------------- | ------------ 
 1 | [apps.py](bag/apps.py) | No issues | [link](readme/pep8/bag-apps.png)
-2 | [contexts.py](bag/contexts.py) | Two Issues - E501 Line Length see Note^ below tables | [link](readme/pep8/bag-contexts.png)
+2 | [contexts.py](bag/contexts.py) | No issues | [link](readme/pep8/bag-contexts.png)
 3 | [urls.py](bag/urls.py) | No issues | [link](readme/pep8/bag-urls.png)
-4 | [views.py](bag/views.py) | No issues | [link](readme/pep8/bag-views.png)
+4 | [views.py](bag/views.py) |  | [link](readme/pep8/bag-views.png)
+
+#### **(b) Checkout Application:**
+
+No. |Python File | PEP8 Status | Screenshot 
+------------- |------------- | ------------- | ------------ 
+1 | [admin.py](checkout/admin.py) | No issues | [link](readme/pep8/checkout-admin.png)
+2 | [apps.py](checkout/apps.py) | No issues | [link](readme/pep8/checkout-apps.png)
+3 | [models.py](checkout/models.py) |  | [link](readme/pep8/checkout-models.png)
+4 | [signals.py](checkout/signals.py) | No issues  | [link](readme/pep8/checkout-signals.png)
+5 | [urls.py](checkout/urls.py) |  | [link](readme/pep8/checkout-urls.png)
+6 | [views.py](checkout/views.py) |  | [link](readme/pep8/checkout-views.png)
+7 | [webhook_handler.py](checkout/webhook_handler.py) |  | [link](readme/pep8/checkout-webhook-handler.png)
+8 | [webhooks.py](checkout/webhooks.py) |  | [link](readme/pep8/checkout-webhooks.png)
+
 
 #### **(a) Main Project Directory:**
 
