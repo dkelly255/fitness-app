@@ -18,6 +18,20 @@
 
 <div class="container my-3">
     
+    <div class="row">
+        <div class="col">        
+
+            <div class="border border-secondary rounded px-2 py-1 m-2 bg-light">
+                Currently Logged in as: <a href="{% url 'user_activity' user.username %}"> {{ user.username }} </a>
+                <a href="{% url 'user_activity' user.username %}" class="mx-3">My Activity</a>
+                <a href="{% url 'home' %}" class="mx-3">Return To Site</a>
+                <a href="{% url 'discussion_forum' %}" class="mx-3">Return To Topics List</a>
+                <a href="{% url 'account_logout' %}" class="mx-3">Logout</a>    
+            </div>     
+        
+        </div>
+    </div>
+
         <div class="table-responsive">
             <h1 class="h4 bg-primary mb-0 px-3 py-2 rounded-top text-light">
                 <strong>Fitness<i class="fas fa-medal mx-1"></i>App Forum </strong>: Add a comment
