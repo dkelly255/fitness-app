@@ -36,7 +36,7 @@
                 <td>
                     <form method="POST">
                         {% csrf_token %}
-                        <p><input type="text" name="content" value="{{comment.content}}" maxlength="300" required id="id_content"></p>
+                        <textarea name="content" cols="40" rows="10" required id="id_content">{{ comment.content }}</textarea>
                         <div>
                             <p>
                                 <button type="submit">Save Edits</button>

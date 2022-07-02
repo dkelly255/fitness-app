@@ -152,7 +152,8 @@ def edit_comment(request, topic_id, comment_id):
     form = CommentForm(instance=comment)
     
     context = {
-        'form': form
+        'form': form,
+        'comment': comment,
     }
     
     return render(request, 'discussion_forum/edit_comment.html', context)
