@@ -16,20 +16,22 @@
 {% block content %}
 <div class="overlay"></div>
 
-<div class="row ">
-    <div class="col">        
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">        
 
-        <div class="container border border-secondary rounded px-2 py-1 m-1 bg-light">
-            Currently Logged in as: <a href="{% url 'user_activity' user.username %}"> {{ user.username }} </a>
-            <a href="{% url 'user_activity' user.username %}" class="mx-3">My Activity</a>
-            <a href="{% url 'home' %}" class="mx-3">Return To Site</a>
-            <a href="{% url 'account_logout' %}" class="mx-3">Logout</a>    
-        </div>     
-    
+            <div class="border border-secondary rounded px-2 py-1 m-2 bg-light">
+                Currently Logged in as: <a href="{% url 'user_activity' user.username %}"> {{ user.username }} </a>
+                <a href="{% url 'user_activity' user.username %}" class="mx-3">My Activity</a>
+                <a href="{% url 'home' %}" class="mx-3">Return To Site</a>
+                <a href="{% url 'account_logout' %}" class="mx-3">Logout</a>    
+            </div>     
+        
+        </div>
     </div>
-</div>
 
-<div class="container-fluid mx-1">
+
+
 
     <div class="row">
         <div class="table-responsive">
