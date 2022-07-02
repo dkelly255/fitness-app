@@ -16,253 +16,254 @@
 {% block content %}
 <div class="overlay"></div>
 
-<div class="row pl-3">
-    <div class="col">
+<div class="container-fluid">
+    <div class="row pl-3">
+        <div class="col">
 
-        <div class="container border border-secondary rounded px-2 py-1 m-1 mb-3 bg-light">
-            Currently Logged in as: <a href="{% url 'user_activity' user.username %}"> {{ user.username }} </a>
-            <a href="{% url 'user_activity' user.username %}" class="mx-3">My Activity</a>
-            <a href="{% url 'home' %}" class="mx-3">Return To Site</a>
-            <a href="{% url 'discussion_forum' %}" class="mx-3">Return To Topics List</a>
-            <a href="{% url 'account_logout' %}" class="mx-3">Logout</a>    
-        </div>
+            <div class="container border border-secondary rounded px-2 py-1 m-1 mb-3 bg-light">
+                Currently Logged in as: <a href="{% url 'user_activity' user.username %}"> {{ user.username }} </a>
+                <a href="{% url 'user_activity' user.username %}" class="mx-3">My Activity</a>
+                <a href="{% url 'home' %}" class="mx-3">Return To Site</a>
+                <a href="{% url 'discussion_forum' %}" class="mx-3">Return To Topics List</a>
+                <a href="{% url 'account_logout' %}" class="mx-3">Logout</a>    
+            </div>
 
-        <div class="container-fluid my-3">
-            <div class="row">
-                <div class="table-responsive">
-                    <h2 class="h4 bg-primary mb-0 px-3 py-2 rounded-top text-light">
-                        <strong>Discussion<i class="fas fa-medal mx-1"></i>Topic</strong>: {{ topic.title }}                        
-                    </h2>
-                    
-                </div>
-
-                <div class="table-responsive">
-                    <h3 class="h7 m-0 p-1 bg-secondary text-light">
-                        {% if topic.author == user %}                        
-
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-topic-modal-{{ topic.id }}">
-                            Delete Topic
-                        </button>
+            <div class="container-fluid my-3">
+                <div class="row">
+                    <div class="table-responsive">
+                        <h2 class="h4 bg-primary mb-0 px-3 py-2 rounded-top text-light">
+                            <strong>Discussion<i class="fas fa-medal mx-1"></i>Topic</strong>: {{ topic.title }}                        
+                        </h2>
                         
-                        <!-- Modal -->
-                        <div class="modal fade" id="delete-topic-modal-{{ topic.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title text-dark" id="exampleModalLabel">Are You Sure?</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body text-dark">
-                                        Warning - If you continue this Topic will be permanently deleted, including all comments and replies
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <a href="{% url 'delete_topic' topic.id %}">
-                                            <button class="btn btn-danger p-1">Delete Topic</button>
-                                        </a>
+                    </div>
+
+                    <div class="table-responsive">
+                        <h3 class="h7 m-0 p-1 bg-secondary text-light">
+                            {% if topic.author == user %}                        
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-topic-modal-{{ topic.id }}">
+                                Delete Topic
+                            </button>
+                            
+                            <!-- Modal -->
+                            <div class="modal fade" id="delete-topic-modal-{{ topic.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-dark" id="exampleModalLabel">Are You Sure?</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body text-dark">
+                                            Warning - If you continue this Topic will be permanently deleted, including all comments and replies
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <a href="{% url 'delete_topic' topic.id %}">
+                                                <button class="btn btn-danger p-1">Delete Topic</button>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <a href="{% url 'edit_topic' topic.id %}">
-                            <button class="btn btn-warning m-1 p-1">Edit Topic</button>
+                            <a href="{% url 'edit_topic' topic.id %}">
+                                <button class="btn btn-warning m-1 p-1">Edit Topic</button>
+                            </a>
+                            {% endif %}
+            
+                        <a href="{% url 'add_comment' topic.id %}">
+                            <button class="btn btn-dark m-1 p-1">Add a comment</button>
                         </a>
-                        {% endif %}
-        
-                    <a href="{% url 'add_comment' topic.id %}">
-                        <button class="btn btn-dark m-1 p-1">Add a comment</button>
-                    </a>
-                    </h3>
-                </div>
+                        </h3>
+                    </div>
 
-                <div class="table-responsive">
-                    <h3 class="h6 bg-info text-light m-0">
-                            <p class="p-2 m-0">Started By: 
-                                <a href="{% url 'user_activity' topic.author %}" class="text-light">
-                                    {{ topic.author }} 
-                                </a>
-                                on {{ topic.date_created }} 
-                            </p>
-                    </h3>
-                </div>
+                    <div class="table-responsive">
+                        <h3 class="h6 bg-info text-light m-0">
+                                <p class="p-2 m-0">Started By: 
+                                    <a href="{% url 'user_activity' topic.author %}" class="text-light">
+                                        {{ topic.author }} 
+                                    </a>
+                                    on {{ topic.date_created }} 
+                                </p>
+                        </h3>
+                    </div>                   
 
-                
-
-
-            <table class="table table-striped table-bordered">
-                <thead class="thead-light text-center">
-                    <tr>
-                        <th scope="col" class="forum-col-1">Comment #</th>
-                        <th scope="col" class="forum-col-4">Comments & Replies</th>
-                        <th scope="col" class="forum-col-2">Date Posted</th>
-                        <th scope="col" class="forum-col-2">Author</th>
-                        <th scope="col" class="forum-col-3">Action/s</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for comment in page_obj %}
-                        {% if comment.topic == topic %}
+                    <table class="table table-striped table-bordered">
+                        <thead class="thead-light text-center">
                             <tr>
-                                <td class="forum-col-1 text-center" rowspan="{{ comment.replies.count | add:'1' }}">
-                                    {{ forloop.counter }}
-        
-                                </td>
-                                
-                                <td class="forum-col-4">
-                                    {{ comment.content }}                                     
-                                </td>
-                                
-                                <td class="forum-col-2">
-                                    {{ comment.comment_date | date:"j/n/y" }} {{ comment.comment_date |  time:"H:i" }}                                
-                                </td>
-                                
-                                <td class="forum-col-2">
-                                    {{ comment.author }}
-                                </td>
-                                
-                                <td class="forum-col-3">                                    
-                                    {% if comment.author == user %}                                      
-
-                                        <!-- Button trigger modal -->
-                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-comment-modal-{{ comment.id }}">
-                                            Delete Comment
-                                        </button>
-                                        
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="delete-comment-modal-{{ comment.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Are You Sure?</h5>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        Warning - If you continue this Comment will be permanently deleted
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                        <a href="{% url 'delete_comment' topic.id comment.id %}">
-                                                            <button class="btn btn-danger p-1">Delete Comment</button>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-
-                                        <a href="{% url 'edit_comment' topic.id comment.id %}">
-                                            <button class="btn btn-warning p-1">Edit Comment</button>
-                                        </a>
-                                    {% endif %}
-                                    <a href="{% url 'reply_to_comment' topic.id comment.id %}">
-                                        <button class="btn btn-secondary p-1">Reply</button>
-                                    </a>                                
-                                </td>
+                                <th scope="col" class="forum-col-1">Comment #</th>
+                                <th scope="col" class="forum-col-4">Comments & Replies</th>
+                                <th scope="col" class="forum-col-2">Date Posted</th>
+                                <th scope="col" class="forum-col-2">Author</th>
+                                <th scope="col" class="forum-col-3">Action/s</th>
                             </tr>
-                            {% for reply in replies %}
-                                {% if reply.comment == comment %}    
+                        </thead>
+                        <tbody>
+                            {% for comment in page_obj %}
+                                {% if comment.topic == topic %}
                                     <tr>
-                                               
+                                        <td class="forum-col-1 text-center" rowspan="{{ comment.replies.count | add:'1' }}">
+                                            {{ forloop.counter }}
+                
+                                        </td>
                                         
-                                        <td class="forum-col-4 text-muted pl-5">
-                                            
-                                            
-                                                {% if reply.comment == comment %}
-                                                    
-                                                    <em> {{ reply.content }}</em>
-
-                                                {% endif %}
-                                            
-                                            
+                                        <td class="forum-col-4">
+                                            {{ comment.content }}                                     
                                         </td>
+                                        
                                         <td class="forum-col-2">
-                                            
-                                            
-                                                {% if reply.comment == comment %}
-                                                    
-                                                    <em>{{ reply.reply_date | date:"j/n/y" }} {{ reply.reply_date | time:"H:i" }}</em>
-
-                                                {% endif %}
-                                            
-                                            
+                                            {{ comment.comment_date | date:"j/n/y" }} {{ comment.comment_date |  time:"H:i" }}                                
                                         </td>
+                                        
                                         <td class="forum-col-2">
-                                            
-                                            
-                                                {% if reply.comment == comment %}
-                                                    
-                                                    <em>{{ reply.author }}</em>
-
-                                                {% endif %}
-                                            
-                                                                        
+                                            {{ comment.author }}
                                         </td>
-                                        <td class="forum-col-3">
-                                            
-                                        {% if reply.comment == comment %}
-                                            {% if reply.author == user %}
+                                        
+                                        <td class="forum-col-3">                                    
+                                            {% if comment.author == user %}                                      
+
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-comment-modal-{{ comment.id }}">
+                                                    Delete Comment
+                                                </button>
                                                 
-                                            <em>                                               
-                                            <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-reply-modal-{{ reply.id }}">
-                                                Delete Reply
-                                            </button>
-                                            
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="delete-reply-modal-{{ reply.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">Are You Sure?</h5>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            Warning - If you continue this reply will be permanently deleted
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                            <a href="{% url 'delete_reply' topic.id reply.id %}">
-                                                                <button class="btn btn-danger p-1">Delete Reply</button>
-                                                            </a>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="delete-comment-modal-{{ comment.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Are You Sure?</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                Warning - If you continue this Comment will be permanently deleted
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                <a href="{% url 'delete_comment' topic.id comment.id %}">
+                                                                    <button class="btn btn-danger p-1">Delete Comment</button>
+                                                                </a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
 
 
-                                            <a href="{% url 'edit_reply' topic.id reply.id %}">
-                                                <button class="btn btn-warning p-1">Edit Reply</button>
-                                            </a>
 
-                                            </em>
-
+                                                <a href="{% url 'edit_comment' topic.id comment.id %}">
+                                                    <button class="btn btn-warning p-1">Edit Comment</button>
+                                                </a>
                                             {% endif %}
-                                        {% endif %}
-                                            
+                                            <a href="{% url 'reply_to_comment' topic.id comment.id %}">
+                                                <button class="btn btn-secondary p-1">Reply</button>
+                                            </a>                                
                                         </td>
                                     </tr>
-                                {% endif %}  
+                                    {% for reply in replies %}
+                                        {% if reply.comment == comment %}    
+                                            <tr>
+                                                    
+                                                
+                                                <td class="forum-col-4 text-muted pl-5">
+                                                    
+                                                    
+                                                        {% if reply.comment == comment %}
+                                                            
+                                                            <em> {{ reply.content }}</em>
+
+                                                        {% endif %}
+                                                    
+                                                    
+                                                </td>
+                                                <td class="forum-col-2">
+                                                    
+                                                    
+                                                        {% if reply.comment == comment %}
+                                                            
+                                                            <em>{{ reply.reply_date | date:"j/n/y" }} {{ reply.reply_date | time:"H:i" }}</em>
+
+                                                        {% endif %}
+                                                    
+                                                    
+                                                </td>
+                                                <td class="forum-col-2">
+                                                    
+                                                    
+                                                        {% if reply.comment == comment %}
+                                                            
+                                                            <em>{{ reply.author }}</em>
+
+                                                        {% endif %}
+                                                    
+                                                                                
+                                                </td>
+                                                <td class="forum-col-3">
+                                                    
+                                                {% if reply.comment == comment %}
+                                                    {% if reply.author == user %}
+                                                        
+                                                    <em>                                               
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-reply-modal-{{ reply.id }}">
+                                                        Delete Reply
+                                                    </button>
+                                                    
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="delete-reply-modal-{{ reply.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title" id="exampleModalLabel">Are You Sure?</h5>
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    Warning - If you continue this reply will be permanently deleted
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                    <a href="{% url 'delete_reply' topic.id reply.id %}">
+                                                                        <button class="btn btn-danger p-1">Delete Reply</button>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <a href="{% url 'edit_reply' topic.id reply.id %}">
+                                                        <button class="btn btn-warning p-1">Edit Reply</button>
+                                                    </a>
+
+                                                    </em>
+
+                                                    {% endif %}
+                                                {% endif %}
+                                                    
+                                                </td>
+                                            </tr>
+                                        {% endif %}  
+                                    {% endfor %}
+                                    
+                                    
+                                {% endif %}
                             {% endfor %}
-                            
-                            
-                        {% endif %}
-                    {% endfor %}
-                </tbody>
-            </table>
+                        </tbody>
+                    </table>
 
+                </div>
+            </div>
         </div>
-        </div>
-
-        <div class="pagination">
+    </div>
+</div>
+        
+            <div class="pagination">
             <span class="step-links">
                 {% if page_obj.has_previous %}
                     <a href="?page=1"> First</a>
