@@ -776,15 +776,15 @@ The DevTools suite, and Lighthouse were used to audit the site's accessibility a
 
 Website Page | Performance | Accessibility | Best practices | SEO | Screenshot
   ------------- |------------- | ------------- | ------------ | ------------- | ------------- 
-  Home Page | 99 | 93 | 92 | 100 | [Screenshot](readme/testing/lighthouse_home.png)
-  Register | 99 | 93 | 92 | 100 | [Screenshot](readme/testing/lighthouse_register.png)
-  Log In | 99 | 93 | 92 | 100 | [Screenshot](readme/testing/lighthouse_login.png)
-  Log Out | 99 | 93 | 92 | 100 | [Screenshot](readme/testing/lighthouse_logout.png)
-  About Us | 100 | 93 | 92 | 100 | [Screenshot](readme/testing/lighthouse_about.png)
-  Merchandise | 100 | 93 | 92 | 100 | [Screenshot](readme/testing/lighthouse_products.png)
-  Contact | 99 | 93 | 92 | 100 | [Screenshot](readme/testing/lighthouse_contact.png)
-  Forum Overview | 98 | 93 | 92 | 100 | [Screenshot](readme/testing/lighthouse_forum.png)
-  Forum User Activity | 99 | 93 | 92 | 89 | [Screenshot](readme/testing/lighthouse_activity.png)
+  Home Page | 99 | 93 | 92 | 100 | ![Screenshot](readme/testing/lighthouse_home.png)
+  Register | 99 | 93 | 92 | 100 | ![Screenshot](readme/testing/lighthouse_register.png)
+  Log In | 99 | 93 | 92 | 100 | ![Screenshot](readme/testing/lighthouse_login.png)
+  Log Out | 99 | 93 | 92 | 100 | ![Screenshot](readme/testing/lighthouse_logout.png)
+  About Us | 100 | 93 | 92 | 100 | ![Screenshot](readme/testing/lighthouse_about.png)
+  Merchandise | 100 | 93 | 92 | 100 | ![Screenshot](readme/testing/lighthouse_products.png)
+  Contact | 99 | 93 | 92 | 100 | ![Screenshot](readme/testing/lighthouse_contact.png)
+  Forum Overview | 98 | 93 | 92 | 100 | ![Screenshot](readme/testing/lighthouse_forum.png)
+  Forum User Activity | 99 | 93 | 92 | 89 | ![Screenshot](readme/testing/lighthouse_activity.png)
   
 
 ## 4. Compliance Testing:
