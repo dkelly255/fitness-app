@@ -91,6 +91,7 @@ def edit_topic(request, topic_id):
         form = TopicForm(request.POST, instance=topic)
         if form.is_valid():
             form.save()
+            messages.success(request, f'Topic successfully edited!')
             return redirect('discussion_forum')
     
     form = TopicForm(instance=topic)
@@ -124,7 +125,9 @@ def add_comment(request, topic_id):
         form.instance.author = user
         if form.is_valid():
             form.save()
+            messages.success(request, f'Comment successfully added!')
             return redirect('topic_detail', topic_id)
+            
 
     context = {
         'form': form,
@@ -150,6 +153,7 @@ def edit_comment(request, topic_id, comment_id):
         form = CommentForm(request.POST, instance=comment)
         if form.is_valid():
             form.save()
+            messages.success(request, f'Comment successfully edited!')
             return redirect('topic_detail', topic_id)
     
     form = CommentForm(instance=comment)
@@ -176,6 +180,7 @@ def reply_to_comment(request, topic_id, comment_id):
         form.instance.author = user
         if form.is_valid():
             form.save()
+            messages.success(request, f'Reply successfully added!')
             return redirect('topic_detail', topic_id)
         
     context = {
@@ -203,6 +208,7 @@ def edit_reply(request, topic_id, reply_id):
         form = ReplyForm(request.POST, instance=reply)
         if form.is_valid():
             form.save()
+            messages.success(request, f'Reply successfully edited!')
             return redirect('topic_detail', topic_id)
     
     form = ReplyForm(instance=reply)
