@@ -205,6 +205,7 @@ def delete_reply(request, topic_id, reply_id):
 def edit_reply(request, topic_id, reply_id):
     
     reply = get_object_or_404(Reply, id=reply_id)
+    topic = Topic.objects.get(pk=topic_id)
     
     if request.method == 'POST':
         form = ReplyForm(request.POST, instance=reply)
@@ -217,7 +218,8 @@ def edit_reply(request, topic_id, reply_id):
     
     context = {
         'form': form,
-        'reply':reply,
+        'reply': reply,
+        'topic': topic,
     }
     
     return render(request, 'discussion_forum/edit_reply.html', context)
