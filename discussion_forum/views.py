@@ -148,6 +148,7 @@ def delete_comment(request, topic_id, comment_id):
 def edit_comment(request, topic_id, comment_id):
     
     comment = get_object_or_404(Comment, id=comment_id)
+    topic = Topic.objects.get(pk=topic_id)
     
     if request.method == 'POST':
         form = CommentForm(request.POST, instance=comment)
@@ -161,6 +162,7 @@ def edit_comment(request, topic_id, comment_id):
     context = {
         'form': form,
         'comment': comment,
+        'topic': topic,
     }
     
     return render(request, 'discussion_forum/edit_comment.html', context)

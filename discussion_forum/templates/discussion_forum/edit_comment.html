@@ -53,9 +53,10 @@
                         {% csrf_token %}
                         <textarea name="content" cols="40" rows="10" required id="id_content">{{ comment.content }}</textarea>
                         <div>
-                            <p>
+                            
                                 <button type="submit">Save Edits</button>
-                            </p>
+                                <a class="btn btn-dark text-light" href="{% url 'topic_detail' topic.id %}">Cancel</a>
+                            
                         </div>
                     </form>
                 </td>
