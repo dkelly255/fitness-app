@@ -1018,7 +1018,7 @@ The Steps for deployment to Heroku are as follows - Please note these steps are 
 
 Settings Tab:
 
-- Config Vars - It is important to get your settings section done before you deploy  your code, the first section being the "config vars" - also known as "environment variables", are where sensitive data that needs to be kept private is stored. In the case of this website & app the  required "CLOUDINARY_URL", "DATABASE_URL", and "SECRET_KEY" config vars are shown below:
+- Config Vars - It is important to get your settings section done before you deploy  your code, the first section being the "config vars" - also known as "environment variables", are where sensitive data that needs to be kept private is stored. In the case of this website & app the required , "DATABASE_URL", and "SECRET_KEY" config vars are shown below:
 
 ![Settings Tab](readme/deployment/heroku-configvars.png)
 
