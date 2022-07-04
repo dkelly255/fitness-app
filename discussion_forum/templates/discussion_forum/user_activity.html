@@ -60,7 +60,7 @@
                             <th scope="col" class="">Title</th>
                             <th scope="col" class="forum-col-2">Created By</th>
                             <th scope="col" class="forum-col-2">Date Created</th>
-                            <th scope="col" class="forum-col-3">Action/s</th>
+                            
                         </tr>
                     </thead>
         
@@ -75,19 +75,7 @@
                                 </td>
                                 <td class="forum-col-2">{{ topic.author }}</td>
                                 <td class="forum-col-2">{{ topic.date_created | date:"j/n/y" }}, {{ topic.date_created | time:"H:i" }}</td>
-                                <td class="forum-col-3">
-                                    {% if topic.author == user %}
-                                        <a href="/discussion_forum/delete_topic/{{ topic.id }}" class="btn btn-danger m-1 p-1">
-                                            Delete Topic
-                                        </a>
-                                        <a href="/discussion_forum/edit_topic/{{ topic.id }}" class="btn btn-danger m-1 p-1">
-                                            Edit Topic
-                                        </a>
-                                    {% endif %}
-                                        <a href="{% url 'topic_detail' topic.id %}" class="btn btn-secondary m-1 p-1">
-                                            View Comments
-                                        </a>
-                                </td>
+                                
                             </tr>
                         {% endfor %}
                     </tbody>
@@ -129,7 +117,7 @@
                             <th scope="col" class="">Comment Detail</th>
                             <th scope="col" class="forum-col-2">Topic</th>
                             <th scope="col" class="forum-col-2">Date Posted</th>
-                            <th scope="col" class="forum-col-3">Action/s</th>
+                           
                         </tr>
                     </thead>
         
@@ -150,17 +138,7 @@
                                     </a>
                                 </td>
                                 <td class="forum-col-2">{{ comment.comment_date | date:"j/n/y" }}, {{ comment.comment_date | time:"H:i" }}</td>
-                                <td class="forum-col-3">
-                                    
-                                        <a href="" class="btn btn-danger m-1 p-1">
-                                            Delete Comment
-                                        </a>
-                                        <a href="" class="btn btn-danger m-1 p-1">
-                                            Edit Comment
-                                        </a>
-                                    
-                                        
-                                </td>
+                                
                             </tr>
                         {% endfor %}
                     </tbody>
@@ -202,7 +180,7 @@
                             <th scope="col" class="">Reply Detail</th>
                             <th scope="col" class="forum-col-2">Original Comment</th>
                             <th scope="col" class="forum-col-2">Date Posted</th>
-                            <th scope="col" class="forum-col-3">Action/s</th>
+                            
                         </tr>
                     </thead>
         
@@ -219,14 +197,7 @@
                                     </a>
                                 </td>
                                 <td class="forum-col-2">{{ reply.reply_date | date:"j/n/y" }}, {{ reply.reply_date | time:"H:i" }}</td>
-                                <td class="forum-col-3">                                    
-                                        <a href="" class="btn btn-danger m-1 p-1">
-                                            Delete Reply
-                                        </a>
-                                        <a href="" class="btn btn-danger m-1 p-1">
-                                            Edit Reply
-                                        </a>                                   
-                                </td>
+                               
                             </tr>
                         {% endfor %}
                     </tbody>
