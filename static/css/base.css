@@ -311,3 +311,16 @@ input[name='q']::placeholder {
     color: rgb(2, 2, 2);
     min-width:100%;
 }
+
+@media (max-width: 500px) {
+
+.overlap {
+    font-size: x-small;
+}
+
+.banner {
+    display:none;
+}
+
+}
+
