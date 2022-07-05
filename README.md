@@ -80,9 +80,9 @@ Each of the User Stories in Epic #1 are detailed below, together with their indi
 
 - View individual product details so that I can Identify the price, description, and product rating, product image and available sizes
     - Acceptance Criteria:
-            - 1 The product details should contain an "add to bag" button allowing the shopper to add the product to their bag
-            - 2 The image should be large enough to give the shopper a good feel for the item being assessed
-            - 3 The product details screen should contain a more in-depth description of the item to give the shopper context and information on the product
+        - 1 The product details should contain an "add to bag" button allowing the shopper to add the product to their bag
+        - 2 The image should be large enough to give the shopper a good feel for the item being assessed
+        - 3 The product details screen should contain a more in-depth description of the item to give the shopper context and information on the product
 
 - Easily view the total of my purchases at any time so that I can Avoid spending too much
     - Acceptance Criteria:
@@ -340,7 +340,7 @@ The diagram below (sourced from [Towards-Data-Science](https://towardsdatascienc
 
 ![MVT](readme/mvt.png)
 
-### - *Requirements.txt* 
+### - [*Requirements.txt*](https://github.com/dkelly255/fitness-app/blob/main/requirements.txt) 
 
 The project structure includes a requirements.txt in keeping with Python Standards & best practices - as per this overview from [idkrtm.com](https://www.idkrtm.com/what-is-the-python-requirements-txt/), the requirements.txt file is used for specifying which Python packages are required to run the overall project.
 
@@ -348,7 +348,7 @@ The current packages and dependencies list for the project are shown below:
 
 ![Requirements](readme/requirements.png)
 
-### - *Procfile*
+### - [*Procfile*](https://github.com/dkelly255/fitness-app/blob/main/Procfile)
 
 A Procfile is also an integral element of the project structure - as per the overview in [medium.com](https://medium.com/@bennettgarner/deploying-django-to-heroku-procfile-static-root-other-pitfalls-e7ab8b2ba33b) - the Procfile is a file in the project's root directory that tells Heroku how the application should start and run - in this case, via a Gunicorn server.
 
