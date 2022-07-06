@@ -941,6 +941,18 @@ No. |Python File | PEP8 Status | Screenshot
 4 | [models.py](newsletter/models.py) | No issues | [link](readme/pep8/pep8-newsletter-models.png)
 6 | [urls.py](newsletter/urls.py) | No issues | [link](readme/pep8/pep8-newsletter-urls.png)
 
+#### **(h) Products Application:** 
+
+No. |Python File | PEP8 Status | Screenshot 
+------------- |------------- | ------------- | ------------ 
+1 | [admin.py](products/admin.py) | No issues | [link](readme/pep8/pep8-products-admin.png)
+1 | [apps.py](products/apps.py) | No issues | [link](readme/pep8/pep8-products-apps.png)
+1 | [forms.py](products/forms.py) | No issues | [link](readme/pep8/pep8-products-forms.png)
+1 | [models.py](products/models.py) | No issues | [link](readme/pep8/pep8-products-models.png)
+1 | [urls.py](products/urls.py) | No issues | [link](readme/pep8/pep8-products-urls.png)
+1 | [views.py](products/views.py) | No issues | [link](readme/pep8/pep8-products-views.png)
+1 | [widgets.py](products/widgets.py) | No issues | [link](readme/pep8/pep8-products-widgets.png)
+
 
 ^Note - Lines 167 and 132 in settings.py are generating an `E501 code` for line length (exceeding 79 characters by one character & three characters respectively) - this is known and understood as Django has developed the code in this fashion, and per [this](https://peps.python.org/pep-0008/) section of the [PEP8](https://www.python.org/) guidelines I have made a judgement call that applying the guideline in these two specific instance `would potentially make the code less readable, even for someone who is used to reading code that follows this PEP.`
 
