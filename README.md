@@ -939,22 +939,30 @@ No. |Python File | PEP8 Status | Screenshot
 2 | [apps.py](newsletter/apps.py) | No issues | [link](readme/pep8/pep8-newsletter-apps.png)
 3 | [forms.py](newsletter/forms.py) | No issues | [link](readme/pep8/pep8-newsletter-forms.png)
 4 | [models.py](newsletter/models.py) | No issues | [link](readme/pep8/pep8-newsletter-models.png)
-6 | [urls.py](newsletter/urls.py) | No issues | [link](readme/pep8/pep8-newsletter-urls.png)
+5 | [urls.py](newsletter/urls.py) | No issues | [link](readme/pep8/pep8-newsletter-urls.png)
 
 #### **(h) Products Application:** 
 
 No. |Python File | PEP8 Status | Screenshot 
 ------------- |------------- | ------------- | ------------ 
 1 | [admin.py](products/admin.py) | No issues | [link](readme/pep8/pep8-products-admin.png)
-1 | [apps.py](products/apps.py) | No issues | [link](readme/pep8/pep8-products-apps.png)
-1 | [forms.py](products/forms.py) | No issues | [link](readme/pep8/pep8-products-forms.png)
-1 | [models.py](products/models.py) | No issues | [link](readme/pep8/pep8-products-models.png)
-1 | [urls.py](products/urls.py) | No issues | [link](readme/pep8/pep8-products-urls.png)
-1 | [views.py](products/views.py) | No issues | [link](readme/pep8/pep8-products-views.png)
-1 | [widgets.py](products/widgets.py) | No issues | [link](readme/pep8/pep8-products-widgets.png)
+2 | [apps.py](products/apps.py) | No issues | [link](readme/pep8/pep8-products-apps.png)
+3 | [forms.py](products/forms.py) | No issues | [link](readme/pep8/pep8-products-forms.png)
+4 | [models.py](products/models.py) | No issues | [link](readme/pep8/pep8-products-models.png)
+5 | [urls.py](products/urls.py) | No issues | [link](readme/pep8/pep8-products-urls.png)
+6 | [views.py](products/views.py) | No issues | [link](readme/pep8/pep8-products-views.png)
+7 | [widgets.py](products/widgets.py) | No issues | [link](readme/pep8/pep8-products-widgets.png)
 
+#### **(i) Profiles Application:** 
 
-^Note - Lines 167 and 132 in settings.py are generating an `E501 code` for line length (exceeding 79 characters by one character & three characters respectively) - this is known and understood as Django has developed the code in this fashion, and per [this](https://peps.python.org/pep-0008/) section of the [PEP8](https://www.python.org/) guidelines I have made a judgement call that applying the guideline in these two specific instance `would potentially make the code less readable, even for someone who is used to reading code that follows this PEP.`
+No. |Python File | PEP8 Status | Screenshot 
+------------- |------------- | ------------- | ------------ 
+1 | [admin.py](profiles/admin.py) | No issues | [link](readme/pep8/pep8-profiles-admin.png)
+2 | [apps.py](profiles/apps.py) | No issues | [link](readme/pep8/pep8-profiles-apps.png)
+3 | [forms.py](profiles/forms.py) | No issues | [link](readme/pep8/pep8-profiles-forms.png)
+4 | [models.py](profiles/models.py) | No issues | [link](readme/pep8/pep8-profiles-models.png)
+5 | [urls.py](profiles/urls.py) | No issues | [link](readme/pep8/pep8-profiles-urls.png)
+6 | [views.py](profiles/views.py) | No issues | [link](readme/pep8/pep8-profiles-views.png)
 
 
 # Bugs
