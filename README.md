@@ -873,9 +873,9 @@ This section will summarise the Python validation activities carried out across 
 
 No. |Python File | PEP8 Status | Screenshot 
 ------------- |------------- | ------------- | ------------ 
-1 | [apps.py](bag/apps.py) | No issues | [link](readme/pep8/bag-apps.png)
-2 | [contexts.py](bag/contexts.py) | No issues | [link](readme/pep8/bag-contexts.png)
-3 | [urls.py](bag/urls.py) | No issues | [link](readme/pep8/bag-urls.png)
+1 | [apps.py](bag/apps.py) | No issues | ![link](readme/testing/pep8/bag-apps.png)
+2 | [contexts.py](bag/contexts.py) | No issues | ![link](readme/testing/pep8/bag-contexts.png)
+3 | [urls.py](bag/urls.py) | No issues | ![link](readme/testing/pep8/bag-urls.png)
 4 | [views.py](bag/views.py) |  | [link](readme/pep8/bag-views.png)
 
 #### **(b) Checkout Application:**
