@@ -882,8 +882,8 @@ No. |Python File | PEP8 Status | Screenshot
 
 No. |Python File | PEP8 Status | Screenshot 
 ------------- |------------- | ------------- | ------------ 
-1 | [admin.py](checkout/admin.py) | No issues | [link](readme/pep8/checkout-admin.png)
-2 | [apps.py](checkout/apps.py) | No issues | [link](readme/pep8/checkout-apps.png)
+1 | [admin.py](checkout/admin.py) | No issues | ![link](readme/testing/pep8/checkout-admin.png)
+2 | [apps.py](checkout/apps.py) | No issues | ![link](readme/testing/pep8/checkout-apps.png)
 3 | [models.py](checkout/models.py) |  | [link](readme/pep8/checkout-models.png)
 4 | [signals.py](checkout/signals.py) | No issues  | [link](readme/pep8/checkout-signals.png)
 5 | [urls.py](checkout/urls.py) |  | [link](readme/pep8/checkout-urls.png)
@@ -891,15 +891,35 @@ No. |Python File | PEP8 Status | Screenshot
 7 | [webhook_handler.py](checkout/webhook_handler.py) |  | [link](readme/pep8/checkout-webhook-handler.png)
 8 | [webhooks.py](checkout/webhooks.py) |  | [link](readme/pep8/checkout-webhooks.png)
 
-
-#### **(a) Main Project Directory:**
+#### **(c) Contact Application:**
 
 No. |Python File | PEP8 Status | Screenshot 
 ------------- |------------- | ------------- | ------------ 
-1 | [asgi.py](p4-django-project/asgi.py) | No issues | [link](readme/pep8/pep8-project-asgi.png)
-2 | [settings.py](p4-django-project/settings.py) | Two Issues - E501 Line Length see Note^ below tables | [link](readme/pep8/pep8-project-settings.png)
-3 | [urls.py](p4-django-project/urls.py) | No issues | [link](readme/pep8/pep8-project-urls.png)
-4 | [wsgi.py](p4-django-project/wsgi.py) | No issues | [link](readme/pep8/pep8-project-wsgi.png)
+1 | [admin.py](contact/admin.py) |  | [link](readme/testing/pep8/contact-admin.png)
+2 | [apps.py](contact/apps.py) |  | [link](readme/testing/pep8/contact-apps.png)
+3 | [forms.py](contact/forms.py) |  | [link](readme/pep8/contact-forms.png)
+4 | [models.py](contact/models.py) |  | [link](readme/pep8/contact-models.png)
+5 | [urls.py](contact/urls.py) |  | [link](readme/pep8/contact-urls.png)
+6 | [views.py](contact/views.py) |  | [link](readme/pep8/contact-views.png)
+
+#### **(d) Discussion Forum Application:**
+
+No. |Python File | PEP8 Status | Screenshot 
+------------- |------------- | ------------- | ------------ 
+1 | [admin.py](discussion_forum/admin.py) |  | [link](readme/testing/pep8/discussion_forum-admin.png)
+2 | [apps.py](discussion_forum/apps.py) |  | [link](readme/testing/pep8/discussion_forum-apps.png)
+3 | [forms.py](discussion_forum/forms.py) |  | [link](readme/pep8/discussion_forum-forms.png)
+4 | [models.py](discussion_forum/models.py) |  | [link](readme/pep8/discussion_forum-models.png)
+5 | [urls.py](discussion_forum/urls.py) |  | [link](readme/pep8/discussion_forum-urls.png)
+6 | [views.py](discussion_forum/views.py) |  | [link](readme/pep8/discussion_forum-views.png)
+
+#### **(e) Main Project Directory:**
+
+No. |Python File | PEP8 Status | Screenshot 
+------------- |------------- | ------------- | ------------ 
+1 | [settings.py](fitness_app/settings.py) | Two Issues - E501 Line Length see Note^ below tables | [link](readme/pep8/pep8-project-settings.png)
+2 | [urls.py](fitness_app/urls.py) | No issues | [link](readme/pep8/pep8-project-urls.png)
+3 | [views.py](fitness_app/views.py) | No issues | [link](readme/pep8/pep8-project-wsgi.png)
 
 #### **(b) Poll App Directory:**
 
