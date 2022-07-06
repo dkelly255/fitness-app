@@ -926,9 +926,9 @@ No. |Python File | PEP8 Status | Screenshot
 
 No. |Python File | PEP8 Status | Screenshot 
 ------------- |------------- | ------------- | ------------ 
-1 | [apps.py](home/apps.py) | No issues | [link](readme/testing/pep8/home-apps.png)
-2 | [urls.py](home/urls.py) | No issues | [link](readme/testing/pep8/home-urls.png)
-3 | [views.py](home/views.py) | No issues | [link](readme/testing/pep8/home-views.png)
+1 | [apps.py](home/apps.py) | No issues | ![link](readme/testing/pep8/home-apps.png)
+2 | [urls.py](home/urls.py) | No issues | ![link](readme/testing/pep8/home-urls.png)
+3 | [views.py](home/views.py) | No issues | ![link](readme/testing/pep8/home-views.png)
 
 #### **(g) Newsletter Application:** 
 
