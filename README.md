@@ -918,9 +918,9 @@ No. |Python File | PEP8 Status | Screenshot
 
 No. |Python File | PEP8 Status | Screenshot 
 ------------- |------------- | ------------- | ------------ 
-1 | [settings.py](fitness_app/settings.py) | Two Issues - E501 Line Length see Note^ below tables | [link](readme/pep8/pep8-project-settings.png)
-2 | [urls.py](fitness_app/urls.py) | No issues | [link](readme/pep8/pep8-project-urls.png)
-3 | [views.py](fitness_app/views.py) | No issues | [link](readme/pep8/pep8-project-wsgi.png)
+1 | [settings.py](fitness_app/settings.py) | No Issues | ![link](readme/testing/pep8/project-settings.png)
+2 | [urls.py](fitness_app/urls.py) | No issues | ![link](readme/testing/pep8/project-urls.png)
+3 | [views.py](fitness_app/views.py) | No issues | ![link](readme/testing/pep8/project-views.png)
 
 #### **(f) Home Application:**
 
