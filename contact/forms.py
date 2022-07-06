@@ -4,14 +4,8 @@ from django import forms
 from .models import Contact
 
 
-class ContactForm(ModelForm):  
-    # first_name = models.CharField(max_length=100, null=True, blank=True)
-    # last_name = models.CharField(max_length=100, null=True, blank=True)
-    # email = models.EmailField(widget=forms.EmailInput(attrs={'class':'form-control'}))
-    # subject = models.CharField(max_length=255)
-    # message = models.TextField()
-    
-    
+class ContactForm(ModelForm):
+
     class Meta:
         model = Contact
         fields = (

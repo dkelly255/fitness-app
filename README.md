@@ -896,12 +896,12 @@ No. |Python File | PEP8 Status | Screenshot
 
 No. |Python File | PEP8 Status | Screenshot 
 ------------- |------------- | ------------- | ------------ 
-1 | [admin.py](contact/admin.py) |  | [link](readme/testing/pep8/contact-admin.png)
-2 | [apps.py](contact/apps.py) |  | [link](readme/testing/pep8/contact-apps.png)
-3 | [forms.py](contact/forms.py) |  | [link](readme/pep8/contact-forms.png)
-4 | [models.py](contact/models.py) |  | [link](readme/pep8/contact-models.png)
-5 | [urls.py](contact/urls.py) |  | [link](readme/pep8/contact-urls.png)
-6 | [views.py](contact/views.py) |  | [link](readme/pep8/contact-views.png)
+1 | [admin.py](contact/admin.py) | No Issues | ![link](readme/testing/pep8/contact-admin.png)
+2 | [apps.py](contact/apps.py) | No Issues | ![link](readme/testing/pep8/contact-apps.png)
+3 | [forms.py](contact/forms.py) | Line Length too long x1 | ![link](readme/testing/pep8/contact-forms.png)
+4 | [models.py](contact/models.py) | No Issues | ![link](readme/testing/pep8/contact-models.png)
+5 | [urls.py](contact/urls.py) | Line Length too long x1 | ![link](readme/testing/pep8/contact-urls.png)
+6 | [views.py](contact/views.py) | Line Length too long x2 | ![link](readme/testing/pep8/contact-views.png)
 
 #### **(d) Discussion Forum Application:**
 
