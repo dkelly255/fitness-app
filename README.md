@@ -851,9 +851,15 @@ The site's CSS code has been successfully validated using the Jigsaw CSS validat
 
 ### Javascript Validation
 
-The site's Javascript code has been successfully validated using the JSHint validation service, with no errors found, and only two warnings regarding an undefined variable which does not affect the site content and is required in order to enable the messaging functionality to operate and the template literal warnings reagrding ES6:
+The site's Javascript code has been successfully validated using the JSHint validation service, with no errors found, and only one warning regarding an undefined variable which does not affect the site content and is required in order to enable the messaging functionality to operate:
 
-![stripe_elements.js](readme/testing/jshint.png)
+- Stripe Elements:
+
+![stripe_elements.js](readme/testing/jshint_stripe-elements.png)
+
+- Country Field:
+
+![countryfield.js](readme/testing/jshint_countryfield.png)
 
 ### Python Validation
 
