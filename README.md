@@ -921,28 +921,26 @@ No. |Python File | PEP8 Status | Screenshot
 2 | [urls.py](fitness_app/urls.py) | No issues | [link](readme/pep8/pep8-project-urls.png)
 3 | [views.py](fitness_app/views.py) | No issues | [link](readme/pep8/pep8-project-wsgi.png)
 
-#### **(b) Poll App Directory:**
+#### **(f) Home Application:**
 
 No. |Python File | PEP8 Status | Screenshot 
 ------------- |------------- | ------------- | ------------ 
-1 | [admin.py](poll/admin.py) | No issues | [link](readme/pep8/pep8-poll-admin.png)
-2 | [apps.py](poll/apps.py) | No issues | [link](readme/pep8/pep8-poll-apps.png)
-3 | [models.py](poll/models.py) | No issues | [link](readme/pep8/pep8-poll-models.png)
-4 | [tests.py](poll/tests.py) | No issues | [link](readme/pep8/pep8-poll-tests.png)
-5 | [urls.py](poll/urls.py) | No issues | [link](readme/pep8/pep8-poll-urls.png)
-6 | [views.py](poll/views.py) | No issues | [link](readme/pep8/pep8-poll-views.png)
+1 | [admin.py](home/admin.py) | No issues | [link](readme/pep8/pep8-home-admin.png)
+2 | [apps.py](home/apps.py) | No issues | [link](readme/pep8/pep8-home-apps.png)
+3 | [models.py](home/models.py) | No issues | [link](readme/pep8/pep8-home-models.png)
+4 | [urls.py](home/urls.py) | No issues | [link](readme/pep8/pep8-home-urls.png)
+5 | [views.py](home/views.py) | No issues | [link](readme/pep8/pep8-home-views.png)
 
-#### **(c) Website App Directory:** 
+#### **(g) Newsletter Application:** 
 
 No. |Python File | PEP8 Status | Screenshot 
 ------------- |------------- | ------------- | ------------ 
-1 | [admin.py](website/admin.py) | No issues | [link](readme/pep8/pep8-website-admin.png)
-2 | [apps.py](website/apps.py) | No issues | [link](readme/pep8/pep8-website-apps.png)
-3 | [forms.py](website/forms.py) | No issues | [link](readme/pep8/pep8-website-forms.png)
-4 | [models.py](website/models.py) | No issues | [link](readme/pep8/pep8-website-models.png)
-5 | [tests.py](website/tests.py) | No issues | [link](readme/pep8/pep8-website-tests.png)
-6 | [urls.py](website/urls.py) | No issues | [link](readme/pep8/pep8-website-urls.png)
-7 | [views.py](website/views.py) | No issues | [link](readme/pep8/pep8-website-views.png)
+1 | [admin.py](newsletter/admin.py) | No issues | [link](readme/pep8/pep8-newsletter-admin.png)
+2 | [apps.py](newsletter/apps.py) | No issues | [link](readme/pep8/pep8-newsletter-apps.png)
+3 | [forms.py](newsletter/forms.py) | No issues | [link](readme/pep8/pep8-newsletter-forms.png)
+4 | [models.py](newsletter/models.py) | No issues | [link](readme/pep8/pep8-newsletter-models.png)
+6 | [urls.py](newsletter/urls.py) | No issues | [link](readme/pep8/pep8-newsletter-urls.png)
+
 
 ^Note - Lines 167 and 132 in settings.py are generating an `E501 code` for line length (exceeding 79 characters by one character & three characters respectively) - this is known and understood as Django has developed the code in this fashion, and per [this](https://peps.python.org/pep-0008/) section of the [PEP8](https://www.python.org/) guidelines I have made a judgement call that applying the guideline in these two specific instance `would potentially make the code less readable, even for someone who is used to reading code that follows this PEP.`
 
