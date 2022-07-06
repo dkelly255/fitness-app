@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Topic, Comment, Reply
 
+
 class TopicAdmin(admin.ModelAdmin):
     list_display = (
         'author',
@@ -10,22 +11,24 @@ class TopicAdmin(admin.ModelAdmin):
 
     ordering = ('date_created',)
 
+
 class CommentAdmin(admin.ModelAdmin):
     list_display = (
         'comment_date',
         'author',
         'content',
-        'topic',  
+        'topic',
     )
 
     ordering = ('comment_date',)
+
 
 class ReplyAdmin(admin.ModelAdmin):
     list_display = (
         'reply_date',
         'author',
         'content',
-        'comment',   
+        'comment',
     )
 
     ordering = ('reply_date',)

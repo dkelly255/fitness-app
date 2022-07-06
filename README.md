@@ -907,12 +907,12 @@ No. |Python File | PEP8 Status | Screenshot
 
 No. |Python File | PEP8 Status | Screenshot 
 ------------- |------------- | ------------- | ------------ 
-1 | [admin.py](discussion_forum/admin.py) |  | [link](readme/testing/pep8/discussion_forum-admin.png)
-2 | [apps.py](discussion_forum/apps.py) |  | [link](readme/testing/pep8/discussion_forum-apps.png)
-3 | [forms.py](discussion_forum/forms.py) |  | [link](readme/pep8/discussion_forum-forms.png)
-4 | [models.py](discussion_forum/models.py) |  | [link](readme/pep8/discussion_forum-models.png)
-5 | [urls.py](discussion_forum/urls.py) |  | [link](readme/pep8/discussion_forum-urls.png)
-6 | [views.py](discussion_forum/views.py) |  | [link](readme/pep8/discussion_forum-views.png)
+1 | [admin.py](discussion_forum/admin.py) | No Issues | ![link](readme/testing/pep8/discussion_forum-admin.png)
+2 | [apps.py](discussion_forum/apps.py) | No Issues | ![link](readme/testing/pep8/discussion_forum-apps.png)
+3 | [forms.py](discussion_forum/forms.py) | No Issues | ![link](readme/testing/pep8/discussion_forum-forms.png)
+4 | [models.py](discussion_forum/models.py) | Line Length too long x5  | ![link](readme/testing/pep8/discussion_forum-models.png)
+5 | [urls.py](discussion_forum/urls.py) | Line Length too long x6 | ![link](readme/testing/pep8/discussion_forum-urls.png)
+6 | [views.py](discussion_forum/views.py) | No Issues | ![link](readme/testing/pep8/discussion_forum-views.png)
 
 #### **(e) Main Project Directory:**
 

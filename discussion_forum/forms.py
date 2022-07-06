@@ -3,7 +3,7 @@ from .models import Topic, Comment, Reply
 
 
 class TopicForm(ModelForm):
-    
+
     class Meta:
         model = Topic
         fields = (
@@ -11,16 +11,16 @@ class TopicForm(ModelForm):
 
 
 class CommentForm(ModelForm):
-    
+
     class Meta:
         model = Comment
-        fields = ( 'content',
+        fields = ('content',
                   )
+
 
 class ReplyForm(ModelForm):
-    
+
     class Meta:
         model = Reply
-        fields = ( 'content',
+        fields = ('content',
                   )
-
