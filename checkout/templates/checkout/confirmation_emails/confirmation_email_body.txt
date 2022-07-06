@@ -2,7 +2,7 @@ Hello {{ order.full_name }}!
 
 This is a confirmation of your order at Fitness App. Your order information is below:
 
-Order Number: <a href="https://fitness-app-p5.herokuapp.com/checkout/checkout_success/{{ order.order_number }}" target="_blank" rel="noopener">{{ order.order_number }}</a>
+Order Number: <a href="https://fitness-app-p5.herokuapp.com/{% url 'checkout_success' order.order_number %}">{{ order.order_number }}</a>
 
 Order Date: {{ order.date }}
 
