@@ -30,7 +30,7 @@ def contact_view(request):
                 'Subject here',
                 'Here is the message.',
                 settings.DEFAULT_FROM_EMAIL,
-                request.POST.get("id_email")
+                request.POST.get("email")
             )   
 
             return redirect(reverse('home'))
