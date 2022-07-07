@@ -960,6 +960,19 @@ No. |Python File | PEP8 Status | Screenshot
 
 # Bugs
 ## Resolved Bugs
+
+- Newsletter fields pre-populating with login details of user
+
+This bug originally existed in the Newsletter application due to naming clashes between multiple form elements on the same page & was succesfully resolved.
+
+- Quantity Selector on Shopping Bag page allowing non-numeric characters
+
+This bug required resolution to prevent non-numeric characters ( for example `1-99`) being enterable on the quanttity selector on the shopping bag page. I was able to find a solution from [techiedelight](https://www.techiedelight.com/restrict-html-input-text-box-to-allow-only-numeric-values/) which succesfully resolved the bug.
+
+- Erroneous whitespace in textarea inputs on Forum fields
+
+This bug originally existed on all textarea input fields on the forum applications CRUD screens (for example `edit comment`, `edit reply` etc) - and was caused by skipping lines in the template to indent the textarea element for readability. Unfortunately the textarea would assume any skipped lines or indentation was whitespace and would translate the whitespace to the start of the input box on the screen contributing to a sub-optimal UX. The bug was resolved by ensuring the textarea elements had no whitespace after them in the html templates.
+
 ## Unresolved Bugs
 
 There are no known unresolved bugs in this release of the application
