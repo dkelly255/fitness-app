@@ -1,3 +1,5 @@
+# Credits: This code is sourced & adapted from the
+# Code Institute Boutique Ado Project
 import uuid
 
 from django.db import models

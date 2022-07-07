@@ -1,3 +1,5 @@
+# Credits: This code is sourced & adapted from the
+# Code Institute Boutique Ado Project
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages

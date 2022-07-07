@@ -1,3 +1,5 @@
+# Credits: This code is sourced & adapted from the
+# Code Institute Boutique Ado Project
 from django.contrib import admin
 from .models import Product, Category
 
