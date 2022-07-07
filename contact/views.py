@@ -27,8 +27,8 @@ def contact_view(request):
             messages.success(request, 'Your Enquiry was submitted! Please allow one working day for processing and reply')
             
             send_mail(
-                'Subject here',
-                'Here is the message.',
+                'Fitness App: Contact Enquiry Received!',
+                'Thank you for getting in contact, we aim to respond to all queries within 24 hours & will be in touch soon',
                 settings.DEFAULT_FROM_EMAIL,
                 [request.POST.get("email")],
             )   
