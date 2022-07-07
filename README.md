@@ -955,12 +955,11 @@ No. |Python File | PEP8 Status | Screenshot
 
 No. |Python File | PEP8 Status | Screenshot 
 ------------- |------------- | ------------- | ------------ 
-1 | [admin.py](profiles/admin.py) | No issues | [link](readme/pep8/pep8-profiles-admin.png)
-2 | [apps.py](profiles/apps.py) | No issues | [link](readme/pep8/pep8-profiles-apps.png)
-3 | [forms.py](profiles/forms.py) | No issues | [link](readme/pep8/pep8-profiles-forms.png)
-4 | [models.py](profiles/models.py) | No issues | [link](readme/pep8/pep8-profiles-models.png)
-5 | [urls.py](profiles/urls.py) | No issues | [link](readme/pep8/pep8-profiles-urls.png)
-6 | [views.py](profiles/views.py) | No issues | [link](readme/pep8/pep8-profiles-views.png)
+1 | [apps.py](profiles/apps.py) | No issues | ![link](readme/testing/pep8/profiles-apps.png)
+2 | [forms.py](profiles/forms.py) | Line Length x1 | ![link](readme/testing/pep8/profiles-forms.png)
+3 | [models.py](profiles/models.py) | Line Length x5 | ![link](readme/testing/pep8/profiles-models.png)
+4 | [urls.py](profiles/urls.py) | Line Length x1 | ![link](readme/testing/pep8/profiles-urls.png)
+5 | [views.py](profiles/views.py) | Line Length x1 | ![link](readme/testing/pep8/profiles-views.png)
 
 
 # Bugs
