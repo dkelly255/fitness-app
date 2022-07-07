@@ -1,3 +1,5 @@
+# Credits: This code is sourced & adapted from the
+# Code Institute Boutique Ado Project
 from django.forms.widgets import ClearableFileInput
 from django.utils.translation import gettext_lazy as _
 
