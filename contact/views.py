@@ -5,6 +5,8 @@ from .forms import ContactForm
 from .models import Contact
 from django.contrib import messages
 from django.core.paginator import Paginator
+from django.core.mail import send_mail
+from django.conf import settings
 
 # Create your views here.
 
@@ -23,6 +25,14 @@ def contact_view(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your Enquiry was submitted! Please allow one working day for processing and reply')
+            
+            send_mail(
+                'Subject here',
+                'Here is the message.',
+                settings.DEFAULT_FROM_EMAIL,
+                request.POST.get("id_email")
+            )   
+
             return redirect(reverse('home'))
 
     context = {'form': form}
