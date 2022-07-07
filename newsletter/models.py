@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class Newsletter(models.Model):
 
     class Meta:
@@ -9,4 +10,3 @@ class Newsletter(models.Model):
 
     email = models.EmailField(null=False, blank=False)
     privacy = models.BooleanField(null=False, blank=False)
-    

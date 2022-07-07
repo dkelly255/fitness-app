@@ -8,6 +8,7 @@ from .forms import ProductForm
 
 # Create your views here.
 
+
 def all_products(request):
     """ A view to show all products, and filter by category note:searching by term has been extracted out into search_results view """
 
@@ -32,7 +33,6 @@ def all_products(request):
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
 
-        
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
@@ -43,7 +43,7 @@ def all_products(request):
             if not query:
                 messages.error(request, "You didn't enter any search criteria")
                 return redirect(reverse('products'))
-            
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
@@ -58,6 +58,7 @@ def all_products(request):
 
     return render(request, 'products/products.html', context)
 
+
 def all_programmes(request):
     """ A view to return the programmes and filter by category note:searching by term has been extracted out into search_results view"""
 
@@ -67,7 +68,6 @@ def all_programmes(request):
     sort = None
     direction = None
 
-   
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -83,7 +83,6 @@ def all_programmes(request):
                     sortkey = f'-{sortkey}'
             programmes = programmes.order_by(sortkey)
 
-        
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             programmes = programmes.filter(category__name__in=categories)
@@ -94,7 +93,7 @@ def all_programmes(request):
             if not query:
                 messages.error(request, "You didn't enter any search criteria")
                 return redirect(reverse('programmes'))
-            
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             programmes = programmes.filter(queries)
 
@@ -103,14 +102,13 @@ def all_programmes(request):
     context = {
         'programmes': programmes,
         'search_term': query,
-        'current_categories':categories,
+        'current_categories': categories,
         'current_sorting': current_sorting,
     }
 
     print(categories)
 
     return render(request, 'products/programmes.html', context)
-
 
 
 def product_detail(request, product_id):
@@ -156,8 +154,8 @@ def search_results(request):
             query = request.GET['q']
             if not query:
                 messages.error(request, "You didn't enter any search criteria")
-                return redirect(reverse('products')) # Note: Might need to update this to search_results instead of products
-            
+                return redirect(reverse('products'))
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
             programmes = programmes.filter(queries)
@@ -166,10 +164,11 @@ def search_results(request):
             'products': products,
             'programmes': programmes,
             'search_term': query,
-            'current_categories':categories,
+            'current_categories': categories,
         }
 
     return render(request, 'products/search_results.html', context)
+
 
 @login_required
 def add_product(request):
@@ -177,7 +176,7 @@ def add_product(request):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-    
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -188,7 +187,7 @@ def add_product(request):
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
@@ -196,13 +195,14 @@ def add_product(request):
 
     return render(request, template, context)
 
+
 @login_required
 def edit_product(request, product_id):
     """ Edit a product in the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-    
+
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -224,13 +224,13 @@ def edit_product(request, product_id):
 
     return render(request, template, context)
 
+
 @login_required
 def delete_product(request, product_id):
     """ Delete a product from the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-
 
     product = get_object_or_404(Product, pk=product_id)
     product.delete()

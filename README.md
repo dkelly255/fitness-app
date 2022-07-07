@@ -934,23 +934,22 @@ No. |Python File | PEP8 Status | Screenshot
 
 No. |Python File | PEP8 Status | Screenshot 
 ------------- |------------- | ------------- | ------------ 
-1 | [admin.py](newsletter/admin.py) | No issues | [link](readme/pep8/pep8-newsletter-admin.png)
-2 | [apps.py](newsletter/apps.py) | No issues | [link](readme/pep8/pep8-newsletter-apps.png)
-3 | [forms.py](newsletter/forms.py) | No issues | [link](readme/pep8/pep8-newsletter-forms.png)
-4 | [models.py](newsletter/models.py) | No issues | [link](readme/pep8/pep8-newsletter-models.png)
-5 | [urls.py](newsletter/urls.py) | No issues | [link](readme/pep8/pep8-newsletter-urls.png)
+1 | [admin.py](newsletter/admin.py) | No issues | ![link](readme/testing/pep8/newsletter-admin.png)
+2 | [apps.py](newsletter/apps.py) | No issues | ![link](readme/testing/pep8/newsletter-apps.png)
+3 | [forms.py](newsletter/forms.py) | No issues | ![link](readme/testing/pep8/newsletter-forms.png)
+4 | [models.py](newsletter/models.py) | No issues | ![link](readme/testing/pep8/newsletter-models.png)
 
 #### **(h) Products Application:** 
 
 No. |Python File | PEP8 Status | Screenshot 
 ------------- |------------- | ------------- | ------------ 
-1 | [admin.py](products/admin.py) | No issues | [link](readme/pep8/pep8-products-admin.png)
-2 | [apps.py](products/apps.py) | No issues | [link](readme/pep8/pep8-products-apps.png)
-3 | [forms.py](products/forms.py) | No issues | [link](readme/pep8/pep8-products-forms.png)
-4 | [models.py](products/models.py) | No issues | [link](readme/pep8/pep8-products-models.png)
-5 | [urls.py](products/urls.py) | No issues | [link](readme/pep8/pep8-products-urls.png)
-6 | [views.py](products/views.py) | No issues | [link](readme/pep8/pep8-products-views.png)
-7 | [widgets.py](products/widgets.py) | No issues | [link](readme/pep8/pep8-products-widgets.png)
+1 | [admin.py](products/admin.py) | No issues | ![link](readme/testing/pep8/products-admin.png)
+2 | [apps.py](products/apps.py) | No issues | ![link](readme/testing/pep8/products-apps.png)
+3 | [forms.py](products/forms.py) | Line Length too long x1 | ![link](readme/testing/pep8/products-forms.png)
+4 | [models.py](products/models.py) | Line Length too long x3 | ![link](readme/testing/pep8/products-models.png)
+5 | [urls.py](products/urls.py) | Line Length too long x2 | ![link](readme/testing/pep8/products-urls.png)
+6 | [views.py](products/views.py) | Line Length too long x7 | ![link](readme/testing/pep8/products-views.png)
+7 | [widgets.py](products/widgets.py) | Line Length too long x1 | ![link](readme/testing/pep8/products-widgets.png)
 
 #### **(i) Profiles Application:** 
 
