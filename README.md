@@ -1120,6 +1120,7 @@ Also please ensure to have an environment file correctly setup (`env.py`) with t
 ## Code
 - The `Amazon AWS` steps are taken from the Code Institute Boutique Ado Deployment Lessons
 - The `Heroku` Deployment steps are taken from the Code Institute Boutique Ado Deployment Lessons
+- The code to permit only numeric values in the shopping bag quantity input selector was sourced from [techiedelight](https://www.techiedelight.com/restrict-html-input-text-box-to-allow-only-numeric-values/)
 
 ## Media
 - The site `background image` was sourced from [Pexels](https://www.pexels.com/photo/close-up-view-of-system-hacking-5380618/) and is free to use with no attribution required
