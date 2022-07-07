@@ -863,10 +863,6 @@ The site's Javascript code has been successfully validated using the JSHint vali
 
 ### Python Validation
 
-This section will summarise the Python validation activities carried out across the various python files consisting the structure of the application, using the PEP8 Online Check utility:
-
-### (iv) Python Validation
-
 This section will summarise the Python validation activities carried out across the various python files consisting the structure of the application, using the [PEP8 Online Check](http://pep8online.com/) utility:
 
 #### **(a) Bag Application:**
@@ -1113,10 +1109,23 @@ Also please ensure to have an environment file correctly setup (`env.py`) with t
 `EMAIL_HOST_USER`
 ```
 
-# Credits
-## General
 
-The Amazon AWS Deployment steps are taken from the Code Institute Boutique Ado Deployment instructions
-## Content
+# Credits
+## General Credits
+- The Ecommerce store functionality, including the checkout, shopping bag and product listings and profile functionality are based on the Code Insitute Boutique Ado Lessons
+
+## Content  
+- The mission statement & context used for the `About Us` page is taken from [My Protein](https://www.myprotein.ie/about-us.list)
+
 ## Code
+- The `Amazon AWS` steps are taken from the Code Institute Boutique Ado Deployment Lessons
+- The `Heroku` Deployment steps are taken from the Code Institute Boutique Ado Deployment Lessons
+
 ## Media
+- The site `background image` was sourced from [Pexels](https://www.pexels.com/photo/close-up-view-of-system-hacking-5380618/) and is free to use with no attribution required
+- The site fonts were taken from [Google Fonts](https://fonts.google.com/)
+- All `Icons`, including the `Favicon` used throughout the site were sourced from [FontAwesome](https://fontawesome.com/)
+- The Images used for the site `Apparrell` products were taken from [My Protein](https://www.myprotein.ie/clothing.list)
+- The Images used for the site `Nutritional` products were taken from [My Protein](https://www.myprotein.ie/nutrition.list)
+    
+I would also like to thank my Mentor Tim Nelson, my UCD course members and our Stand-Up Facilitator Richard Wells for their help throughout the course
