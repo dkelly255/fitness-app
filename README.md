@@ -655,6 +655,10 @@ The footer is also included on all site pages and is fully responsive - this fea
 
 # Testing
 
+In an effort to keep the readme documentation as streamlined & structured as possible, the testing approaches & results for the application are contained in a separate markdown file, stored in the [testing](https://github.com/dkelly255/p5-fitness-app/blob/main/TESTING.md) location contained in the [link](https://github.com/dkelly255/p5-fitness-app/blob/main/TESTING.md) attached
+
+Please navigate to this section for an in-depth analysis & overview of the code validation, code testing processes & procedures, and the testing results for all end-to-end aspects of the application & functionality.
+
 ## 1. Manual Testing - Site Visitor Workflows:
 
 The key tests below are part of the manual testing procedures I have followed to prove out the functionality of the primary workflows available to shoppers, ommunity members, and store owners within the application:
