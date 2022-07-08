@@ -8,4 +8,5 @@ class NewsletterAdmin(admin.ModelAdmin):
         'privacy',
     )
 
+
 admin.site.register(Newsletter, NewsletterAdmin)
