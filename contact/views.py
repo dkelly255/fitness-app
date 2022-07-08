@@ -16,7 +16,13 @@ def contact_view(request):
 
     if not request.user.is_anonymous:
         user = get_object_or_404(User, username=request.user)
-        form = ContactForm(initial={'first_name': request.user.first_name, 'last_name': request.user.last_name, 'email': request.user.email})
+        form = ContactForm(
+            initial={
+                'first_name': request.user.first_name,
+                'last_name': request.user.last_name,
+                'email': request.user.email
+            }
+        )
     else:
         form = ContactForm(request.POST or None)
 
@@ -24,14 +30,18 @@ def contact_view(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your Enquiry was submitted! Please allow one working day for processing and reply')
-            
+            messages.success(
+                request,
+                'Your Enquiry was submitted! Please allow one working '
+                'day for processing and reply')
+
             send_mail(
                 'Fitness App: Contact Enquiry Received!',
-                'Thank you for getting in contact, we aim to respond to all queries within 24 hours & will be in touch soon',
+                'Thank you for getting in contact, we aim to respond to '
+                'all queries within 24 hours & will be in touch soon',
                 settings.DEFAULT_FROM_EMAIL,
                 [request.POST.get("email")],
-            )   
+            )
 
             return redirect(reverse('home'))
 
