@@ -217,7 +217,7 @@ No. |Python File | PEP8 Status | Screenshot
 1 | [apps.py](bag/apps.py) | No issues | ![link](readme/testing/pep8/bag-apps.png)
 2 | [contexts.py](bag/contexts.py) | No issues | ![link](readme/testing/pep8/bag-contexts.png)
 3 | [urls.py](bag/urls.py) | No issues | ![link](readme/testing/pep8/bag-urls.png)
-4 | [views.py](bag/views.py) | Line Length too long x8 | ![link](readme/testing/pep8/bag-views.png)
+4 | [views.py](bag/views.py) | No issues | ![link](readme/testing/pep8/bag-views.png)
 
 #### **(b) Checkout Application:**
 
@@ -226,12 +226,12 @@ No. |Python File | PEP8 Status | Screenshot
 1 | [admin.py](checkout/admin.py) | No issues | ![link](readme/testing/pep8/checkout-admin.png)
 2 | [apps.py](checkout/apps.py) | No issues | ![link](readme/testing/pep8/checkout-apps.png)
 3 | [models.py](checkout/forms.py) | No Issues | ![link](readme/testing/pep8/checkout-forms.png)
-4 | [models.py](checkout/models.py) | Line Length too long x10 | ![link](readme/testing/pep8/checkout-models.png)
+4 | [models.py](checkout/models.py) | No Issues | ![link](readme/testing/pep8/checkout-models.png)
 5 | [signals.py](checkout/signals.py) | No issues  | ![link](readme/testing/pep8/checkout-signals.png)
-6 | [urls.py](checkout/urls.py) | Line Length too long x2 | ![link](readme/testing/pep8/checkout-urls.png)
-7 | [views.py](checkout/views.py) | Line Length too long x5 | ![link](readme/testing/pep8/checkout-views.png)
-8 | [webhook_handler.py](checkout/webhook_handler.py) | Line Length too long x5 | ![link](readme/testing/pep8/checkout-webhook-handler.png)
-9 | [webhooks.py](checkout/webhooks.py) | Line Length too long x2 | ![link](readme/testing/pep8/checkout-webhooks.png)
+6 | [urls.py](checkout/urls.py) | No issues | ![link](readme/testing/pep8/checkout-urls.png)
+7 | [views.py](checkout/views.py) | No issues | ![link](readme/testing/pep8/checkout-views.png)
+8 | [webhook_handler.py](checkout/webhook_handler.py) | No issues | ![link](readme/testing/pep8/checkout-webhook-handler.png)
+9 | [webhooks.py](checkout/webhooks.py) | No issues | ![link](readme/testing/pep8/checkout-webhooks.png)
 
 #### **(c) Contact Application:**
 
