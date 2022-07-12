@@ -24,7 +24,7 @@ We will address the site's marketing strategy from several angles, including Sea
 
 - Search Engine Optimisation
 
-From an SEO strategy standpoint, the goal is to have the site rank as highly as possible on search engine results pages. To facilitate this, a keyword research exercise has been performed using both google and [Wordtracker.com](https://www.wordtracker.com/) - firstly, making a listing of topics relevant and important to the fitness nutrition/apparrell industry B2C customers, and then building out the topics with keywords relevant and appropriate to those topics - with the keywords then splitting into both short tail (head terms) & long tail categories.
+From an SEO strategy standpoint, the goal is to have the site rank as highly as possible on search engine results pages. To facilitate this, a keyword research exercise has been performed using both google and [Wordtracker.com](https://www.wordtracker.com/) - firstly, making a listing of topics relevant and important to the fitness nutrition/apparrel industry B2C customers, and then building out the topics with keywords relevant and appropriate to those topics - with the keywords then splitting into both short tail (head terms) & long tail categories.
 
 We also want to avoid "Keyword stuffing" as part of the SEO strategy when using the keywords throughout the body elements of the application, and for the site to be SEO-smart. Additionally, the site contains social links in the footer which we want to ensure are excluded from Search Engines for ranking purposes so the `rel="noopener` attribute has been used to ensure this is the case.
 
@@ -32,11 +32,11 @@ Additionally, we also want to ensure that descriptive metadata (i.e. that accura
 
 ![SEO](readme/seo.png)
 
-Two additional important files relevant to our marketing strategy are the [sitemap.xml](https://github.com/dkelly255/fitness-app/blob/main/sitemap.xml) and the [robots.txt](https://github.com/dkelly255/fitness-app/blob/main/robots.txt). The sitemap is a file that lists the website's important page url's, ensuring that search engines can crawl/navigate through them, and helping search engines understand the website structure. Whereas the robots.txt is a simple text file that tells search engines where they are not allowed to go on a website - listing any folders or files that will not be crawled or indexed by search engines. Having these files is an integral element of our SEO marketing strategy and should help improve our search engine rankings as a result.
+Two additional important files relevant to our marketing strategy are the [sitemap.xml](https://github.com/dkelly255/fitness-app/blob/main/sitemap.xml) and the [robots.txt](https://github.com/dkelly255/fitness-app/blob/main/robots.txt). The sitemap is a file that lists the website's important page URL's, ensuring that search engines can crawl/navigate through them, and helping search engines understand the website structure. Whereas the robots.txt is a simple text file that tells search engines where they are not allowed to go on a website - listing any folders or files that will not be crawled or indexed by search engines. Having these files is an integral element of our SEO marketing strategy and should help improve our search engine rankings as a result.
 
 - Content Marketing:
 
-Content marketing is the process of consistently creating useful, engaging content that will attract, engage and convert your target market into customers. The Community Disucssion Forum is a key part of the content marketing strategy underpinning Fitness App's marketing efforts - and in many discussion topics and comments there are references to which products work best for which goals, and other useful content marketing elements.
+Content marketing is the process of consistently creating useful, engaging content that will attract, engage and convert your target market into customers. The Community Discussion Forum is a key part of the content marketing strategy underpinning Fitness App's marketing efforts - and in many discussion topics and comments there are references to which products work best for which goals, and other useful content marketing elements.
 
 - Email Marketing:
 
@@ -52,7 +52,7 @@ As part of the primary marketing strategy, a facebook business page for the site
 
 The Scope of the site is broadly encompassed in the delivery of the following **Epics**:
 
-1. Epic 1 - Create an Ecommerce Website App to allow users to purchase fitness apparrell and nutritional products
+1. Epic 1 - Create an Ecommerce Website App to allow users to purchase fitness apparrel and nutritional products
 2. Epic 2 - Create a community within the website to enhance the business brand and encourage members to purchase more products from the store
 
 With these two broad epics as the overall strategic goal of the project, we are then able to refine the epics into the following **User Stories**, each of which must have a clearly defined set of **Acceptance Criteria**
@@ -67,7 +67,7 @@ A view of the Kanban board with the user stories having been brought through "To
 
 ![Title](readme/kanban1.png)
 
-Each of the User Stories in Epic #1 are detailed below, together with their individual specific acceptance criteria and descriptions, from the perspcetives of both a shopper, and a store owner:
+Each of the User Stories in Epic #1 are detailed below, together with their individual specific acceptance criteria and descriptions, from the perspectives of both a shopper, and a store owner:
 
 ### **Epic 1 - Ecommerce Website App - User Story Mapping:**
 
@@ -113,7 +113,7 @@ Each of the User Stories in Epic #1 are detailed below, together with their indi
 - Have a personalised user profile so that I can View my personal order history and order confirmations, and save my payment information
     - Acceptance Criteria:
         - 1 The profile should provide fields for a user's default delivery information
-        - 2 A history of the user's previous orders should also be shown wih dates and costs
+        - 2 A history of the user's previous orders should also be shown with dates and costs
         - 3 There should be an option for a user to update their information 
 
 - Sort the list of available products so that I can Easily identify the best rated, best priced and categorically sorted products
@@ -128,7 +128,7 @@ Each of the User Stories in Epic #1 are detailed below, together with their indi
         - 2 Enable the user to sort by name (in both directions)
         - 3 Enable the user to sort by category (both ascending and descending)
         
-- Sort multiple categories of products simulataneously so that I can Find the best-priced or best-rated product across broad categories such as "nutrition" or "apparrell"
+- Sort multiple categories of products simultaneously so that I can Find the best-priced or best-rated product across broad categories such as "nutrition" or "apparrel"
     - Acceptance Criteria:
         - 1 The products should be displayed in their correct sequence upon completion of the search
         - 2 The search should be possible in either direction - ascending or descending
@@ -209,7 +209,7 @@ Each of the User Stories in Epic #1 are detailed below, together with their indi
         
 - Edit/Update a product so that I can Change product Prices, descriptions, images, and other product criteria
     - Acceptance Criteria:
-        - 1 The edit optiopn should be clearly visible beside each product
+        - 1 The edit option should be clearly visible beside each product
         - 2 The option should be viewable only to users with the correct level of authentication and authorisation
         - 3 There should also be an option for the user to cancel their update if it is no longer required
         
@@ -234,7 +234,7 @@ Additionally - From a further Agile development perspective, the User Stories ar
 
 ![Title](readme/kanban2.png)
 
-Each of the User Stories in Epic #2 are detailed below, together with their individual specific acceptance criteria and descriptions, from the perspcetives of a community/forum member:
+Each of the User Stories in Epic #2 are detailed below, together with their individual specific acceptance criteria and descriptions, from the perspectives of a community/forum member:
 
 ### **Epic 2 - Fitness App Community - User Story Mapping:**
 
@@ -252,7 +252,7 @@ Each of the User Stories in Epic #2 are detailed below, together with their indi
         - 3 My permitted CRUD actions should be displayed 
         - 4 The list of comments & replies should be paginated to prevent excessive scrolling for the user
 
-- View a record of my forum actvities so that I can Easily see my activity in terms of topics I have created, as well as comments and replies I have left
+- View a record of my forum activities so that I can Easily see my activity in terms of topics I have created, as well as comments and replies I have left
     - Acceptance Criteria:
         - 1 The activity summary should show a list of all topics created by the user, together with key details and permitted CRUD actions
         - 2 A list of all comments left by the user, together with key details and permitted CRUD actions should also be shown
@@ -482,7 +482,7 @@ The Logout form screenshot is shown below, illustrating the simple & intuitive n
 
 ## 2. Ecommerce Features:
 
-The primary focus of the site is on offering e-commerce functionality to users in the form of two types of products available for purchase - Nutrition and Apparell. The section below covers an overview of the main e-commerce features of the site: 
+The primary focus of the site is on offering e-commerce functionality to users in the form of two types of products available for purchase - Nutrition and Apparel. The section below covers an overview of the main e-commerce features of the site: 
 
 ### - Display Products
 
@@ -492,7 +492,7 @@ The "Product display" page is the central e-commerce hub of the site, and contai
 
 ### - Product Detail
 
-The product detail page is reached by clicking on the image of any of the displayed products. This will bring the user to a more detailed overview of the selected product, including an in-depth description of the product, together with the product's price and rating. A size selector will also be present for any Apparrell products with sizes, and a quantity selector will allow the user to specify their desited quantity.
+The product detail page is reached by clicking on the image of any of the displayed products. This will bring the user to a more detailed overview of the selected product, including an in-depth description of the product, together with the product's price and rating. A size selector will also be present for any apparrel products with sizes, and a quantity selector will allow the user to specify their desired quantity.
 
 ![Features](readme/features-productdetail.png)
 
@@ -664,11 +664,11 @@ Please navigate to this section for an in-depth analysis & overview of the code 
 
 - Newsletter fields pre-populating with login details of user
 
-This bug originally existed in the Newsletter application due to naming clashes between multiple form elements on the same page & was succesfully resolved.
+This bug originally existed in the Newsletter application due to naming clashes between multiple form elements on the same page & was successfully resolved.
 
 - Quantity Selector on Shopping Bag page allowing non-numeric characters
 
-This bug required resolution to prevent non-numeric characters ( for example `1-99`) being enterable on the quanttity selector on the shopping bag page. I was able to find a solution from [techiedelight](https://www.techiedelight.com/restrict-html-input-text-box-to-allow-only-numeric-values/) which succesfully resolved the bug.
+This bug required resolution to prevent non-numeric characters ( for example `1-99`) being enterable on the quantity selector on the shopping bag page. I was able to find a solution from [techiedelight](https://www.techiedelight.com/restrict-html-input-text-box-to-allow-only-numeric-values/) which successfully resolved the bug.
 
 - Erroneous whitespace in textarea inputs on Forum fields
 
@@ -826,7 +826,7 @@ Also please ensure to have an environment file correctly setup (`env.py`) with t
 
 # Credits
 ## General Credits
-- The Ecommerce store functionality, including the checkout, shopping bag and product listings and profile functionality are based on the Code Insitute Boutique Ado Lessons
+- The Ecommerce store functionality, including the checkout, shopping bag and product listings and profile functionality are based on the Code Institute Boutique Ado Lessons
 
 ## Content  
 - The mission statement & context used for the `About Us` page is taken from [My Protein](https://www.myprotein.ie/about-us.list)
@@ -838,9 +838,10 @@ Also please ensure to have an environment file correctly setup (`env.py`) with t
 
 ## Media
 - The site `background image` was sourced from [Pexels](https://www.pexels.com/photo/close-up-view-of-system-hacking-5380618/) and is free to use with no attribution required
+- The Images used for the site `apparrel` products were taken from [My Protein](https://www.myprotein.ie/clothing.list)
+- The Images used for the site `Nutritional` products were taken from [My Protein](https://www.myprotein.ie/nutrition.list)
 - The site fonts were taken from [Google Fonts](https://fonts.google.com/)
 - All `Icons`, including the `Favicon` used throughout the site were sourced from [FontAwesome](https://fontawesome.com/)
-- The Images used for the site `Apparrell` products were taken from [My Protein](https://www.myprotein.ie/clothing.list)
-- The Images used for the site `Nutritional` products were taken from [My Protein](https://www.myprotein.ie/nutrition.list)
+
     
-I would also like to thank my Mentor Tim Nelson, my UCD course members and our Stand-Up Facilitator Richard Wells for their help throughout the course
+I would also like to thank our Program Stand-Up Facilitator Richard Wells, as well as my UCD and Code Institute course members for their help throughout the course and especially my Code Institute Mentor Tim Nelson for his invaluable support and guidance on all of my projects.
